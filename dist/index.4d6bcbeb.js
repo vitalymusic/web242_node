@@ -592,7 +592,7 @@ var _jqueryDefault = parcelHelpers.interopDefault(_jquery);
         color: "red",
         fontSize: "55pt"
     }).click(()=>{
-        alert("Clicked");
+        alert("Clicked once");
     });
 });
 
