@@ -7,7 +7,7 @@ $(document).ready(()=>{
         fontSize:"55pt"
     })
     .click(()=>{
-        alert("Clicked")
+        alert("Clicked once")
     })
 
 
