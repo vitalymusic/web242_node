@@ -1,5 +1,10 @@
 {
+  "scripts": {
+    "start": "parcel src/index.pug",
+    "build": "parcel build src/index.pug"
+  },
   "dependencies": {
+    "bigger-picture-fork": "^1.1.25",
     "jquery": "^3.7.1",
     "parcel": "^2.12.0",
     "slider-pro": "^1.6.2",
