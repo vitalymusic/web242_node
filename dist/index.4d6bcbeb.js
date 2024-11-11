@@ -587,6 +587,9 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jquery = require("jquery");
 var _jqueryDefault = parcelHelpers.interopDefault(_jquery);
+var _sliderProJs = require("slider-pro-js");
+var _sliderProJsDefault = parcelHelpers.interopDefault(_sliderProJs);
+var _sliderProCss = require("slider-pro-js/build/slider-pro.css");
 (0, _jqueryDefault.default)(document).ready(()=>{
     (0, _jqueryDefault.default)("h3").css({
         color: "red",
@@ -594,39 +597,21 @@ var _jqueryDefault = parcelHelpers.interopDefault(_jquery);
     }).click(()=>{
         alert("Clicked once");
     });
+// Slider
+});
+document.addEventListener("DOMContentLoaded", ()=>{
+    const mySlider = new (0, _sliderProJsDefault.default)("#my-slider", {
+        addOns: [
+            (0, _sliderProJs.Autoplay),
+            (0, _sliderProJs.Buttons),
+            (0, _sliderProJs.Thumbnails)
+        ],
+        width: "100vw",
+        imageScaleMode: "cover"
+    });
 });
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","jquery":"hgMhh"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"hgMhh":[function(require,module,exports) {
+},{"jquery":"hgMhh","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","slider-pro-js":"kT5pC","slider-pro-js/build/slider-pro.css":"kIvDg"}],"hgMhh":[function(require,module,exports) {
 /*!
  * jQuery JavaScript Library v3.7.1
  * https://jquery.com/
@@ -7327,6 +7312,4574 @@ exports.export = function(dest, destName, get) {
     return jQuery;
 });
 
-},{}]},["anvqh","gLLPy"], "gLLPy", "parcelRequire94c2")
+},{}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || Object.prototype.hasOwnProperty.call(dest, key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"kT5pC":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Arrows", ()=>(0, _arrowsJsDefault.default));
+parcelHelpers.export(exports, "Autoplay", ()=>(0, _autoplayJsDefault.default));
+parcelHelpers.export(exports, "Breakpoints", ()=>(0, _breakpointsJsDefault.default));
+parcelHelpers.export(exports, "Buttons", ()=>(0, _buttonsJsDefault.default));
+parcelHelpers.export(exports, "Caption", ()=>(0, _captionJsDefault.default));
+parcelHelpers.export(exports, "ConditionalImages", ()=>(0, _conditionalImagesJsDefault.default));
+parcelHelpers.export(exports, "DeepLinking", ()=>(0, _deepLinkingJsDefault.default));
+parcelHelpers.export(exports, "Fade", ()=>(0, _fadeJsDefault.default));
+parcelHelpers.export(exports, "Fullscreen", ()=>(0, _fullscreenJsDefault.default));
+parcelHelpers.export(exports, "Keyboard", ()=>(0, _keyboardJsDefault.default));
+parcelHelpers.export(exports, "Layers", ()=>(0, _layersJsDefault.default));
+parcelHelpers.export(exports, "LazyLoading", ()=>(0, _lazyLoadingJsDefault.default));
+parcelHelpers.export(exports, "Retina", ()=>(0, _retinaJsDefault.default));
+parcelHelpers.export(exports, "ThumbnailArrows", ()=>(0, _thumbnailArrowsJsDefault.default));
+parcelHelpers.export(exports, "ThumbnailTouchSwipe", ()=>(0, _thumbnailTouchSwipeJsDefault.default));
+parcelHelpers.export(exports, "Thumbnails", ()=>(0, _thumbnailsJsDefault.default));
+parcelHelpers.export(exports, "TouchSwipe", ()=>(0, _touchSwipeJsDefault.default));
+parcelHelpers.export(exports, "Video", ()=>(0, _videoJsDefault.default));
+var _sliderProJs = require("../src/core/slider-pro.js");
+var _sliderProJsDefault = parcelHelpers.interopDefault(_sliderProJs);
+var _arrowsJs = require("../src/add-ons/arrows/arrows.js");
+var _arrowsJsDefault = parcelHelpers.interopDefault(_arrowsJs);
+var _autoplayJs = require("../src/add-ons/autoplay/autoplay.js");
+var _autoplayJsDefault = parcelHelpers.interopDefault(_autoplayJs);
+var _breakpointsJs = require("../src/add-ons/breakpoints/breakpoints.js");
+var _breakpointsJsDefault = parcelHelpers.interopDefault(_breakpointsJs);
+var _buttonsJs = require("../src/add-ons/buttons/buttons.js");
+var _buttonsJsDefault = parcelHelpers.interopDefault(_buttonsJs);
+var _captionJs = require("../src/add-ons/caption/caption.js");
+var _captionJsDefault = parcelHelpers.interopDefault(_captionJs);
+var _conditionalImagesJs = require("../src/add-ons/conditional-images/conditional-images.js");
+var _conditionalImagesJsDefault = parcelHelpers.interopDefault(_conditionalImagesJs);
+var _deepLinkingJs = require("../src/add-ons/deep-linking/deep-linking.js");
+var _deepLinkingJsDefault = parcelHelpers.interopDefault(_deepLinkingJs);
+var _fadeJs = require("../src/add-ons/fade/fade.js");
+var _fadeJsDefault = parcelHelpers.interopDefault(_fadeJs);
+var _fullscreenJs = require("../src/add-ons/fullscreen/fullscreen.js");
+var _fullscreenJsDefault = parcelHelpers.interopDefault(_fullscreenJs);
+var _keyboardJs = require("../src/add-ons/keyboard/keyboard.js");
+var _keyboardJsDefault = parcelHelpers.interopDefault(_keyboardJs);
+var _layersJs = require("../src/add-ons/layers/layers.js");
+var _layersJsDefault = parcelHelpers.interopDefault(_layersJs);
+var _lazyLoadingJs = require("../src/add-ons/lazy-loading/lazy-loading.js");
+var _lazyLoadingJsDefault = parcelHelpers.interopDefault(_lazyLoadingJs);
+var _retinaJs = require("../src/add-ons/retina/retina.js");
+var _retinaJsDefault = parcelHelpers.interopDefault(_retinaJs);
+var _thumbnailsJs = require("../src/add-ons/thumbnails/thumbnails.js");
+var _thumbnailsJsDefault = parcelHelpers.interopDefault(_thumbnailsJs);
+var _thumbnailArrowsJs = require("../src/add-ons/thumbnail-arrows/thumbnail-arrows.js");
+var _thumbnailArrowsJsDefault = parcelHelpers.interopDefault(_thumbnailArrowsJs);
+var _thumbnailTouchSwipeJs = require("../src/add-ons/thumbnail-touch-swipe/thumbnail-touch-swipe.js");
+var _thumbnailTouchSwipeJsDefault = parcelHelpers.interopDefault(_thumbnailTouchSwipeJs);
+var _touchSwipeJs = require("../src/add-ons/touch-swipe/touch-swipe.js");
+var _touchSwipeJsDefault = parcelHelpers.interopDefault(_touchSwipeJs);
+var _videoJs = require("../src/add-ons/video/video.js");
+var _videoJsDefault = parcelHelpers.interopDefault(_videoJs);
+exports.default = (0, _sliderProJsDefault.default);
+
+},{"../src/core/slider-pro.js":"cCwaN","../src/add-ons/arrows/arrows.js":"aZlXJ","../src/add-ons/autoplay/autoplay.js":"9NEJu","../src/add-ons/breakpoints/breakpoints.js":"7Gh8U","../src/add-ons/buttons/buttons.js":"5ZWDj","../src/add-ons/caption/caption.js":"1Qi33","../src/add-ons/conditional-images/conditional-images.js":"eS2SQ","../src/add-ons/deep-linking/deep-linking.js":"2L4xU","../src/add-ons/fade/fade.js":"6loan","../src/add-ons/fullscreen/fullscreen.js":"bVqE5","../src/add-ons/keyboard/keyboard.js":"flhBN","../src/add-ons/layers/layers.js":"8uXiS","../src/add-ons/lazy-loading/lazy-loading.js":"kriZW","../src/add-ons/retina/retina.js":"GM09p","../src/add-ons/thumbnails/thumbnails.js":"fxjei","../src/add-ons/thumbnail-arrows/thumbnail-arrows.js":"luCz7","../src/add-ons/thumbnail-touch-swipe/thumbnail-touch-swipe.js":"224Xu","../src/add-ons/touch-swipe/touch-swipe.js":"2ZHbD","../src/add-ons/video/video.js":"czAYr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cCwaN":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _sliderProDefaultsJs = require("./slider-pro-defaults.js");
+var _sliderProDefaultsJsDefault = parcelHelpers.interopDefault(_sliderProDefaultsJs);
+var _utilJs = require("../helpers/util.js");
+var _sliderProSlideJs = require("./slider-pro-slide.js");
+var _sliderProSlideJsDefault = parcelHelpers.interopDefault(_sliderProSlideJs);
+var _customEventTargetJs = require("../helpers/custom-event-target.js");
+var _customEventTargetJsDefault = parcelHelpers.interopDefault(_customEventTargetJs);
+var _windowResizeHandlerJs = require("../helpers/window-resize-handler.js");
+var _windowResizeHandlerJsDefault = parcelHelpers.interopDefault(_windowResizeHandlerJs);
+var _addOnsManagerJs = require("../add-ons/add-ons-manager.js");
+var _addOnsManagerJsDefault = parcelHelpers.interopDefault(_addOnsManagerJs);
+class SliderPro extends (0, _customEventTargetJsDefault.default) {
+    // The namespace to be used when adding event listeners
+    namespace = "sliderpro";
+    // Holds the final settings of the slider after merging the specified
+    // ones with the default ones.
+    settings = {};
+    // Selector for the main element of the slider
+    selector;
+    // Reference to the slider element
+    sliderEl;
+    // Reference to the slides element
+    slidesEl;
+    // Reference to the mask element
+    slidesMaskEl;
+    // Reference to the slides element
+    slidesContainerEl;
+    // Indicates the position of the slides container
+    slidesPosition = 0;
+    // Array of SliderProSlide objects, ordered by their DOM index
+    slides = [];
+    // Array of SliderProSlide objects, ordered by their left/top position in the slider.
+    // This will be updated continuously if the slider is loopable.
+    slidesOrder = [];
+    // The index of the currently selected slide (starts with 0)
+    selectedSlideIndex = 0;
+    // The index of the previously selected slide
+    previousSlideIndex = 0;
+    // The width of the individual slide
+    slideWidth = 0;
+    // The height of the individual slide
+    slideHeight = 0;
+    // Reference to the old slide width, used to check if the width has changed
+    previousSlideWidth = 0;
+    // Reference to the old slide height, used to check if the height has changed
+    previousSlideHeight = 0;
+    // Stores references the event handlers in pairs containing the event identifier and the event handler
+    // in order to be able to retrieve them when they need to be removed
+    eventHandlerReferences = {};
+    // Reference to the WindowResizeHandler instance
+    windowResizeHandler;
+    // Reference to the AddOnsManager instance
+    addOnsManager;
+    constructor(selector, options = null){
+        super();
+        this.selector = selector;
+        this.settings = options !== null ? {
+            ...(0, _sliderProDefaultsJsDefault.default),
+            ...options
+        } : {
+            ...(0, _sliderProDefaultsJsDefault.default)
+        };
+        this.addOnsManager = new (0, _addOnsManagerJsDefault.default)(this, this.settings.addOns);
+        this.addOnsManager.init();
+        this.init();
+    }
+    // The starting place for the slider
+    init() {
+        this.dispatchEvent("beforeInit");
+        this.sliderEl = document.querySelector(this.selector);
+        // Remove the 'sp-no-js' when the slider's JavaScript code starts running
+        this.sliderEl.classList.remove("sp-no-js");
+        // Set up the slides containers
+        // slider-pro > sp-slides-container > sp-mask > sp-slides > sp-slide
+        this.slidesContainerEl = document.createElement("div");
+        this.slidesContainerEl.classList.add("sp-slides-container");
+        this.sliderEl.appendChild(this.slidesContainerEl);
+        this.slidesMaskEl = document.createElement("div");
+        this.slidesMaskEl.classList.add("sp-mask");
+        this.slidesContainerEl.appendChild(this.slidesMaskEl);
+        this.slidesEl = this.sliderEl.getElementsByClassName("sp-slides")[0];
+        this.slidesMaskEl.appendChild(this.slidesEl);
+        // Set which slide should be selected initially
+        this.selectedSlideIndex = this.settings.startSlide;
+        // Shuffle/randomize the slides
+        if (this.settings.shuffle === true) {
+            const slides = Array.from(this.slidesEl.getElementsByClassName("sp-slide"));
+            const shuffledSlides = [
+                ...slides
+            ];
+            for(let k = shuffledSlides.length - 1; k > 0; k--){
+                let l = Math.floor(Math.random() * (k + 1));
+                let temp = shuffledSlides[k];
+                shuffledSlides[k] = shuffledSlides[l];
+                shuffledSlides[l] = temp;
+            }
+            this.slidesEl.replaceChildren(...shuffledSlides);
+        }
+        this.windowResizeHandler = new (0, _windowResizeHandlerJsDefault.default)();
+        this.windowResizeHandler.addEventListener("resize", ()=>{
+            this.resize();
+        });
+        this.update();
+        // add the 'sp-selected' class to the initially selected slide
+        this.slidesEl.getElementsByClassName("sp-slide")[this.selectedSlideIndex].classList.add("sp-selected");
+        this.dispatchEvent("init");
+    }
+    // Update the slider by checking for setting changes and for slides
+    // that weren't initialized yet.
+    update() {
+        this.dispatchEvent("beforeUpdate");
+        // Check the current slider orientation and reset CSS that might have been
+        // added for a different orientation, since the orientation can be changed
+        // at runtime.
+        if (this.settings.orientation === "horizontal") {
+            this.sliderEl.classList.remove("sp-vertical");
+            this.sliderEl.classList.add("sp-horizontal");
+            this.sliderEl.style.removeProperty("height");
+            this.sliderEl.style.removeProperty("max-height");
+            Array.from(this.slidesEl.getElementsByClassName("sp-slide")).forEach((slideEl)=>{
+                slideEl.style.removeProperty("top");
+            });
+        } else if (this.settings.orientation === "vertical") {
+            this.sliderEl.classList.remove("sp-horizontal");
+            this.sliderEl.classList.add("sp-vertical");
+            Array.from(this.slidesEl.getElementsByClassName("sp-slide")).forEach((slideEl)=>{
+                slideEl.style.removeProperty("left");
+            });
+        }
+        if (this.settings.rightToLeft === true) this.sliderEl.classList.add("sp-rtl");
+        else this.sliderEl.classList.remove("sp-rtl");
+        // Loop through the array of SliderProSlide objects and if a stored slide is found
+        // which is not in the DOM anymore, destroy that slide.
+        [
+            ...this.slides
+        ].forEach((slide, index)=>{
+            if (this.sliderEl.querySelector(`.sp-slide[data-index="${index}"]`) === null) {
+                slide.removeEventListener("imagesLoaded");
+                slide.destroy();
+                const indexOfSlide = this.slides.findIndex((slide)=>slide.index === index);
+                this.slides.splice(indexOfSlide, 1);
+            }
+        });
+        this.slidesOrder.length = 0;
+        // Loop through the list of slides and initialize newly added slides if any,
+        // and reset the index of each slide.
+        Array.from(this.sliderEl.getElementsByClassName("sp-slide")).forEach((slideEl, index)=>{
+            if (slideEl.hasAttribute("data-init") === false) {
+                const slide = this.createSlide(slideEl);
+                this.slides.splice(index, 0, slide);
+            }
+            this.slides[index].index = index;
+            this.slidesOrder.push(index);
+        });
+        // Arrange the slides in a loop
+        if (this.settings.loop === true) this.updateSlidesOrder();
+        // Reset the previous slide width
+        this.previousSlideWidth = 0;
+        this.dispatchEvent("update");
+        // Some updates might require a resize
+        this.resize();
+    }
+    // Called when the slider needs to resize
+    resize() {
+        this.dispatchEvent("beforeResize");
+        // Set the width of the main slider container based on whether or not the slider is responsive,
+        // full width or full size
+        if (this.settings.responsive === true) {
+            if ((this.settings.forceSize === "fullWidth" || this.settings.forceSize === "fullWindow") && (this.settings.visibleSize === "auto" || this.settings.visibleSize !== "auto" && this.settings.orientation === "vertical")) {
+                this.sliderEl.style.margin = "0";
+                this.sliderEl.style.width = (0, _utilJs.resolveUnit)(window.innerWidth);
+                this.sliderEl.style.maxWidth = "";
+                this.sliderEl.style.marginLeft = -(0, _utilJs.resolveUnit)(this.sliderEl.offsetLeft);
+            } else {
+                this.sliderEl.style.width = "100%";
+                this.sliderEl.style.maxWidth = (0, _utilJs.resolveUnit)(this.settings.width);
+                this.sliderEl.style.marginLeft = "";
+            }
+        } else this.sliderEl.style.width = (0, _utilJs.resolveUnit)(this.settings.width);
+        // Calculate the aspect ratio of the slider
+        if (this.settings.aspectRatio === -1) this.settings.aspectRatio = this.settings.width / this.settings.height;
+        // Initially set the slide width to the size of the slider.
+        // Later, this will be set to less if there are multiple visible slides.
+        const possiblePadding = parseInt(window.getComputedStyle(this.sliderEl).paddingLeft, 10) + parseInt(window.getComputedStyle(this.sliderEl).paddingRight, 10);
+        this.slideWidth = this.sliderEl.clientWidth - possiblePadding;
+        // Set the height to the same size as the browser window if the slider is set to be 'fullWindow',
+        // or calculate the height based on the width and the aspect ratio.
+        if (this.settings.forceSize === "fullWindow") this.slideHeight = window.innerHeight;
+        else this.slideHeight = isNaN(this.settings.aspectRatio) ? this.settings.height : this.slideWidth / this.settings.aspectRatio;
+        // Resize the slider only if the size of the slider has changed
+        // If it hasn't, return.
+        if (this.previousSlideWidth !== this.slideWidth || this.previousSlideHeight !== this.slideHeight || this.settings.visibleSize !== "auto" || this.sliderEl.offsetWidth > this.sliderEl.parentElement.clientWidth || this.sliderEl.clientWidth !== this.slidesMaskEl.clientWidth) {
+            this.previousSlideWidth = this.slideWidth;
+            this.previousSlideHeight = this.slideHeight;
+        } else return;
+        this.resizeSlides();
+        // Set the initial size of the mask container to the size of an individual slide
+        this.slidesMaskEl.style.width = (0, _utilJs.resolveUnit)(this.slideWidth);
+        this.slidesMaskEl.style.height = (0, _utilJs.resolveUnit)(this.slideHeight);
+        // Adjust the height if it's set to 'auto'
+        if (this.settings.autoHeight === true) // Delay the resizing of the height to allow for other resize handlers
+        // to execute first before calculating the final height of the slide
+        setTimeout(()=>{
+            this.resizeHeight();
+        }, 1);
+        else this.slidesMaskEl.style.removeProperty("transition");
+        // The 'visibleSize' option can be set to fixed or percentage size to make more slides
+        // visible at a time.
+        // By default it's set to 'auto'.
+        if (this.settings.visibleSize !== "auto") {
+            if (this.settings.orientation === "horizontal") {
+                // If the size is forced to full width or full window, the 'visibleSize' option will be
+                // ignored and the slider will become as wide as the browser window.
+                if (this.settings.forceSize === "fullWidth" || this.settings.forceSize === "fullWindow") {
+                    this.sliderEl.style.removeProperty("margin");
+                    this.sliderEl.style.removeProperty("max-width");
+                    this.sliderEl.style.width = (0, _utilJs.resolveUnit)(window.innerWidth);
+                    this.sliderEl.style.marginLeft = -this.sliderEl.offsetLeft;
+                } else {
+                    this.sliderEl.style.width = (0, _utilJs.resolveUnit)(this.settings.visibleSize);
+                    this.sliderEl.style.maxWidth = "100%";
+                    this.sliderEl.style.marginLeft = 0;
+                }
+                this.slidesMaskEl.style.width = (0, _utilJs.resolveUnit)(this.sliderEl.clientWidth);
+            } else {
+                // If the size is forced to full window, the 'visibleSize' option will be
+                // ignored and the slider will become as high as the browser window.
+                if (this.settings.forceSize === "fullWindow") {
+                    this.sliderEl.style.height = (0, _utilJs.resolveUnit)(window.innerHeight);
+                    this.sliderEl.style.removeProperty("max-height");
+                } else {
+                    this.sliderEl.style.height = (0, _utilJs.resolveUnit)(this.settings.visibleSize);
+                    this.sliderEl.style.maxHeight = "100%";
+                }
+                this.slidesMaskEl.style.height = (0, _utilJs.resolveUnit)(this.sliderEl.clientHeight);
+            }
+        }
+        this.resetSlidesPosition();
+        // Fire the 'sliderResize' event
+        this.dispatchEvent("resize");
+    }
+    // Resize each individual slide
+    resizeSlides() {
+        let slideWidth = this.slideWidth, slideHeight = this.slideHeight;
+        if (this.settings.autoSlideSize === true) {
+            if (this.settings.orientation === "horizontal") slideWidth = "auto";
+            else if (this.settings.orientation === "vertical") slideHeight = "auto";
+        } else if (this.settings.autoHeight === true) slideHeight = "auto";
+        // Loop through the existing slides and reset their size.
+        this.slides.forEach((slide)=>{
+            slide.settings = this.settings;
+            slide.setSize(slideWidth, slideHeight);
+        });
+    }
+    // Create a SliderProSlide instance for the slide passed as a jQuery element
+    createSlide(element) {
+        const slide = new (0, _sliderProSlideJsDefault.default)(element, this.settings);
+        slide.addEventListener("imagesLoaded", (event)=>{
+            if (this.settings.autoSlideSize === true) {
+                if (this.slidesEl.classList.contains("sp-animated") === false) this.resetSlidesPosition();
+            }
+            if (this.settings.autoHeight === true && event.detail.index === this.selectedSlideIndex) this.resizeHeightTo(slide.getSize().height);
+        });
+        return slide;
+    }
+    // Arrange the slide elements in a loop inside the 'slidesOrder' array
+    updateSlidesOrder() {
+        let slicedItems;
+        // Calculate the position/index of the middle slide
+        const middleSlidePosition = parseInt((this.slidesOrder.length - 1) / 2, 10);
+        // Calculate the distance between the selected element and the middle position
+        const distance = this.slidesOrder.findIndex((slideIndex)=>slideIndex === this.selectedSlideIndex) - middleSlidePosition;
+        // If the distance is negative it means that the selected slider is before the middle position, so
+        // slides from the end of the array will be added at the beginning, in order to shift the selected slide
+        // forward.
+        // If the distance is positive, slides from the beginning of the array will be added at the end.
+        if (distance < 0) {
+            slicedItems = this.slidesOrder.splice(distance, Math.abs(distance));
+            for(let i = slicedItems.length - 1; i >= 0; i--)this.slidesOrder.unshift(slicedItems[i]);
+        } else if (distance > 0) {
+            slicedItems = this.slidesOrder.splice(0, distance);
+            for(let i = 0; i <= slicedItems.length - 1; i++)this.slidesOrder.push(slicedItems[i]);
+        }
+    }
+    // Set the left/top position of the slides based on their position in the 'slidesOrder' array
+    updateSlidesPosition() {
+        const selectedSlide = this.slidesEl.getElementsByClassName("sp-slide")[this.selectedSlideIndex];
+        const positionProperty = this.settings.orientation === "horizontal" ? "left" : "top";
+        const sizeProperty = this.settings.orientation === "horizontal" ? "width" : "height";
+        const selectedSlidePixelPosition = parseInt(selectedSlide.style[positionProperty], 10);
+        // Calculate the position/index of the middle slide
+        const middleSlidePosition = parseInt((this.slidesOrder.length - 1) / 2, 10);
+        let slide, slideEl, slideIndex, previousPosition = selectedSlidePixelPosition, newPosition, directionMultiplier, slideSize;
+        if (this.settings.autoSlideSize === true) {
+            if (this.settings.rightToLeft === true && this.settings.orientation === "horizontal") {
+                for(slideIndex = middleSlidePosition; slideIndex >= 0; slideIndex--){
+                    slide = this.getSlideAt(this.slidesOrder[slideIndex]);
+                    slideEl = slide.slideEl;
+                    newPosition = previousPosition;
+                    slideEl.style[positionProperty] = (0, _utilJs.resolveUnit)(newPosition);
+                    previousPosition = parseInt(slideEl.style[positionProperty], 10) + slide.getSize()[sizeProperty] + this.settings.slideDistance;
+                }
+                previousPosition = selectedSlidePixelPosition;
+                for(slideIndex = middleSlidePosition + 1; slideIndex < this.slidesOrder.length; slideIndex++){
+                    slide = this.getSlideAt(this.slidesOrder[slideIndex]);
+                    slideEl = slide.slideEl;
+                    newPosition = previousPosition - (slide.getSize()[sizeProperty] + this.settings.slideDistance);
+                    slideEl.style[positionProperty] = (0, _utilJs.resolveUnit)(newPosition);
+                    previousPosition = parseInt(slideEl.style[positionProperty], 10);
+                }
+            } else {
+                for(slideIndex = middleSlidePosition - 1; slideIndex >= 0; slideIndex--){
+                    slide = this.getSlideAt(this.slidesOrder[slideIndex]);
+                    slideEl = slide.slideEl;
+                    newPosition = previousPosition - (slide.getSize()[sizeProperty] + this.settings.slideDistance);
+                    slideEl.style[positionProperty] = (0, _utilJs.resolveUnit)(newPosition);
+                    previousPosition = parseInt(slideEl.style[positionProperty], 10);
+                }
+                previousPosition = selectedSlidePixelPosition;
+                for(slideIndex = middleSlidePosition; slideIndex < this.slidesOrder.length; slideIndex++){
+                    slide = this.getSlideAt(this.slidesOrder[slideIndex]);
+                    slideEl = slide.slideEl;
+                    newPosition = previousPosition;
+                    slideEl.style[positionProperty] = (0, _utilJs.resolveUnit)(newPosition);
+                    previousPosition = parseInt(slideEl.style[positionProperty], 10) + slide.getSize()[sizeProperty] + this.settings.slideDistance;
+                }
+            }
+        } else {
+            directionMultiplier = this.settings.rightToLeft === true && this.settings.orientation === "horizontal" ? -1 : 1;
+            slideSize = this.settings.orientation === "horizontal" ? this.slideWidth : this.slideHeight;
+            for(slideIndex = 0; slideIndex < this.slidesOrder.length; slideIndex++){
+                slideEl = this.slidesEl.getElementsByClassName("sp-slide")[this.slidesOrder[slideIndex]];
+                newPosition = selectedSlidePixelPosition + directionMultiplier * (slideIndex - middleSlidePosition) * (slideSize + this.settings.slideDistance);
+                slideEl.style[positionProperty] = (0, _utilJs.resolveUnit)(newPosition);
+            }
+        }
+    }
+    // Set the left/top position of the slides based on their position in the 'slidesOrder' array,
+    // and also set the position of the slides container.
+    resetSlidesPosition() {
+        const positionProperty = this.settings.orientation === "horizontal" ? "left" : "top";
+        const sizeProperty = this.settings.orientation === "horizontal" ? "width" : "height";
+        let previousPosition = 0, newPosition, slide, slideEl, slideIndex, selectedSlideSize, directionMultiplier, slideSize;
+        if (this.settings.autoSlideSize === true) {
+            if (this.settings.rightToLeft === true && this.settings.orientation === "horizontal") for(slideIndex = 0; slideIndex < this.slidesOrder.length; slideIndex++){
+                slide = this.getSlideAt(this.slidesOrder[slideIndex]);
+                slideEl = slide.slideEl;
+                newPosition = previousPosition - (slide.getSize()[sizeProperty] + this.settings.slideDistance);
+                slideEl.style[positionProperty] = (0, _utilJs.resolveUnit)(newPosition);
+                previousPosition = parseInt(slideEl.style[positionProperty], 10);
+            }
+            else for(slideIndex = 0; slideIndex < this.slidesOrder.length; slideIndex++){
+                slide = this.getSlideAt(this.slidesOrder[slideIndex]);
+                slideEl = slide.slideEl;
+                newPosition = previousPosition;
+                slideEl.style[positionProperty] = (0, _utilJs.resolveUnit)(previousPosition);
+                previousPosition = parseInt(slideEl.style[positionProperty], 10) + slide.getSize()[sizeProperty] + this.settings.slideDistance;
+            }
+            selectedSlideSize = this.getSlideAt(this.selectedSlideIndex).getSize()[sizeProperty];
+        } else {
+            directionMultiplier = (this.settings.rightToLeft === true && this.settings.orientation === "horizontal") === true ? -1 : 1;
+            slideSize = this.settings.orientation === "horizontal" ? this.slideWidth : this.slideHeight;
+            for(slideIndex = 0; slideIndex < this.slidesOrder.length; slideIndex++){
+                slideEl = this.slidesEl.getElementsByClassName("sp-slide")[this.slidesOrder[slideIndex]];
+                newPosition = directionMultiplier * slideIndex * (slideSize + this.settings.slideDistance);
+                slideEl.style[positionProperty] = (0, _utilJs.resolveUnit)(newPosition);
+            }
+            selectedSlideSize = slideSize;
+        }
+        let selectedSlideOffset = this.settings.centerSelectedSlide === true && this.settings.visibleSize !== "auto" ? Math.round((parseInt(this.slidesMaskEl.style[sizeProperty], 10) - selectedSlideSize) / 2) : 0, newSlidesPosition = -parseInt(this.slidesEl.getElementsByClassName("sp-slide")[this.selectedSlideIndex].style[positionProperty], 10) + selectedSlideOffset;
+        this.moveTo(newSlidesPosition, true);
+    }
+    // Resize the height of the slider to the height of the selected slide.
+    // It's used when the 'autoHeight' option is set to 'true'.
+    resizeHeight() {
+        const selectedSlide = this.getSlideAt(this.selectedSlideIndex);
+        this.resizeHeightTo(selectedSlide.getSize().height);
+    }
+    // Get the current position of the slides by parsing the 'transform' property
+    getSlidesPosition() {
+        let left = 0;
+        let top = 0;
+        if (this.slidesEl.style.transform !== "") {
+            const matrixString = window.getComputedStyle(this.slidesEl).transform, matrixType = matrixString.indexOf("matrix3d") !== -1 ? "matrix3d" : "matrix", matrixArray = matrixString.replace(matrixType, "").match(/-?[0-9.]+/g);
+            left = matrixType === "matrix3d" ? parseInt(matrixArray[12], 10) : parseInt(matrixArray[4], 10);
+            top = matrixType === "matrix3d" ? parseInt(matrixArray[13], 10) : parseInt(matrixArray[5], 10);
+        }
+        return {
+            left,
+            top
+        };
+    }
+    // Move the slides container to the specified position.
+    // The movement can be instant or animated.
+    moveTo(position, instant, callback) {
+        if (position === this.slidesPosition) return;
+        this.slidesPosition = position;
+        if (typeof instant !== "undefined" && instant === true) this.slidesEl.style.transition = "";
+        else {
+            this.slidesEl.classList.add("sp-animated");
+            const transitionEventHandler = (event)=>{
+                if (event.target !== event.currentTarget) return;
+                this.slidesEl.removeEventListener("transitionend", transitionEventHandler);
+                this.slidesEl.classList.remove("sp-animated");
+                if (typeof callback === "function") callback();
+            };
+            this.slidesEl.addEventListener("transitionend", transitionEventHandler);
+            this.eventHandlerReferences["slidesEl.transitionend"] = transitionEventHandler;
+            this.slidesEl.style.transition = "transform " + this.settings.slideAnimationDuration / 1000 + "s";
+        }
+        const newLeft = this.settings.orientation === "horizontal" ? position : 0;
+        const newTop = this.settings.orientation === "horizontal" ? 0 : position;
+        this.slidesEl.style.transform = "translate3d(" + newLeft + "px, " + newTop + "px, 0)";
+    }
+    // Stop the movement of the slides
+    stopMovement() {
+        const { left, top } = this.getSlidesPosition();
+        this.slidesPosition = this.settings.orientation === "horizontal" ? left : top;
+        // Set the transform property to the value that the transform had when the function was called
+        this.slidesEl.style.transform = "translate3d(" + left + "px, " + top + "px, 0)";
+        this.slidesEl.style.removeProperty("transition");
+        this.slidesEl.removeEventListener("transitionend", this.eventHandlerReferences["slidesEl.transitionend"]);
+        this.slidesEl.classList.remove("sp-animated");
+    }
+    // Resize the height of the slider to the specified value
+    resizeHeightTo(height) {
+        const transitionEventHandler = (event)=>{
+            if (event.target !== event.currentTarget) return;
+            this.slidesMaskEl.removeEventListener("transitionend", transitionEventHandler);
+            // Fire the 'resizeHeightComplete' event
+            this.dispatchEvent("resizeHeightComplete");
+        };
+        this.slidesMaskEl.removeEventListener("transitionend", this.eventHandlerReferences["slidesMaskEl.transitionend"]);
+        this.slidesMaskEl.addEventListener("transitionend", transitionEventHandler);
+        this.eventHandlerReferences["slidesMaskEl.transitionend"] = transitionEventHandler;
+        this.slidesMaskEl.style.height = (0, _utilJs.resolveUnit)(height);
+        this.slidesMaskEl.style.transition = "height " + this.settings.heightAnimationDuration / 1000 + "s";
+    }
+    // Open the slide at the specified index
+    gotoSlide(index) {
+        if (index === this.selectedSlideIndex || typeof this.slides[index] === "undefined") return;
+        this.previousSlideIndex = this.selectedSlideIndex;
+        this.selectedSlideIndex = index;
+        // Re-assign the 'sp-selected' class to the currently selected slide
+        this.slidesEl.getElementsByClassName("sp-selected")[0].classList.remove("sp-selected");
+        this.slidesEl.getElementsByClassName("sp-slide")[this.selectedSlideIndex].classList.add("sp-selected");
+        // If the slider is loopable reorder the slides to have the selected slide in the middle
+        // and update the slides' position.
+        if (this.settings.loop === true) {
+            this.updateSlidesOrder();
+            this.updateSlidesPosition();
+        }
+        // Adjust the height of the slider
+        if (this.settings.autoHeight === true) this.resizeHeight();
+        const positionProperty = this.settings.orientation === "horizontal" ? "left" : "top";
+        const sizeProperty = this.settings.orientation === "horizontal" ? "width" : "height";
+        const selectedSlideOffset = this.settings.centerSelectedSlide === true && this.settings.visibleSize !== "auto" ? Math.round((parseInt(this.slidesMaskEl.style[sizeProperty], 10) - this.getSlideAt(this.selectedSlideIndex).getSize()[sizeProperty]) / 2) : 0;
+        const newSlidesPosition = -parseInt(this.slidesEl.getElementsByClassName("sp-slide")[this.selectedSlideIndex].style[positionProperty], 10) + selectedSlideOffset;
+        // Move the slides container to the new position
+        this.moveTo(newSlidesPosition, false, ()=>{
+            this.resetSlidesPosition();
+            // Fire the 'gotoSlideComplete' event
+            this.dispatchEvent("gotoSlideComplete", {
+                index: index,
+                previousIndex: this.previousSlideIndex
+            });
+        });
+        // Fire the 'gotoSlide' event
+        this.dispatchEvent("gotoSlide", {
+            index: index,
+            previousIndex: this.previousSlideIndex
+        });
+    }
+    // Open the next slide
+    nextSlide() {
+        const index = this.selectedSlideIndex >= this.getTotalSlides() - 1 ? 0 : this.selectedSlideIndex + 1;
+        this.gotoSlide(index);
+    }
+    // Open the previous slide
+    previousSlide() {
+        const index = this.selectedSlideIndex <= 0 ? this.getTotalSlides() - 1 : this.selectedSlideIndex - 1;
+        this.gotoSlide(index);
+    }
+    // Return the slide at the specified index
+    getSlideAt(index) {
+        return this.slides[index];
+    }
+    // Return the index of the currently opened slide
+    getSelectedSlide() {
+        return this.selectedSlideIndex;
+    }
+    // Return the total amount of slides
+    getTotalSlides() {
+        return this.slides.length;
+    }
+    // Destroy the slider instance
+    destroy() {
+        this.addOnsManager.destroyAll();
+        // Clean the CSS
+        this.sliderEl.removeAttribute("style");
+        this.sliderEl.setAttribute("class", "slider-pro sp-no-js");
+        this.slidesEl.removeAttribute("style");
+        this.slidesEl.setAttribute("class", "sp-slides");
+        // Remove event listeners
+        this.removeEventListener("update");
+        this.windowResizeHandler.removeEventListener("resize");
+        this.windowResizeHandler.destroy();
+        // Destroy all slides
+        this.slides.forEach((slide)=>{
+            slide.destroy();
+        });
+        this.slides.length = 0;
+        // Move the slides to their initial position in the DOM and 
+        // remove the container elements created dynamically.
+        this.sliderEl.insertBefore(this.slidesEl, this.sliderEl.firstChild);
+        this.slidesContainerEl.remove();
+    }
+}
+exports.default = SliderPro;
+
+},{"./slider-pro-defaults.js":"dyuMd","../helpers/util.js":"iNkcr","./slider-pro-slide.js":"lCsK9","../helpers/custom-event-target.js":"dGwse","../helpers/window-resize-handler.js":"g732P","../add-ons/add-ons-manager.js":"sZ2Ki","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dyuMd":[function(require,module,exports) {
+// The default options of the slider
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+const defaults = {
+    // Width of the slide
+    width: 500,
+    // Height of the slide
+    height: 300,
+    // Indicates if the slider is responsive
+    responsive: true,
+    // The aspect ratio of the slider (width/height)
+    aspectRatio: -1,
+    // The scale mode for images (cover, contain, exact and none)
+    imageScaleMode: "cover",
+    // Indicates if the image will be centered
+    centerImage: true,
+    // Indicates if the image can be scaled up more than its original size
+    allowScaleUp: true,
+    // Indicates if height of the slider will be adjusted to the
+    // height of the selected slide
+    autoHeight: false,
+    // Will maintain all the slides at the same height, but will allow the width
+    // of the slides to be variable if the orientation of the slides is horizontal
+    // and vice-versa if the orientation is vertical
+    autoSlideSize: false,
+    // Indicates the initially selected slide
+    startSlide: 0,
+    // Indicates if the slides will be shuffled
+    shuffle: false,
+    // Indicates whether the slides will be arranged horizontally
+    // or vertically. Can be set to 'horizontal' or 'vertical'.
+    orientation: "horizontal",
+    // Indicates if the size of the slider will be forced to 'fullWidth' or 'fullWindow'
+    forceSize: "none",
+    // Indicates if the slider will be loopable
+    loop: true,
+    // The distance between slides
+    slideDistance: 10,
+    // The duration of the slide animation
+    slideAnimationDuration: 700,
+    // The duration of the height animation
+    heightAnimationDuration: 700,
+    // Sets the size of the visible area, allowing the increase of it in order
+    // to make more slides visible.
+    // By default, only the selected slide will be visible. 
+    visibleSize: "auto",
+    // Indicates whether the selected slide will be in the center of the slider, when there
+    // are more slides visible at a time. If set to false, the selected slide will be in the
+    // left side of the slider.
+    centerSelectedSlide: true,
+    // Indicates if the direction of the slider will be from right to left,
+    // instead of the default left to right
+    rightToLeft: false,
+    // The list of add-ons that will be initialized when the slider is initialized.
+    addOns: []
+};
+exports.default = defaults;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"iNkcr":[function(require,module,exports) {
+// If a single image is passed, check if it's loaded.
+// If a different element is passed, check if there are images
+// inside it, and check if these images are loaded.
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "checkImagesComplete", ()=>checkImagesComplete);
+parcelHelpers.export(exports, "checkImagesStatus", ()=>checkImagesStatus);
+parcelHelpers.export(exports, "resolveUnit", ()=>resolveUnit);
+parcelHelpers.export(exports, "getParent", ()=>getParent);
+function checkImagesComplete(targetEl) {
+    return new Promise((resolve)=>{
+        let status = checkImagesStatus(targetEl);
+        // If there are loading images, wait for them to load.
+        // If the images are loaded, resolve the promise.
+        if (status === "loading") {
+            const checkImages = setInterval(()=>{
+                status = checkImagesStatus(targetEl);
+                if (status === "complete") {
+                    clearInterval(checkImages);
+                    resolve("complete");
+                }
+            }, 100);
+        } else resolve("complete");
+    });
+}
+function checkImagesStatus(targetEl) {
+    let status = "complete";
+    if (targetEl.tagName === "IMG" && targetEl.complete === false) status = "loading";
+    else Array.from(targetEl.getElementsByTagName("img")).forEach((imageEl)=>{
+        if (imageEl.complete === false) status = "loading";
+    });
+    return status;
+}
+function resolveUnit(target) {
+    return isNaN(target) || target === "auto" ? target : target + "px";
+}
+function getParent(element, identifier) {
+    if (typeof element === "undefined" || element === null || typeof element.tagName === "undefined") return null;
+    while(!element.classList.contains(identifier) && element.tagName !== identifier.toUpperCase()){
+        if (element.tagName === "HTML") return null;
+        element = element.parentElement;
+    }
+    return element;
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lCsK9":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _utilJs = require("../helpers/util.js");
+var _customEventTargetJs = require("../helpers/custom-event-target.js");
+var _customEventTargetJsDefault = parcelHelpers.interopDefault(_customEventTargetJs);
+class SliderProSlide extends (0, _customEventTargetJsDefault.default) {
+    // Index of the slide
+    #index;
+    // Reference to the slide element
+    slideEl;
+    // Reference to the main slide image
+    mainImageEl;
+    // Reference to the container that will hold the main image
+    imageContainerEl;
+    // Indicates whether the slide has a main image
+    hasMainImage = false;
+    // Indicates whether the main image is loaded
+    isMainImageLoaded = false;
+    // Indicates whether the main image is in the process of being loaded
+    isMainImageLoading = false;
+    // Indicates whether the slide has any image. There could be other images (i.e., in layers)
+    // besides the main slide image.
+    hasImages = false;
+    // Indicates if all the images in the slide are loaded
+    areImagesLoaded = false;
+    // Indicates if the images inside the slide are in the process of being loaded
+    areImagesLoading = false;
+    // The width and height of the slide
+    width = 0;
+    height = 0;
+    // Reference to the global settings of the slider
+    // Stores the current settings of the slider
+    settings;
+    constructor(slide, settings){
+        super();
+        this.slideEl = slide;
+        this.settings = settings;
+        // Initialize the slide
+        this.init();
+    }
+    // The starting point for the slide
+    init() {
+        // Mark the slide as initialized
+        this.slideEl.setAttribute("data-init", true);
+        // Get the main slide image if there is one
+        this.mainImageEl = this.slideEl.getElementsByClassName("sp-image")[0] || null;
+        // If there is a main slide image, create a container for it and add the image to this container.
+        // The container will allow the isolation of the image from the rest of the slide's content. This is
+        // helpful when you want to show some content below the image and not cover it.
+        if (this.mainImageEl !== null) {
+            this.hasMainImage = true;
+            this.imageContainerEl = document.createElement("div");
+            this.imageContainerEl.classList.add("sp-image-container");
+            this.slideEl.insertBefore(this.imageContainerEl, this.slideEl.firstChild);
+            if (this.mainImageEl.parentElement.tagName === "A") this.imageContainerEl.appendChild(this.mainImageEl.parentElement);
+            else this.imageContainerEl.appendChild(this.mainImageEl);
+        }
+        this.hasImages = this.slideEl.getElementsByTagName("img").length !== 0 ? true : false;
+    }
+    // Set the size of the slide
+    setSize(width, height) {
+        this.width = width;
+        this.height = height;
+        this.slideEl.style.width = (0, _utilJs.resolveUnit)(this.width);
+        this.slideEl.style.height = (0, _utilJs.resolveUnit)(this.height);
+        if (this.hasMainImage === true) {
+            // Initially set the width and height of the container to the width and height
+            // specified in the settings. This will prevent content overflowing if the width or height
+            // are 'auto'. The 'auto' value will be passed only after the image is loaded.
+            this.imageContainerEl.style.width = (0, _utilJs.resolveUnit)(this.settings.width);
+            this.imageContainerEl.style.height = (0, _utilJs.resolveUnit)(this.settings.height);
+            // Resize the main image if it's loaded. If the 'data-src' attribute is present it means
+            // that the image will be lazy-loaded
+            if (this.mainImageEl.hasAttribute("data-src") === false) this.resizeMainImage();
+        }
+    }
+    // Get the size (width and height) of the slide
+    getSize() {
+        // Check if all images have loaded, and if they have, return the size, else, return
+        // the original width and height of the slide
+        if (this.hasImages === true && this.areImagesLoaded === false && this.areImagesLoading === false) {
+            this.areImagesLoading = true;
+            let status = (0, _utilJs.checkImagesStatus)(this.slideEl);
+            if (status !== "complete") {
+                (0, _utilJs.checkImagesComplete)(this.slideEl).then(()=>{
+                    this.areImagesLoaded = true;
+                    this.areImagesLoading = false;
+                    this.dispatchEvent("imagesLoaded", {
+                        index: this.index
+                    });
+                });
+                // if the image is not loaded yet, return the original width and height of the slider
+                return {
+                    width: this.settings.width,
+                    height: this.settings.height
+                };
+            }
+        }
+        const { width, height } = this.calculateSize();
+        return {
+            width,
+            height
+        };
+    }
+    // Calculate the width and height of the slide by going
+    // through all the child elements and measuring their 'bottom'
+    // and 'right' properties. The element with the biggest
+    // 'right'/'bottom' property will determine the slide's
+    // width/height.
+    calculateSize() {
+        let width = this.slideEl.clientWidth, height = this.slideEl.clientHeight;
+        Array.from(this.slideEl.children).forEach((childEl)=>{
+            if (childEl.style.visibility === "hidden" || childEl.style.display === "none") return;
+            const { left, right, top, bottom } = childEl.getBoundingClientRect();
+            const bottomEdge = childEl.offsetTop + (bottom - top);
+            const rightEdge = childEl.offsetLeft + (right - left);
+            if (bottomEdge > height) height = bottomEdge;
+            if (rightEdge > width) width = rightEdge;
+        });
+        return {
+            width,
+            height
+        };
+    }
+    // Resize the main image.
+    // 
+    // Call this when the slide resizes or when the main image has changed to a different image.
+    resizeMainImage(isNewImage) {
+        // If the main image has changed, reset the 'flags'
+        if (isNewImage === true) {
+            this.isMainImageLoaded = false;
+            this.isMainImageLoading = false;
+        }
+        // If the image was not loaded yet and it's not in the process of being loaded, load it
+        if (this.isMainImageLoaded === false && this.isMainImageLoading === false) {
+            this.isMainImageLoading = true;
+            (0, _utilJs.checkImagesComplete)(this.mainImageEl).then(()=>{
+                this.isMainImageLoaded = true;
+                this.isMainImageLoading = false;
+                this.resizeMainImage();
+                this.dispatchEvent("imagesLoaded", {
+                    index: this.index
+                });
+            });
+            return;
+        }
+        // Set the size of the image container element to the proper 'width' and 'height'
+        // values, as they were calculated. Previous values were the 'width' and 'height'
+        // from the settings.
+        this.imageContainerEl.style.width = (0, _utilJs.resolveUnit)(this.width);
+        this.imageContainerEl.style.height = (0, _utilJs.resolveUnit)(this.height);
+        if (this.settings.allowScaleUp === false) {
+            // reset the image to its natural size
+            this.mainImageEl.style.removeProperty("width");
+            this.mainImageEl.style.removeProperty("height");
+            this.mainImageEl.style.removeProperty("max-width");
+            this.mainImageEl.style.removeProperty("max-height");
+            // set the boundaries
+            this.mainImageEl.style.maxWidth = (0, _utilJs.resolveUnit)(this.mainImageEl.clientWidth);
+            this.mainImageEl.style.maxHeight = (0, _utilJs.resolveUnit)(this.mainImageEl.clientHeight);
+        }
+        // After the main image has loaded, resize it
+        if (this.settings.autoSlideSize === true) {
+            this.mainImageEl.style.removeProperty("margin-left");
+            this.mainImageEl.style.removeProperty("margin-top");
+            if (this.settings.orientation === "horizontal") {
+                this.mainImageEl.style.width = "auto";
+                this.mainImageEl.style.height = "100%";
+                // resize the slide's width to a fixed value instead of 'auto', to
+                // prevent incorrect sizing caused by links added to the main image
+                this.slideEl.style.width = (0, _utilJs.resolveUnit)(this.mainImageEl.clientWidth);
+            } else if (this.settings.orientation === "vertical") {
+                this.mainImageEl.style.width = "100%";
+                this.mainImageEl.style.height = "auto";
+                // resize the slide's height to a fixed value instead of 'auto', to
+                // prevent incorrect sizing caused by links added to the main image
+                this.slideEl.style.height = this.mainImageEl.height;
+            }
+        } else if (this.settings.autoHeight === true) {
+            this.mainImageEl.style.width = "100%";
+            this.mainImageEl.style.height = "auto";
+            if (this.settings.centerImage === true) this.mainImageEl.style.marginLeft = (0, _utilJs.resolveUnit)((this.imageContainerEl.clientWidth - this.mainImageEl.clientWidth) * 0.5);
+        } else {
+            if (this.settings.imageScaleMode === "cover") {
+                if (this.mainImageEl.clientWidth / this.mainImageEl.clientHeight <= this.slideEl.clientWidth / this.slideEl.clientHeight) {
+                    this.mainImageEl.style.width = "100%";
+                    this.mainImageEl.style.height = "auto";
+                } else {
+                    this.mainImageEl.style.width = "auto";
+                    this.mainImageEl.style.height = "100%";
+                }
+            } else if (this.settings.imageScaleMode === "contain") {
+                if (this.mainImageEl.clientWidth / this.mainImageEl.clientHeight >= this.slideEl.clientWidth / this.slideEl.clientHeight) {
+                    this.mainImageEl.style.width = "100%";
+                    this.mainImageEl.style.height = "auto";
+                } else {
+                    this.mainImageEl.style.width = "auto";
+                    this.mainImageEl.style.height = "100%";
+                }
+            } else if (this.settings.imageScaleMode === "exact") {
+                this.mainImageEl.style.width = "100%";
+                this.mainImageEl.style.height = "auto";
+            }
+            if (this.settings.centerImage === true) {
+                this.mainImageEl.style.marginLeft = (0, _utilJs.resolveUnit)((this.imageContainerEl.clientWidth - this.mainImageEl.clientWidth) * 0.5);
+                this.mainImageEl.style.marginTop = (0, _utilJs.resolveUnit)((this.imageContainerEl.clientHeight - this.mainImageEl.clientHeight) * 0.5);
+            }
+        }
+    }
+    // Destroy the slide
+    destroy() {
+        // Clean the slide element from attached styles and data
+        this.slideEl.removeAttribute("style");
+        this.slideEl.removeAttribute("data-init");
+        this.slideEl.removeAttribute("data-index");
+        this.slideEl.removeAttribute("data-loaded");
+        // If there is a main image, remove its container
+        if (this.hasMainImage === true) {
+            this.mainImageEl.removeAttribute("style");
+            this.slideEl.appendChild(this.mainImageEl);
+            this.imageContainerEl.remove();
+        }
+    }
+    // Return the index of the slide
+    get index() {
+        return this.#index;
+    }
+    // Set the index of the slide
+    set index(index) {
+        this.#index = index;
+        this.slideEl.setAttribute("data-index", this.#index);
+    }
+}
+exports.default = SliderProSlide;
+
+},{"../helpers/util.js":"iNkcr","../helpers/custom-event-target.js":"dGwse","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"dGwse":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+class CustomEventTarget extends EventTarget {
+    handlerReferences = {};
+    uid = null;
+    static idCounter = 0;
+    constructor(){
+        super();
+    }
+    addEventListener(type, handler) {
+        const handlerReference = handler;
+        let typeWithoutNamespace = type;
+        if (this.uid === null) this.uid = CustomEventTarget.idCounter++;
+        if (type.indexOf(".") !== -1) {
+            const typeArray = type.split(".");
+            typeWithoutNamespace = typeArray[0];
+        }
+        this.handlerReferences[type + "." + this.uid] = handlerReference;
+        super.addEventListener(typeWithoutNamespace, handlerReference);
+    }
+    removeEventListener(type) {
+        let typeWithoutNamespace = type;
+        const handlerReference = this.handlerReferences[type + "." + this.uid];
+        if (type.indexOf(".") !== -1) {
+            const typeArray = type.split(".");
+            typeWithoutNamespace = typeArray[0];
+        }
+        super.removeEventListener(typeWithoutNamespace, handlerReference);
+        delete this.handlerReferences[type + "." + this.uid];
+    }
+    dispatchEvent(type, data = null, options = null) {
+        const eventOptions = options || {};
+        const event = new CustomEvent(type, {
+            ...eventOptions,
+            detail: data || {}
+        });
+        super.dispatchEvent(event);
+    }
+    on(type, handler) {
+        this.addEventListener(type, handler);
+    }
+    off(type) {
+        this.removeEventListener(type);
+    }
+    trigger(eventObject) {
+        const { type, detail } = eventObject;
+        this.dispatchEvent(type, detail);
+    }
+}
+exports.default = CustomEventTarget;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"g732P":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _customEventTargetJs = require("./custom-event-target.js");
+var _customEventTargetJsDefault = parcelHelpers.interopDefault(_customEventTargetJs);
+class WindowResizeHandler extends (0, _customEventTargetJsDefault.default) {
+    // Reference to the old window width, used to check if the window width has changed
+    previousWidth = 0;
+    // Reference to the old window height, used to check if the window height has changed
+    previousHeight = 0;
+    // Property used for deferring the resizing of the slider
+    allowResize = true;
+    delay = 200;
+    handlerReference;
+    timeoutReference;
+    constructor(delay = null){
+        super();
+        if (delay !== null) this.delay = delay;
+    }
+    addEventListener(type, handler) {
+        super.addEventListener(type, handler);
+        this.handlerReference = this.handler.bind(this);
+        window.addEventListener("resize", this.handlerReference);
+    }
+    removeEventListener(type) {
+        super.removeEventListener(type);
+        window.removeEventListener("resize", this.handlerReference);
+    }
+    handler() {
+        // If the resize is not allowed yet or if the window size hasn't changed return early.
+        if (this.allowResize === false || this.previousWidth === window.innerWidth && this.previousHeight === window.innerHeight) return;
+        // Assign the new values for the window width and height
+        this.previousWidth = window.innerWidth;
+        this.previousHeight = window.innerHeight;
+        this.allowResize = false;
+        this.timeoutReference = setTimeout(()=>{
+            this.dispatchEvent("resize");
+            this.allowResize = true;
+        }, this.delay);
+    }
+    destroy() {
+        clearTimeout(this.timeoutReference);
+    }
+}
+exports.default = WindowResizeHandler;
+
+},{"./custom-event-target.js":"dGwse","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"sZ2Ki":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+class AddOnsManager {
+    // Reference to the base slider instance
+    slider;
+    // Stores the add-on classes
+    static addOns = [];
+    // Stores instances of the add-ons
+    addOnsInstances = [];
+    activeAddOns = null;
+    constructor(slider, activeAddOns = null){
+        this.slider = slider;
+        this.activeAddOns = activeAddOns;
+    }
+    init() {
+        this.slider.addOns = this.slider.addOns || {};
+        const addOnsToInstantiate = this.activeAddOns.length === 0 ? AddOnsManager.addOns : this.activeAddOns;
+        addOnsToInstantiate.forEach((addOn)=>{
+            let addOnInstance = new addOn(this.slider);
+            this.addOnsInstances.push(addOnInstance);
+            this.slider.addOns[addOn.name] = addOnInstance;
+        });
+    }
+    static add(addOns) {
+        if (typeof addOns === "object") AddOnsManager.addOns = [
+            ...AddOnsManager.addOns,
+            ...addOns
+        ];
+        else if (typeof addOns === "function") AddOnsManager.addOns.push(addOns);
+    }
+    destroyAll() {
+        this.addOnsInstances.forEach((addOn)=>{
+            addOn.destroy();
+        });
+    }
+}
+exports.default = AddOnsManager;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aZlXJ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+class Arrows {
+    // The namespace to be used when adding event listeners
+    namespace = "arrows";
+    // Reference to the base slider instance
+    slider;
+    // Stores the current settings of the slider
+    settings;
+    // Reference to the arrows container
+    arrowsEl = null;
+    // Reference to the previous arrow
+    previousArrowEl = null;
+    // Reference to the next arrow
+    nextArrowEl = null;
+    // Default add-on settings
+    defaults = {
+        // Indicates whether the arrow buttons will be created
+        arrows: false,
+        // Indicates whether the arrows will fade in only on hover
+        fadeArrows: true
+    };
+    // Stores references the event handlers in pairs containing the event identifier and the event handler
+    // in order to be able to retrieve them when they need to be removed
+    eventHandlerReferences = {};
+    constructor(slider){
+        this.slider = slider;
+        this.init();
+    }
+    init() {
+        this.slider.addEventListener("update." + this.namespace, this.updateHandler.bind(this));
+        this.slider.addEventListener("gotoSlide." + this.namespace, this.checkVisibility.bind(this));
+    }
+    updateHandler() {
+        this.settings = {
+            ...this.defaults,
+            ...this.slider.settings
+        };
+        // Create the arrows if the 'arrows' option is set to true
+        if (this.settings.arrows === true && this.arrowsEl === null) {
+            this.createArrows();
+            this.checkVisibility();
+        } else if (this.settings.arrows === false && this.arrowsEl !== null) this.removeArrows();
+        if (this.settings.arrows === true) {
+            if (this.settings.fadeArrows === true) this.arrowsEl.classList.add("sp-fade-arrows");
+            else if (this.settings.fadeArrows === false) this.arrowsEl.classList.remove("sp-fade-arrows");
+        }
+    }
+    // Show or hide the arrows depending on the position of the selected slide
+    checkVisibility() {
+        if (this.settings.arrows === false || this.settings.loop === true) return;
+        if (this.slider.selectedSlideIndex === 0) this.previousArrowEl.style.display = "none";
+        else this.previousArrowEl.style.display = "block";
+        if (this.slider.selectedSlideIndex === this.slider.getTotalSlides() - 1) this.nextArrowEl.style.display = "none";
+        else this.nextArrowEl.style.display = "block";
+    }
+    createArrows() {
+        this.arrowsEl = document.createElement("div");
+        this.arrowsEl.classList.add("sp-arrows");
+        this.slider.slidesContainerEl.appendChild(this.arrowsEl);
+        this.previousArrowEl = document.createElement("div");
+        this.previousArrowEl.classList.add("sp-arrow", "sp-previous-arrow");
+        this.arrowsEl.appendChild(this.previousArrowEl);
+        this.nextArrowEl = document.createElement("div");
+        this.nextArrowEl.classList.add("sp-arrow", "sp-next-arrow");
+        this.arrowsEl.appendChild(this.nextArrowEl);
+        const previousArrowClickHandler = ()=>{
+            this.slider.previousSlide();
+        };
+        const nextArrowClickHandler = ()=>{
+            this.slider.nextSlide();
+        };
+        this.eventHandlerReferences["click.previousArrow"] = previousArrowClickHandler;
+        this.previousArrowEl.addEventListener("click", previousArrowClickHandler);
+        this.eventHandlerReferences["click.nextArrow"] = nextArrowClickHandler;
+        this.nextArrowEl.addEventListener("click", nextArrowClickHandler);
+    }
+    removeArrows() {
+        const previousArrowClickHandler = this.eventHandlerReferences["click.previousArrow"];
+        const nextArrowClickHandler = this.eventHandlerReferences["click.nextArrow"];
+        this.previousArrowEl.removeEventListener("click", previousArrowClickHandler);
+        this.nextArrowEl.removeEventListener("click", nextArrowClickHandler);
+        this.arrowsEl.remove();
+        this.arrowsEl = null;
+    }
+    destroy() {
+        this.removeArrows();
+        this.slider.removeEventListener("update." + this.namespace);
+        this.slider.removeEventListener("gotoSlide." + this.namespace);
+    }
+}
+exports.default = Arrows;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9NEJu":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+class Autoplay {
+    // The namespace to be used when adding event listeners
+    namespace = "autoplay";
+    // Reference to the base slider instance
+    slider;
+    // Stores the current settings of the slider
+    settings;
+    // Reference to the setTimeout timer
+    autoplayTimer;
+    // Stopped, paused, running
+    autoplayState = "stopped";
+    // Indicates whether the slider is hovered or not
+    isHover = false;
+    // Stores references the event handlers in pairs containing the event identifier and the event handler
+    // in order to be able to retrieve them when they need to be removed
+    eventHandlerReferences = {};
+    // Default add-on settings
+    defaults = {
+        autoplay: true,
+        autoplayDelay: 5000,
+        autoplayDirection: "normal",
+        autoplayOnHover: "pause" // Possible values are 'pause', 'stop' or 'none'.
+    };
+    constructor(slider){
+        this.slider = slider;
+        this.slider.autoplay = this;
+        this.init();
+    }
+    init() {
+        this.slider.addEventListener("update." + this.namespace, this.updateHandler.bind(this));
+    }
+    // Start the autoplay if it's enabled, or stop it if it's disabled but running 
+    updateHandler() {
+        this.settings = {
+            ...this.defaults,
+            ...this.slider.settings
+        };
+        if (this.settings.autoplay === true && this.autoplayState === "stopped") {
+            this.slider.addEventListener("gotoSlide." + this.namespace, ()=>{
+                this.gotoSlideHandler();
+            });
+            this.slider.addEventListener("gotoSlideComplete." + this.namespace, ()=>{
+                this.gotoSlideCompleteHandler();
+            });
+            const mouseEnterHandlerReference = ()=>{
+                this.mouseEnterHandler();
+            };
+            this.eventHandlerReferences["mouseenter"] = mouseEnterHandlerReference;
+            this.slider.sliderEl.addEventListener("mouseenter", mouseEnterHandlerReference);
+            const mouseLeaveHandlerReference = ()=>{
+                this.mouseLeaveHandler();
+            };
+            this.eventHandlerReferences["mouseleave"] = mouseLeaveHandlerReference;
+            this.slider.sliderEl.addEventListener("mouseleave", mouseLeaveHandlerReference);
+            this.autoplayState = "running";
+            this.start();
+        } else if (this.settings.autoplay === true && this.autoplayState === "running") {
+            this.slider.removeEventListener("gotoSlide." + this.namespace);
+            this.slider.removeEventListener("gotoSlideComplete." + this.namespace);
+            this.slider.removeEventListener("mouseenter." + this.namespace);
+            this.slider.removeEventListener("mouseleave." + this.namespace);
+            this.autoplayState = "stopped";
+            this.stop();
+        }
+    }
+    // Restart the autoplay timer when a new slide is selected
+    gotoSlideHandler() {
+        // stop previous timers before starting a new one
+        if (this.autoplayState === "running") {
+            this.stop();
+            this.autoplayState = "paused";
+        }
+    }
+    gotoSlideCompleteHandler() {
+        if (this.isHover === true && (this.settings.autoplayOnHover === "pause" || this.settings.autoplayOnHover === "stop")) return;
+        if (this.autoplayState === "paused") {
+            this.start();
+            this.autoplayState = "running";
+        }
+    }
+    // Pause the autoplay when the slider is hovered
+    mouseEnterHandler() {
+        this.isHover = true;
+        if (this.autoplayState === "running" && (this.settings.autoplayOnHover === "pause" || this.settings.autoplayOnHover === "stop")) {
+            this.stop();
+            this.autoplayState = "paused";
+        }
+    }
+    // Start the autoplay when the mouse moves away from the slider
+    mouseLeaveHandler() {
+        this.isHover = false;
+        if (this.settings.autoplay === true && this.autoplayState === "paused" && this.settings.autoplayOnHover !== "stop") {
+            this.start();
+            this.autoplayState = "running";
+        }
+    }
+    // Starts the autoplay
+    start() {
+        this.autoplayTimer = setTimeout(()=>{
+            if (this.settings.autoplayDirection === "normal") this.slider.nextSlide();
+            else if (this.settings.autoplayDirection === "backwards") this.slider.previousSlide();
+        }, this.settings.autoplayDelay);
+    }
+    // Stops the autoplay
+    stop() {
+        clearTimeout(this.autoplayTimer);
+    }
+    // Destroy the module
+    destroy() {
+        clearTimeout(this.autoplayTimer);
+        this.slider.removeEventListener("update." + this.namespace);
+        this.slider.removeEventListener("gotoSlide." + this.namespace);
+        this.slider.removeEventListener("gotoSlideComplete." + this.namespace);
+        this.slider.sliderEl.removeEventListener("mouseenter", this.eventHandlerReferences["mouseenter"]);
+        this.slider.sliderEl.removeEventListener("mouseleave", this.eventHandlerReferences["mouseleave"]);
+    }
+}
+exports.default = Autoplay;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"7Gh8U":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+class Breakpoints {
+    // The namespace to be used when adding event listeners
+    namespace = "breakpoints";
+    // Reference to the base slider instance
+    slider;
+    // Stores the breakpoints
+    breakpoints;
+    // Another reference to the settings which will not be altered by breakpoints or by other means
+    originalSettings = {};
+    // Stores size breakpoints
+    orderedBreakpoints = [];
+    // Indicates the current size breakpoint
+    currentBreakpoint = -1;
+    constructor(slider){
+        this.slider = slider;
+        if (this.slider.settings.breakpoints === null) return;
+        this.slider.addEventListener("beforeInit." + this.namespace, ()=>{
+            this.init();
+        });
+    }
+    init() {
+        this.breakpoints = {
+            ...this.slider.settings.breakpoints
+        };
+        // Keep a reference of the original settings and use it
+        // to restore the settings when the breakpoints are used.
+        this.originalSettings = {
+            ...this.slider.settings
+        };
+        // Parse the breakpoints object and store the values into an array,
+        // sorting them in ascending order based on the specified size.
+        for(let sizes in this.breakpoints)this.orderedBreakpoints.push({
+            size: parseInt(sizes, 10),
+            properties: this.breakpoints[sizes]
+        });
+        this.orderedBreakpoints = this.orderedBreakpoints.sort((a, b)=>a.size >= b.size ? 1 : -1);
+        this.slider.addEventListener("beforeResize." + this.namespace, ()=>{
+            const newBreakpointSettings = this.getCurrentSettings();
+            if (newBreakpointSettings !== false) {
+                this.slider.settings = {
+                    ...newBreakpointSettings
+                };
+                this.slider.update();
+            }
+        });
+    }
+    getCurrentSettings() {
+        // Check if the current window width is bigger than the biggest breakpoint
+        // and if necessary reset the properties to the original settings.
+        // 
+        // If the window width is smaller than a certain breakpoint, apply the settings specified
+        // for that breakpoint but only after merging them with the original settings
+        // in order to make sure that only the specified settings for the breakpoint are applied
+        if (this.breakpoints !== null && this.orderedBreakpoints.length > 0) {
+            if (window.innerWidth > this.orderedBreakpoints[this.orderedBreakpoints.length - 1].size && this.currentBreakpoint !== -1) {
+                this.currentBreakpoint = -1;
+                return this.originalSettings;
+            } else {
+                for(let i = 0, n = this.orderedBreakpoints.length; i < n; i++)if (window.innerWidth <= this.orderedBreakpoints[i].size) {
+                    if (this.currentBreakpoint !== this.orderedBreakpoints[i].size) {
+                        const settings = {
+                            ...this.originalSettings,
+                            ...this.orderedBreakpoints[i].properties
+                        };
+                        this.currentBreakpoint = this.orderedBreakpoints[i].size;
+                        return settings;
+                    }
+                    break;
+                }
+            }
+        }
+        return false;
+    }
+    destroy() {
+        this.slider.removeEventListener("beforeInit." + this.namespace);
+        this.slider.removeEventListener("beforeResize." + this.namespace);
+    }
+}
+exports.default = Breakpoints;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"5ZWDj":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+class Buttons {
+    // The namespace to be used when adding event listeners
+    namespace = "buttons";
+    // Reference to the base slider instance
+    slider;
+    // Stores the current settings of the slider
+    settings;
+    // Reference to the buttons container
+    buttonsEl = null;
+    // Stores references the event handlers in pairs containing the event identifier and the event handler
+    // in order to be able to retrieve them when they need to be removed
+    eventHandlerReferences = {};
+    // Default add-on settings
+    defaults = {
+        // Indicates whether the buttons will be created
+        buttons: true
+    };
+    constructor(slider){
+        this.slider = slider;
+        this.init();
+    }
+    init() {
+        this.slider.addEventListener("update." + this.namespace, this.updateHandler.bind(this));
+        // Select the corresponding button when the slide changes
+        this.slider.addEventListener("gotoSlide." + this.namespace, (event)=>{
+            if (typeof this.buttonsEl === "undefined") return;
+            this.buttonsEl.getElementsByClassName("sp-selected-button")[0].classList.remove("sp-selected-button");
+            this.buttonsEl.getElementsByClassName("sp-button")[event.detail.index].classList.add("sp-selected-button");
+        });
+    }
+    updateHandler() {
+        this.settings = {
+            ...this.defaults,
+            ...this.slider.settings
+        };
+        this.buttonsEl = this.slider.sliderEl.getElementsByClassName("sp-buttons")[0];
+        const totalSlides = this.slider.getTotalSlides();
+        // If there is more that one slide but the buttons weren't created yet, create the buttons.
+        // If the buttons were created but their number differs from the total number of slides, re-create the buttons.
+        // If the buttons were created but there are less than one slide, remove the buttons.s
+        if (this.settings.buttons === true && totalSlides > 1 && typeof this.buttonsEl === "undefined") this.createButtons();
+        else if (this.settings.buttons === true && typeof this.buttonsEl !== "undefined" && totalSlides !== this.buttonsEl.getElementsByClassName("sp-button").length) this.adjustButtons();
+        else if (this.settings.buttons === false && typeof this.buttonsEl !== "undefined" || totalSlides <= 1 && typeof this.buttonsEl !== "undefined") this.removeButtons();
+    }
+    // Create the buttons
+    createButtons() {
+        // Create the buttons' container
+        this.buttonsEl = document.createElement("div");
+        this.buttonsEl.classList.add("sp-buttons");
+        this.slider.sliderEl.appendChild(this.buttonsEl);
+        // Create the buttons
+        for(let i = 0; i < this.slider.getTotalSlides(); i++){
+            const buttonEl = document.createElement("div");
+            buttonEl.classList.add("sp-button");
+            this.buttonsEl.appendChild(buttonEl);
+            if (i === this.slider.selectedSlideIndex) buttonEl.classList.add("sp-selected-button");
+            const buttonClickHandler = ()=>{
+                this.slider.gotoSlide(i);
+            };
+            this.eventHandlerReferences["click.button" + i] = buttonClickHandler;
+            buttonEl.addEventListener("click", buttonClickHandler);
+        }
+        // Indicate that the slider has buttons 
+        this.slider.sliderEl.classList.add("sp-has-buttons");
+    }
+    // Re-create the buttons. This is calles when the number of slides changes.
+    adjustButtons() {
+        this.removeButtons();
+        this.createButtons();
+    }
+    // Remove the buttons
+    removeButtons() {
+        Array.from(this.buttonsEl.getElementsByClassName("sp-button")).forEach((buttonEl, index)=>{
+            const buttonClickHandler = this.eventHandlerReferences["click.button" + index];
+            buttonEl.removeEventListener("click", buttonClickHandler);
+        });
+        this.buttonsEl.remove();
+        this.slider.sliderEl.classList.remove("sp-has-buttons");
+    }
+    destroy() {
+        this.slider.removeEventListener("gotoSlide." + this.namespace);
+        this.slider.removeEventListener("update." + this.namespace);
+        this.removeButtons();
+    }
+}
+exports.default = Buttons;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"1Qi33":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+class Caption {
+    // The namespace to be used when adding event listeners
+    namespace = "caption";
+    // Reference to the base slider instance
+    slider;
+    // Stores the current settings of the slider
+    settings;
+    // Reference to the container element that will hold the caption
+    containerEl = null;
+    // The caption content/text
+    content = "";
+    // Default add-on settings
+    defaults = {
+        // Indicates whether or not the captions will be faded
+        fadeCaption: true,
+        // Sets the duration of the fade animation
+        captionFadeDuration: 500
+    };
+    constructor(slider){
+        this.slider = slider;
+        this.init();
+    }
+    init() {
+        this.slider.addEventListener("update." + this.namespace, this.updateHandler.bind(this));
+        this.slider.addEventListener("gotoSlide." + this.namespace, this.updateContent.bind(this));
+    }
+    // Create the caption container and hide the captions inside the slides
+    updateHandler() {
+        this.settings = {
+            ...this.defaults,
+            ...this.slider.settings
+        };
+        if (this.slider.sliderEl.getElementsByClassName("sp-caption").length !== 0 && this.slider.sliderEl.getElementsByClassName("sp-caption-container").length === 0) {
+            this.containerEl = document.createElement("div");
+            this.containerEl.classList.add("sp-caption-container");
+            this.slider.sliderEl.appendChild(this.containerEl);
+            // Show the caption for the selected slide
+            this.updateContent();
+        }
+        // Hide the captions inside the slides
+        Array.from(this.slider.sliderEl.getElementsByClassName("sp-caption")).forEach((element)=>{
+            element.style.display = "none";
+        });
+    }
+    // Show the caption content for the selected slide
+    updateContent() {
+        const newField = this.slider.sliderEl.getElementsByClassName("sp-slide")[this.slider.selectedSlideIndex].getElementsByClassName("sp-caption")[0];
+        const newContent = newField !== undefined ? newField.innerHTML : "";
+        if (newContent === "" && this.content === "") return;
+        // Either use a fade effect for swapping the captions or use an instant change
+        if (this.settings.fadeCaption === true) {
+            // If the previous slide had a caption, fade out that caption first and when the animation is over
+            // fade in the current caption.
+            // If the previous slide didn't have a caption, fade in the current caption directly.
+            if (this.content !== "") {
+                // If the caption container has 0 opacity when the fade out transition starts, set it
+                // to 1 because the transition wouldn't work if the initial and final values are the same,
+                // and the callback functions wouldn't fire in this case.
+                if (parseInt(this.containerEl.style.opacity) === 0) {
+                    this.containerEl.style.transition = "";
+                    this.containerEl.style.opacity = "1";
+                }
+                this.fadeTo(0, ()=>{
+                    this.content = newContent;
+                    if (newContent !== "") {
+                        this.containerEl.innerHTML = this.content;
+                        this.fadeTo(1);
+                    } else this.containerEl.innerHTML = "";
+                });
+            } else {
+                this.content = newContent;
+                this.containerEl.innerHTML = this.content;
+                this.containerEl.style.opacity = "0";
+                this.fadeTo(1);
+            }
+        } else {
+            this.content = newContent;
+            this.containerEl.innerHTML = this.content;
+        }
+    }
+    // Fade the caption container to the specified opacity
+    fadeTo(opacity, callback) {
+        // There needs to be a delay between the moment the opacity is set
+        // and the moment the transitions starts.
+        setTimeout(()=>{
+            this.containerEl.style.opacity = opacity;
+            this.containerEl.style.transition = "opacity " + this.settings.captionFadeDuration / 1000 + "s";
+        }, 1);
+        const transitionEndHandler = (event)=>{
+            if (event.target !== event.currentTarget) return;
+            this.containerEl.removeEventListener("transitionend", transitionEndHandler);
+            this.containerEl.style.transition = "";
+            if (typeof callback === "function") callback();
+        };
+        this.containerEl.addEventListener("transitionend", transitionEndHandler);
+    }
+    // Destroy the module
+    destroy() {
+        this.slider.removeEventListener("update." + this.namespace);
+        this.slider.removeEventListener("gotoSlide." + this.namespace);
+        this.containerEl.remove();
+        Array.from(this.slider.sliderEl.getElementsByClassName("sp-caption")).forEach((element)=>{
+            element.style.removeProperty("display");
+        });
+    }
+}
+exports.default = Caption;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eS2SQ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+class ConditionalImages {
+    // The namespace to be used when adding event listeners
+    namespace = "conditionalimages";
+    // Reference to the base slider instance
+    slider;
+    // Reference to the previous size
+    previousImageSize = null;
+    // Reference to the current size
+    currentImageSize = null;
+    // Indicates if the current display supports high PPI
+    isRetinaScreen = false;
+    // Default add-on settings
+    defaults = {
+        // If the slider size is below this size, the small version of the images will be used
+        smallSize: 480,
+        // If the slider size is below this size, the medium version of the images will be used
+        mediumSize: 768,
+        // If the slider size is below this size, the large version of the images will be used
+        largeSize: 1024
+    };
+    constructor(slider){
+        this.slider = slider;
+        this.init();
+    }
+    init() {
+        this.currentImageSize = this.previousImageSize = "default";
+        this.isRetinaScreen = window.devicePixelRatio >= 2;
+        this.slider.addEventListener("update." + this.namespace, this.updateHandler.bind(this));
+        this.slider.addEventListener("resize." + this.namespace, this.resizeHandler.bind(this));
+    }
+    // Loop through all the existing images and specify the original path of the image
+    // inside the 'data-default' attribute.
+    updateHandler() {
+        this.settings = {
+            ...this.defaults,
+            ...this.slider.settings
+        };
+        this.slider.slides.forEach((slide)=>{
+            const slideEl = slide.slideEl;
+            Array.from(slideEl.querySelectorAll("img:not([ data-default ])")).forEach((imageEl)=>{
+                if (imageEl.getAttribute("data-src") !== null) imageEl.setAttribute("data-default", imageEl.getAttribute("data-src"));
+                else imageEl.setAttribute("data-default", imageEl.getAttribute("src"));
+            });
+        });
+    }
+    // When the window resizes, identify the applyable image size based on the current size of the slider
+    // and apply it to all images that have a version of the image specified for this size.
+    resizeHandler() {
+        if (this.slider.slideWidth <= this.settings.smallSize) this.currentImageSize = "small";
+        else if (this.slider.slideWidth <= this.settings.mediumSize) this.currentImageSize = "medium";
+        else if (this.slider.slideWidth <= this.settings.largeSize) this.currentImageSize = "large";
+        else this.currentImageSize = "default";
+        if (this.previousImageSize !== this.currentImageSize) {
+            this.slider.slides.forEach((slide)=>{
+                const slideEl = slide.slideEl;
+                Array.from(slideEl.getElementsByTagName("img")).forEach((imageEl)=>{
+                    let imageSource = "";
+                    // Check if the current display supports high PPI and if a retina version of the current size was specified
+                    if (this.isRetinaScreen === true && imageEl.getAttribute("data-retina" + this.currentImageSize) !== null) {
+                        imageSource = imageEl.getAttribute("data-retina" + this.currentImageSize);
+                        // If the retina image was not loaded yet, replace the default image source with the one
+                        // that corresponds to the current slider size
+                        if (imageEl.getAttribute("data-retina") !== null && imageEl.getAttribute("data-retina") !== imageSource) imageEl.setAttribute("data-retina", imageSource);
+                    } else if ((this.isRetinaScreen === false || this.isRetinaScreen === true && imageEl.getAttribute("data-retina") === null) && imageEl.getAttribute("data-" + this.currentImageSize) !== null) {
+                        imageSource = imageEl.getAttribute("data-" + this.currentImageSize);
+                        // If the image is set to lazy load, replace the image source with the one
+                        // that corresponds to the current slider size
+                        if (imageEl.getAttribute("data-src") !== null && imageEl.getAttribute("data-src") !== imageSource) imageEl.setAttribute("data-src", imageSource);
+                    }
+                    // If a new image was found
+                    if (imageSource !== "") // The existence of the 'data-src' attribute indicates that the image
+                    // will be lazy loaded, so don't load the new image yet
+                    {
+                        if (imageEl.getAttribute("data-src") === null && imageEl.getAttribute("src") !== imageSource) this.loadImage(imageEl, imageSource, (newImageEl)=>{
+                            if (newImageEl.classList.contains("sp-image")) {
+                                slide.mainImageEl = newImageEl;
+                                slide.resizeMainImage(true);
+                            }
+                        });
+                    }
+                });
+            });
+            this.previousImageSize = this.currentImageSize;
+        }
+    }
+    // Replace the target image with a new image
+    loadImage(imageEl, source, callback) {
+        // Create a new image element
+        const newImageEl = new Image();
+        // Copy the class(es) and inline style
+        newImageEl.setAttribute("class", imageEl.getAttribute("class"));
+        newImageEl.setAttribute("style", imageEl.getAttribute("style"));
+        // Copy the data attributes
+        for(let keyname in imageEl.dataset)newImageEl.setAttribute("data-" + keyname, imageEl.dataset[keyname]);
+        // Copy the width and height attributes if they exist
+        if (imageEl.getAttribute("width") !== null) newImageEl.setAttribute("width", imageEl.getAttribute("width"));
+        if (imageEl.getAttribute("height") !== null) newImageEl.setAttribute("height", imageEl.getAttribute("height"));
+        if (imageEl.getAttribute("alt") !== null) newImageEl.setAttribute("alt", imageEl.getAttribute("alt"));
+        if (imageEl.getAttribute("title") !== null) newImageEl.setAttribute("title", imageEl.getAttribute("title"));
+        if (imageEl.getAttribute("data-srcset") !== null) {
+            newImageEl.setAttribute("srcset", imageEl.getAttribute("data-srcset"));
+            newImageEl.removeAttribute("data-srcset");
+        }
+        newImageEl.setAttribute("src", source);
+        // Add the new image in the same container and remove the older image
+        imageEl.after(newImageEl);
+        imageEl.remove();
+        imageEl = null;
+        if (typeof callback === "function") callback(newImageEl);
+    }
+    // Destroy the module
+    destroy() {
+        this.slider.removeEventListener("update." + this.namespace);
+        this.slider.removeEventListener("resize." + this.namespace);
+    }
+}
+exports.default = ConditionalImages;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2L4xU":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+class DeepLinking {
+    // The namespace to be used when adding event listeners
+    namespace = "deeplinking";
+    // Reference to the base slider instance
+    slider;
+    // Stores the current settings of the slider
+    settings;
+    // Default add-on settings
+    defaults = {
+        // Indicates whether the hash will be updated when a new slide is selected
+        updateHash: false
+    };
+    // Stores references the event handlers in pairs containing the event identifier and the event handler
+    // in order to be able to retrieve them when they need to be removed
+    eventHandlerReferences = {};
+    constructor(slider){
+        this.slider = slider;
+        this.init();
+    }
+    init() {
+        this.settings = {
+            ...this.defaults,
+            ...this.slider.settings
+        };
+        // Parse the initial hash
+        this.slider.addEventListener("init." + this.namespace, ()=>{
+            this.gotoHash(window.location.hash);
+        });
+        // Update the hash when a new slide is selected
+        this.slider.addEventListener("gotoSlide." + this.namespace, (event)=>{
+            if (this.settings.updateHash === true) {
+                // get the 'id' attribute of the slide
+                let slideId = this.slider.sliderEl.getElementsByClassName("sp-slide")[event.detail.index].getAttribute("id");
+                // if the slide doesn't have an 'id' attribute, use the slide index
+                if (slideId === null) slideId = event.detail.index;
+                window.location.hash = this.slider.sliderEl.getAttribute("id") + "/" + slideId;
+            }
+        });
+        const hashChangeHandler = ()=>{
+            this.gotoHash(window.location.hash);
+        };
+        this.eventHandlerReferences["hashchange"] = hashChangeHandler;
+        // Check when the hash changes and navigate to the indicated slide
+        window.addEventListener("hashchange", hashChangeHandler);
+    }
+    // Parse the hash and return the slider id and the slide id
+    parseHash(hash) {
+        if (hash !== "") {
+            // Eliminate the # symbol
+            hash = hash.substring(1);
+            // Get the specified slider id and slide id
+            const values = hash.split("/"), slideId = values.pop(), sliderId = hash.slice(0, -slideId.toString().length - 1);
+            if (this.slider.sliderEl.getAttribute("id") === sliderId) return {
+                sliderId,
+                slideId
+            };
+        }
+        return false;
+    }
+    // Navigate to the appropriate slide, based on the specified hash
+    gotoHash(hash) {
+        const parsedHash = this.parseHash(hash);
+        if (parsedHash === false) return;
+        const { slideId } = parsedHash;
+        const slideIdNumber = parseInt(slideId, 10);
+        // check if the specified slide id is a number or string
+        if (isNaN(slideIdNumber)) {
+            // get the index of the slide based on the specified id
+            const slideEl = document.getElementById(slideId);
+            const slideIndex = Array.from(this.slider.sliderEl.getElementsByClassName("sp-slide")).indexOf(slideEl);
+            if (slideIndex !== -1 && slideIndex !== this.slider.selectedSlideIndex) this.slider.gotoSlide(slideIndex);
+        } else if (slideIdNumber !== this.slider.selectedSlideIndex) this.slider.gotoSlide(slideIdNumber);
+    }
+    // Destroy the module
+    destroy() {
+        this.slider.removeEventListener("init." + this.namespace);
+        this.slider.removeEventListener("gotoSlide." + this.namespace);
+        const hashChangeHandler = this.eventHandlerReferences["hashchange"];
+        window.removeEventListener("hashchange", hashChangeHandler);
+    }
+}
+exports.default = DeepLinking;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6loan":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+class Fade {
+    // The namespace to be used when adding event listeners
+    namespace = "fade";
+    // Reference to the base slider instance
+    slider;
+    // Stores the current settings of the slider
+    settings;
+    // Reference to the original 'gotoSlide' method
+    fadeGotoSlideReference = null;
+    // Default add-on settings
+    defaults = {
+        // Indicates if fade will be used
+        fade: false,
+        // Indicates if the previous slide will be faded out (in addition to the next slide being faded in)
+        fadeOutPreviousSlide: true,
+        // Sets the duration of the fade effect
+        fadeDuration: 500
+    };
+    constructor(slider){
+        this.slider = slider;
+        this.init();
+    }
+    init() {
+        this.slider.addEventListener("update." + this.namespace, this.updateHandler.bind(this));
+    }
+    // If fade is enabled, store a reference to the original 'gotoSlide' method
+    // and then assign a new function to 'gotoSlide'.
+    updateHandler() {
+        this.settings = {
+            ...this.defaults,
+            ...this.slider.settings
+        };
+        if (this.settings.fade === true) {
+            this.fadeGotoSlideReference = this.slider.gotoSlide.bind(this.slider);
+            this.slider.gotoSlide = this.fadeToSlide.bind(this);
+        }
+    }
+    // Will replace the original 'gotoSlide' function by adding a cross-fade effect
+    // between the previous and the next slide.
+    fadeToSlide(index) {
+        if (index === this.slider.selectedSlideIndex) return;
+        // If the slides are being swiped/dragged, don't use fade, but call the original method instead.
+        // If not, which means that a new slide was selected through a button, arrows or direct call, then
+        // use fade.
+        if (this.slider.sliderEl.classList.contains("sp-swiping")) this.fadeGotoSlideReference(index);
+        else {
+            let nextSlideEl, previousSlideEl, newIndex = index;
+            // Loop through all the slides and overlap the previous and next slide,
+            // and hide the other slides.
+            this.slider.slides.forEach((slide)=>{
+                const slideIndex = slide.index, slideEl = slide.slideEl;
+                if (slideIndex === newIndex) {
+                    slideEl.style.opacity = 0;
+                    slideEl.style.left = 0;
+                    slideEl.style.top = 0;
+                    slideEl.style.zIndex = 20;
+                    slideEl.style.visibility = "visible";
+                    nextSlideEl = slideEl;
+                } else if (slideIndex === this.slider.selectedSlideIndex) {
+                    slideEl.style.opacity = 1;
+                    slideEl.style.left = 0;
+                    slideEl.style.top = 0;
+                    slideEl.style.zIndex = 10;
+                    slideEl.style.visibility = "visible";
+                    previousSlideEl = slideEl;
+                } else {
+                    slideEl.style.opacity = 1;
+                    slideEl.style.visibility = "hidden";
+                    slideEl.style.removeProperty("z-index");
+                }
+            });
+            // Set the new indexes for the previous and selected slides
+            this.slider.previousSlideIndex = this.slider.selectedSlideIndex;
+            this.slider.selectedSlideIndex = index;
+            // Re-assign the 'sp-selected' class to the currently selected slide
+            this.slider.slidesEl.getElementsByClassName("sp-selected")[0].classList.remove("sp-selected");
+            this.slider.slidesEl.getElementsByClassName("sp-slide")[this.slider.selectedSlideIndex].classList.add("sp-selected");
+            // Rearrange the slides if the slider is loop-able
+            if (this.settings.loop === true) this.slider.updateSlidesOrder();
+            // Move the slides container so that the cross-fading slides (which now have the top and left
+            // position set to 0) become visible.
+            this.slider.moveTo(0, true);
+            // Fade in the selected slide
+            this.setSlideOpacityTo(nextSlideEl, 1, ()=>{
+                // This flag will indicate if all the fade transitions are complete,
+                // in case there are multiple running at the same time, which happens
+                // when the slides are navigated very quickly
+                let allTransitionsComplete = true;
+                // Go through all the slides and check if there is at least one slide 
+                // that is still transitioning.
+                this.slider.slides.forEach((slide)=>{
+                    if (slide.slideEl.getAttribute("data-transitioning") !== null) allTransitionsComplete = false;
+                });
+                if (allTransitionsComplete === true) {
+                    // After all the transitions are complete, make all the slides visible again
+                    this.slider.slides.forEach((slide)=>{
+                        const slideEl = slide.slideEl;
+                        slideEl.style.removeProperty("visibility");
+                        slideEl.style.removeProperty("opacity");
+                        slideEl.style.removeProperty("z-index");
+                    });
+                    // Reset the position of the slides and slides container
+                    this.slider.resetSlidesPosition();
+                }
+                // Fire the 'gotoSlideComplete' event
+                this.slider.dispatchEvent("gotoSlideComplete", {
+                    index: index,
+                    previousIndex: this.slider.previousSlideIndex
+                });
+            });
+            // Fade out the previous slide, if indicated, in addition to fading in the next slide
+            if (this.settings.fadeOutPreviousSlide === true) this.setSlideOpacityTo(previousSlideEl, 0);
+            if (this.settings.autoHeight === true) this.slider.resizeHeight();
+            // Fire the 'gotoSlide' event
+            this.slider.dispatchEvent("gotoSlide", {
+                index: index,
+                previousIndex: this.slider.previousSlideIndex
+            });
+        }
+    }
+    // Fade the target slide to the specified opacity (0 or 1)
+    setSlideOpacityTo(target, opacity, callback) {
+        // apply the attribute only to slides that fade in
+        if (opacity === 1) target.setAttribute("data-transitioning", true);
+        // There needs to be a delay between the moment the opacity is set
+        // and the moment the transitions starts.
+        setTimeout(()=>{
+            target.style.opacity = opacity;
+            target.style.transition = "opacity " + this.settings.fadeDuration / 1000 + "s";
+        }, 100);
+        const transitionEndHandler = (event)=>{
+            if (event.target !== event.currentTarget) return;
+            target.removeEventListener("transitionend", transitionEndHandler);
+            target.removeAttribute("data-transitioning");
+            target.style.removeProperty("transition");
+            if (typeof callback === "function") callback();
+        };
+        target.addEventListener("transitionend", transitionEndHandler);
+    }
+    // Destroy the module
+    destroy() {
+        this.slider.removeEventListener("update." + this.namespace);
+        if (this.fadeGotoSlideReference !== null) this.slider.gotoSlide = this.fadeGotoSlideReference;
+    }
+}
+exports.default = Fade;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"bVqE5":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+class Fullscreen {
+    // The namespace to be used when adding event listeners
+    namespace = "fullscreen";
+    // Reference to the base slider instance
+    slider;
+    // Stores the current settings of the slider
+    settings;
+    // Indicates whether the slider is currently in fullscreen mode
+    isFullscreen = false;
+    // Reference to the fullscreen button
+    fullscreenButtonEl = null;
+    // Reference to a set of settings that influence the slider's size
+    // before it goes fullscreen
+    sizeBeforeFullscreen = {};
+    // Default add-on settings
+    defaults = {
+        // Indicates whether the fullscreen button is enabled
+        fullscreen: false,
+        // Indicates whether the button will fade in only on hover
+        fadeFullscreen: true
+    };
+    // Stores references the event handlers in pairs containing the event identifier and the event handler
+    // in order to be able to retrieve them when they need to be removed
+    eventHandlerReferences = {};
+    constructor(slider){
+        this.slider = slider;
+        this.init();
+    }
+    init() {
+        if (document.fullscreenEnabled === false) return;
+        this.slider.addEventListener("update." + this.namespace, this.updateHandler.bind(this));
+    }
+    // Create or remove the fullscreen button depending on the value of the 'fullscreen' option
+    updateHandler() {
+        this.settings = {
+            ...this.defaults,
+            ...this.slider.settings
+        };
+        if (this.settings.fullscreen === true && this.fullscreenButtonEl === null) this.add();
+        else if (this.settings.fullscreen === false && this.fullscreenButtonEl !== null) this.remove();
+        if (this.settings.fullscreen === true) {
+            if (this.settings.fadeFullscreen === true) this.fullscreenButtonEl.classList.add("sp-fade-fullscreen");
+            else if (this.settings.fadeFullscreen === false) this.fullscreenButtonEl.classList.remove("sp-fade-fullscreen");
+        }
+    }
+    // Create the fullscreen button
+    add() {
+        this.fullscreenButtonEl = document.createElement("div");
+        this.fullscreenButtonEl.classList.add("sp-fullscreen-button");
+        this.slider.sliderEl.appendChild(this.fullscreenButtonEl);
+        const fullscreenButtonClickHandlerReference = ()=>{
+            this.fullscreenButtonClickHandler();
+        };
+        this.eventHandlerReferences["click.fullscreenButton"] = fullscreenButtonClickHandlerReference;
+        this.fullscreenButtonEl.addEventListener("click", fullscreenButtonClickHandlerReference);
+        const fullscreenChangeHandlerReference = ()=>{
+            this.fullscreenChangeHandler();
+        };
+        this.eventHandlerReferences["fullscreenchange"] = fullscreenChangeHandlerReference;
+        document.addEventListener("fullscreenchange", fullscreenChangeHandlerReference);
+    }
+    // Remove the fullscreen button
+    remove() {
+        if (this.fullscreenButtonEl !== null) {
+            const fullscreenButtonClickHandlerReference = this.eventHandlerReferences["click.fullscreenButton"];
+            this.fullscreenButtonEl.removeEventListener("click", fullscreenButtonClickHandlerReference);
+            this.fullscreenButtonEl.remove();
+            this.fullscreenButtonEl = null;
+            const fullscreenChangeHandlerReference = this.eventHandlerReferences["fullscreenchange"];
+            document.removeEventListener("fullscreenchange", fullscreenChangeHandlerReference);
+        }
+    }
+    // When the fullscreen button is clicked, put the slider into fullscreen mode, and
+    // take it out of the fullscreen mode when it's clicked again.
+    fullscreenButtonClickHandler() {
+        if (this.isFullscreen === false) this.slider.sliderEl.requestFullscreen();
+        else document.exitFullscreen();
+    }
+    // This will be called whenever the fullscreen mode changes.
+    // If the slider is in fullscreen mode, set it to 'full window', and if it's
+    // not in fullscreen mode anymore, set it back to the original size.
+    fullscreenChangeHandler() {
+        this.isFullscreen = document.fullscreenElement ? true : false;
+        if (this.isFullscreen === true) {
+            this.sizeBeforeFullscreen = {
+                forceSize: this.settings.forceSize,
+                autoHeight: this.settings.autoHeight
+            };
+            this.slider.sliderEl.classList.add("sp-fullscreen");
+            this.slider.settings.forceSize = "fullWindow";
+            this.slider.settings.autoHeight = false;
+        } else {
+            this.slider.sliderEl.style.margin = "";
+            this.slider.sliderEl.classList.remove("sp-fullscreen");
+            this.slider.settings.forceSize = this.sizeBeforeFullscreen.forceSize;
+            this.slider.settings.autoHeight = this.sizeBeforeFullscreen.autoHeight;
+        }
+        this.slider.resize();
+    }
+    // Destroy the module
+    destroy() {
+        this.slider.removeEventListener("update." + this.namespace);
+        this.remove();
+    }
+}
+exports.default = Fullscreen;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"flhBN":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+class Keyboard {
+    // The namespace to be used when adding event listeners
+    namespace = "keyboards";
+    // Reference to the base slider instance
+    slider;
+    // Stores the current settings of the slider
+    settings;
+    // Indicates whether the keyboard navigation is enabled
+    isEnabled = false;
+    // Stores references the event handlers in pairs containing the event identifier and the event handler
+    // in order to be able to retrieve them when they need to be removed
+    eventHandlerReferences = {};
+    // Default add-on settings
+    defaults = {
+        // Indicates whether keyboard navigation will be enabled
+        keyboard: true,
+        // Indicates whether the slider will respond to keyboard input only when
+        // the slider is in focus.
+        keyboardOnlyOnFocus: false
+    };
+    constructor(slider){
+        this.slider = slider;
+        this.init();
+    }
+    init() {
+        this.slider.addEventListener("update." + this.namespace, this.updateHandler.bind(this));
+    }
+    updateHandler() {
+        this.settings = {
+            ...this.defaults,
+            ...this.slider.settings
+        };
+        if (this.settings.keyboard === true && this.isEnabled === false) {
+            this.isEnabled = true;
+            this.enable();
+        }
+        if (this.settings.keyboard === false && this.isEnabled === true) {
+            this.isEnabled = false;
+            this.disable();
+        }
+    }
+    enable() {
+        let hasFocus = false;
+        // Detect when the slide is in focus and when it's not, and, optionally, make it
+        // responsive to keyboard input only when it's in focus
+        const focusHandler = ()=>{
+            hasFocus = true;
+        };
+        this.eventHandlerReferences["focus"] = focusHandler;
+        this.slider.sliderEl.addEventListener("focus", focusHandler);
+        const blurHandler = ()=>{
+            hasFocus = false;
+        };
+        this.eventHandlerReferences["blur"] = blurHandler;
+        this.slider.sliderEl.addEventListener("blur", blurHandler);
+        const keydownHandler = (event)=>{
+            if (this.settings.keyboardOnlyOnFocus === true && hasFocus === false) return;
+            // If the left arrow key is pressed, go to the previous slide.
+            // If the right arrow key is pressed, go to the next slide.
+            // If the Enter key is pressed, open the link attached to the main slide image.
+            if (event.which === 37) this.slider.previousSlide();
+            else if (event.which === 39) this.slider.nextSlide();
+            else if (event.which === 13) {
+                const link = this.slider.sliderEl.getElementsByClassName("sp-slide")[this.slider.selectedSlideIndex].querySelector(".sp-image-container > a");
+                if (link !== null) link.click();
+            }
+        };
+        this.eventHandlerReferences["keydown"] = keydownHandler;
+        document.addEventListener("keydown", keydownHandler);
+    }
+    disable() {
+        this.slider.sliderEl.removeEventListener("focus", this.eventHandlerReferences["focus"]);
+        this.slider.sliderEl.removeEventListener("blur", this.eventHandlerReferences["blur"]);
+        document.removeEventListener("keydown", this.eventHandlerReferences["keydown"]);
+    }
+    // Destroy the module
+    destroy() {
+        this.slider.removeEventListener("update." + this.namespace);
+        this.disable();
+    }
+}
+exports.default = Keyboard;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"8uXiS":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _layerJs = require("./layer.js");
+var _layerJsDefault = parcelHelpers.interopDefault(_layerJs);
+class Layers {
+    // The namespace to be used when adding event listeners
+    namespace = "layers";
+    // Reference to the base slider instance
+    slider;
+    // Stores the current settings of the slider
+    settings;
+    // Stores the Layer instances
+    layers = [];
+    // Stores layers that are animated
+    animatedLayers = [];
+    // Reference to the original 'gotoSlide' method
+    layersGotoSlideReference = null;
+    // Reference to the timer that will delay the overriding
+    // of the 'gotoSlide' method
+    waitForLayersTimer = null;
+    // Default add-on settings
+    defaults = {
+        // Indicates whether the slider will wait for the layers to disappear before
+        // going to a new slide
+        waitForLayers: false,
+        // Indicates whether the layers will be scaled automatically
+        autoScaleLayers: true,
+        // Sets a reference width which will be compared to the current slider width
+        // in order to determine how much the layers need to scale down. By default,
+        // the reference width will be equal to the slide width. However, if the slide width
+        // is set to a percentage value, then it's necessary to set a specific value for 'autoScaleReference'.
+        autoScaleReference: -1
+    };
+    constructor(slider){
+        this.slider = slider;
+        this.init();
+    }
+    init() {
+        this.settings = {
+            ...this.defaults,
+            ...this.slider.settings
+        };
+        this.slider.addEventListener("update." + this.namespace, this.updateHandler.bind(this));
+        this.slider.addEventListener("resize." + this.namespace, this.resizeHandler.bind(this));
+        this.slider.addEventListener("gotoSlide." + this.namespace, this.gotoSlideHandler.bind(this));
+    }
+    // Loop through the slides and initialize all layers
+    updateHandler() {
+        this.settings = {
+            ...this.defaults,
+            ...this.slider.settings
+        };
+        this.slider.slides.forEach((slide, slideIndex)=>{
+            let slideEl = slide.slideEl;
+            // Initialize the layers
+            Array.from(slideEl.querySelectorAll(".sp-layer:not([data-layer-init])")).forEach((layerEl)=>{
+                let layer = new (0, _layerJsDefault.default)(layerEl);
+                this.layers.push({
+                    layer: layer,
+                    slideIndex: slideIndex
+                });
+                if (layerEl.classList.contains("sp-static") === false) this.animatedLayers.push({
+                    layer: layer,
+                    slideIndex: slideIndex
+                });
+            });
+        });
+        // If the 'waitForLayers' option is enabled, the slider will not move to another slide
+        // until all the layers from the previous slide will be hidden. To achieve this,
+        // replace the current 'gotoSlide' function with another function that will include the 
+        // required functionality.
+        // 
+        // Since the 'gotoSlide' method might be overridden by other modules as well, delay this
+        // override to make sure it's the last override.
+        if (this.settings.waitForLayers === true && this.layersGotoSlideReference === null) {
+            clearTimeout(this.waitForLayersTimer);
+            this.waitForLayersTimer = setTimeout(()=>{
+                this.layersGotoSlideReference = this.slider.gotoSlide.bind(this.slider);
+                this.slider.gotoSlide = this.layersGotoSlide.bind(this);
+            }, 1);
+        }
+        // Show the layers for the initial slide
+        // Delay the call in order to make sure the layers
+        // are scaled properly before displaying them
+        setTimeout(()=>{
+            this.showLayersForSlide(this.slider.selectedSlideIndex);
+        }, 1);
+    }
+    // When the slider resizes, try to scale down the layers proportionally. The automatic scaling
+    // will make use of an option, 'autoScaleReference', by comparing the current width of the slider
+    // with the reference width. So, if the reference width is 1000 pixels and the current width is
+    // 500 pixels, it means that the layers will be scaled down to 50% of their size.
+    resizeHandler() {
+        let autoScaleReference, useAutoScale = this.settings.autoScaleLayers, scaleRatio;
+        if (this.settings.autoScaleLayers === false) return;
+        // If there isn't a reference for how the layers should scale down automatically, use the 'width'
+        // option as a reference, unless the width was set to a percentage. If there isn't a set reference and
+        // the width was set to a percentage, auto scaling will not be used because it's not possible to
+        // calculate how much should the layers scale.
+        if (this.settings.autoScaleReference === -1) {
+            if (typeof this.settings.width === "string" && this.settings.width.indexOf("%") !== -1) useAutoScale = false;
+            else autoScaleReference = parseInt(this.settings.width, 10);
+        } else autoScaleReference = this.settings.autoScaleReference;
+        if (useAutoScale === true && this.slider.slideWidth < autoScaleReference) scaleRatio = this.slider.slideWidth / autoScaleReference;
+        else scaleRatio = 1;
+        this.layers.forEach((layerData)=>{
+            layerData.layer.scale(scaleRatio);
+        });
+    }
+    // Replace the 'gotoSlide' method with this one, which makes it possible to 
+    // change the slide only after the layers from the previous slide are hidden.
+    layersGotoSlide(index) {
+        let animatedLayers = this.animatedLayers.filter((layerData)=>layerData.slideIndex === this.slider.selectedSlideIndex);
+        // If the slider is dragged, don't wait for the layer to hide
+        if (this.slider.sliderEl.classList.contains("sp-swiping") || animatedLayers.length === 0) this.layersGotoSlideReference(index);
+        else {
+            const hideLayersForSlideCompleteHandler = ()=>{
+                this.slider.removeEventListener("hideLayersForSlideComplete", hideLayersForSlideCompleteHandler);
+                this.layersGotoSlideReference(index);
+            };
+            this.slider.addEventListener("hideLayersForSlideComplete", hideLayersForSlideCompleteHandler);
+            this.hideLayersForSlide(this.slider.selectedSlideIndex);
+        }
+    }
+    // When a new slide is selected, hide the layers from the previous slide
+    // and show the layers from the current slide.
+    gotoSlideHandler() {
+        if (this.slider.previousSlideIndex !== this.slider.selectedSlideIndex) this.hideLayersForSlide(this.slider.previousSlideIndex);
+        this.showLayersForSlide(this.slider.selectedSlideIndex);
+    }
+    // Show the animated layers from the slide at the specified index,
+    // and fire an event when all the layers from the slide become visible.
+    showLayersForSlide(index) {
+        let animatedLayers = this.animatedLayers.filter((layerData)=>layerData.slideIndex === index), layerCounter = 0;
+        if (animatedLayers.length === 0) return;
+        animatedLayers.forEach((layerData, index)=>{
+            const layer = layerData.layer;
+            // If the layer is already visible, increment the counter directly, else wait 
+            // for the layer's showing animation to complete.
+            if (layer.isVisible() === true) {
+                layerCounter++;
+                if (layerCounter === animatedLayers.length) this.slider.dispatchEvent("showLayersForSlideComplete", {
+                    index: index
+                });
+            } else layer.show(()=>{
+                layerCounter++;
+                if (layerCounter === animatedLayers.length) this.slider.dispatchEvent("showLayersForSlideComplete", {
+                    index: index
+                });
+            });
+        });
+    }
+    // Hide the animated layers from the slide at the specified index,
+    // and fire an event when all the layers from the slide become invisible.
+    hideLayersForSlide(index) {
+        let animatedLayers = this.animatedLayers.filter((layerData)=>layerData.slideIndex === index), layerCounter = 0;
+        if (typeof animatedLayers === "undefined") return;
+        animatedLayers.forEach((layerData, index)=>{
+            const layer = layerData.layer;
+            // If the layer is already invisible, increment the counter directly, else wait 
+            // for the layer's hiding animation to complete.
+            if (layer.isVisible() === false) {
+                layerCounter++;
+                if (layerCounter === animatedLayers.length) this.slider.dispatchEvent("hideLayersForSlideComplete", {
+                    index: index
+                });
+            } else layer.hide(()=>{
+                layerCounter++;
+                if (layerCounter === animatedLayers.length) this.slider.dispatchEvent("hideLayersForSlideComplete", {
+                    index: index
+                });
+            });
+        });
+    }
+    // Destroy the module
+    destroy() {
+        this.slider.removeEventListener("update." + this.namespace);
+        this.slider.removeEventListener("resize." + this.namespace);
+        this.slider.removeEventListener("gotoSlide." + this.namespace);
+        this.slider.removeEventListener("hideLayersForSlideComplete");
+        this.layers.forEach((layer)=>{
+            layer.destroy();
+        });
+    }
+}
+exports.default = Layers;
+
+},{"./layer.js":"4Ztva","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4Ztva":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _utilJs = require("../../helpers/util.js");
+class Layer {
+    // Reference to the layer jQuery element
+    layerEl;
+    // Indicates whether a layer is currently visible or hidden
+    visible = false;
+    // Indicates whether the layer was styled
+    styled = false;
+    // Holds the data attributes added to the layer
+    data = null;
+    // Indicates the layer's reference point (topLeft, bottomLeft, topRight or bottomRight)
+    position = null;
+    // Indicates which CSS property (left or right) will be used for positioning the layer 
+    horizontalProperty = null;
+    // Indicates which CSS property (top or bottom) will be used for positioning the layer 
+    verticalProperty = null;
+    // Indicates the value of the horizontal position
+    horizontalPosition = null;
+    // Indicates the value of the vertical position
+    verticalPosition = null;
+    // Indicates how much the layers needs to be scaled
+    scaleRatio = 1;
+    // Reference to the timer that will be used to hide/show the layers
+    delayTimer = null;
+    // Reference to the timer that will be used to hide the layers automatically after a given time interval
+    stayTimer = null;
+    constructor(layerEl){
+        this.layerEl = layerEl;
+        this.init();
+    }
+    // Initialize the layers
+    init() {
+        this.layerEl.setAttribute("data-layer-init", true);
+        if (this.layerEl.classList.contains("sp-static")) this.setStyle();
+        else this.layerEl.style.visibility = "hidden";
+    }
+    // Set the size and position of the layer
+    setStyle() {
+        this.styled = true;
+        // Get the data attributes specified in HTML
+        this.data = this.layerEl.dataset;
+        if (typeof this.data.width !== "undefined") this.layerEl.style.width = (0, _utilJs.resolveUnit)(this.data.width);
+        if (typeof this.data.height !== "undefined") this.layerEl.style.height = (0, _utilJs.resolveUnit)(this.data.height);
+        if (typeof this.data.depth !== "undefined") this.layerEl.style.zIndex = this.data.depth;
+        this.position = this.data.position ? this.data.position.toLowerCase() : "topleft";
+        if (this.position.indexOf("right") !== -1) this.horizontalProperty = "right";
+        else if (this.position.indexOf("left") !== -1) this.horizontalProperty = "left";
+        else this.horizontalProperty = "center";
+        if (this.position.indexOf("bottom") !== -1) this.verticalProperty = "bottom";
+        else if (this.position.indexOf("top") !== -1) this.verticalProperty = "top";
+        else this.verticalProperty = "center";
+        this.setPosition();
+        this.scale(this.scaleRatio);
+    }
+    // Set the position of the layer
+    setPosition() {
+        let inlineStyle = this.layerEl.getAttribute("style");
+        this.horizontalPosition = typeof this.data.horizontal !== "undefined" ? this.data.horizontal : 0;
+        this.verticalPosition = typeof this.data.vertical !== "undefined" ? this.data.vertical : 0;
+        // Set the horizontal position of the layer based on the data set
+        if (this.horizontalProperty === "center") {
+            // prevent content wrapping while setting the width
+            if (this.layerEl.tagName !== "IMG" && (typeof inlineStyle === "undefined" || typeof inlineStyle !== "undefined" && inlineStyle.indexOf("width") === -1)) {
+                this.layerEl.style.whiteSpace = "nowrap";
+                this.layerEl.style.width = (0, _utilJs.resolveUnit)(this.layerEl.offsetWidth);
+            }
+            this.layerEl.style.marginLeft = "auto";
+            this.layerEl.style.marginRight = "auto";
+            this.layerEl.style.left = (0, _utilJs.resolveUnit)(this.horizontalPosition);
+            this.layerEl.style.right = 0;
+        } else this.layerEl.style[this.horizontalProperty] = (0, _utilJs.resolveUnit)(this.horizontalPosition);
+        // Set the vertical position of the layer based on the data set
+        if (this.verticalProperty === "center") {
+            // prevent content wrapping while setting the height
+            if (this.layerEl.tagName !== "IMG" && (typeof inlineStyle === "undefined" || typeof inlineStyle !== "undefined" && inlineStyle.indexOf("height") === -1)) {
+                this.layerEl.style.whiteSpace = "nowrap";
+                this.layerEl.style.height = (0, _utilJs.resolveUnit)(this.layerEl.offsetHeight);
+            }
+            this.layerEl.style.marginTop = "auto";
+            this.layerEl.style.marginBottom = "auto";
+            this.layerEl.style.top = (0, _utilJs.resolveUnit)(this.verticalPosition);
+            this.layerEl.style.bottom = 0;
+        } else this.layerEl.style[this.verticalProperty] = (0, _utilJs.resolveUnit)(this.verticalPosition);
+    }
+    // Scale the layer
+    scale(ratio) {
+        // Return if the layer is set to be unscalable
+        if (this.layerEl.classList.contains("sp-no-scale")) return;
+        // Store the ratio (even if the layer is not ready to be scaled yet)
+        this.scaleRatio = ratio;
+        // Return if the layer is not styled yet
+        if (this.styled === false) return;
+        let horizontalProperty = this.horizontalProperty === "center" ? "left" : this.horizontalProperty, verticalProperty = this.verticalProperty === "center" ? "top" : this.verticalProperty, css = {};
+        // Apply the scaling
+        css["transformOrigin"] = this.horizontalProperty + " " + this.verticalProperty;
+        css["transform"] = "scale(" + this.scaleRatio + ")";
+        // If the position is not set to a percentage value, apply the scaling to the position
+        if (isNaN(this.horizontalPosition) === false || this.horizontalPosition.indexOf("px") !== -1) css[horizontalProperty] = (0, _utilJs.resolveUnit)(this.horizontalPosition * this.scaleRatio);
+        // If the position is not set to a percentage value, apply the scaling to the position
+        if (isNaN(this.verticalPosition) === false || this.verticalPosition.indexOf("px") !== -1) css[verticalProperty] = (0, _utilJs.resolveUnit)(this.verticalPosition * this.scaleRatio);
+        // If the width or height is set to a percentage value, increase the percentage in order to
+        // maintain the same layer to slide proportions. This is necessary because otherwise the scaling
+        // transform would minimize the layers more than intended.
+        if (typeof this.data.width === "string" && this.data.width.indexOf("%") !== -1) css.width = (parseInt(this.data.width, 10) / this.scaleRatio).toString() + "%";
+        if (typeof this.data.height === "string" && this.data.height.indexOf("%") !== -1) css.height = (parseInt(this.data.height, 10) / this.scaleRatio).toString() + "%";
+        for(let property in css)this.layerEl.style[property] = css[property];
+    }
+    // Show the layer
+    show(callback) {
+        if (this.visible === true) return;
+        this.visible = true;
+        // First, style the layer if it's not already styled
+        if (this.styled === false) this.setStyle();
+        let offset = typeof this.data.showOffset !== "undefined" ? this.data.showOffset : 50, duration = typeof this.data.showDuration !== "undefined" ? this.data.showDuration / 1000 : 0.4, delay = typeof this.data.showDelay !== "undefined" ? this.data.showDelay : 10, stayDuration = typeof this.data.stayDuration !== "undefined" ? parseInt(this.data.stayDuration, 10) : -1;
+        let start = {
+            "opacity": 0,
+            "visibility": "visible"
+        }, target = {
+            "opacity": 1
+        }, transformValues = "";
+        start["transform"] = "scale(" + this.scaleRatio + ")";
+        target["transform"] = "scale(" + this.scaleRatio + ")";
+        target["transition"] = "opacity " + duration + "s";
+        if (typeof this.data.showTransition !== "undefined") {
+            if (this.data.showTransition === "left") transformValues = offset + "px, 0";
+            else if (this.data.showTransition === "right") transformValues = "-" + offset + "px, 0";
+            else if (this.data.showTransition === "up") transformValues = "0, " + offset + "px";
+            else if (this.data.showTransition === "down") transformValues = "0, -" + offset + "px";
+            start["transform"] += " translate3d(" + transformValues + ", 0)";
+            target["transform"] += " translate3d(0, 0, 0)";
+            target["transition"] += ", transform " + duration + "s";
+        }
+        const transitionEndHandler = (event)=>{
+            if (event.target !== event.currentTarget) return;
+            this.layerEl.removeEventListener("transitionend", transitionEndHandler);
+            this.layerEl.style.transition = "";
+            // Hide the layer after a given time interval
+            if (stayDuration !== -1) this.stayTimer = setTimeout(function() {
+                this.hide();
+                this.stayTimer = null;
+            }, stayDuration);
+            if (typeof callback !== "undefined") callback();
+        };
+        // Listen when the layer animation is complete
+        this.layerEl.addEventListener("transitionend", transitionEndHandler);
+        for(let property in start)this.layerEl.style[property] = start[property];
+        this.delayTimer = setTimeout(()=>{
+            for(let property in target)this.layerEl.style[property] = target[property];
+        }, delay);
+    }
+    // Hide the layer
+    hide(callback) {
+        if (this.visible === false) return;
+        let offset = typeof this.data.hideOffset !== "undefined" ? this.data.hideOffset : 50, duration = typeof this.data.hideDuration !== "undefined" ? this.data.hideDuration / 1000 : 0.4, delay = typeof this.data.hideDelay !== "undefined" ? this.data.hideDelay : 10;
+        this.visible = false;
+        // If the layer is hidden before it hides automatically, clear the timer
+        if (this.stayTimer !== null) clearTimeout(this.stayTimer);
+        // Animate the layers with CSS3 or with JavaScript
+        let transformValues = "", target = {
+            "opacity": 0
+        };
+        target["transform"] = "scale(" + this.scaleRatio + ")";
+        target["transition"] = "opacity " + duration + "s";
+        if (typeof this.data.hideTransition !== "undefined") {
+            if (this.data.hideTransition === "left") transformValues = "-" + offset + "px, 0";
+            else if (this.data.hideTransition === "right") transformValues = offset + "px, 0";
+            else if (this.data.hideTransition === "up") transformValues = "0, -" + offset + "px";
+            else if (this.data.hideTransition === "down") transformValues = "0, " + offset + "px";
+            target["transform"] += " translate3d(" + transformValues + ", 0)";
+            target["transition"] += ", transform " + duration + "s";
+        }
+        // Listen when the layer animation is complete
+        const transitionEndHandler = (event)=>{
+            if (event.target !== event.currentTarget) return;
+            this.layerEl.removeEventListener("transitionend", transitionEndHandler);
+            this.layerEl.style.removeProperty("transition");
+            // Hide the layer after transition
+            if (this.visible === false) this.layerEl.style.visibility = "hidden";
+            if (typeof callback !== "undefined") callback();
+        };
+        this.layerEl.addEventListener("transitionend", transitionEndHandler);
+        this.delayTimer = setTimeout(()=>{
+            for(let property in target)this.layerEl.style[property] = target[property];
+        }, delay);
+    }
+    isVisible() {
+        if (this.visible === false || this.layerEl.offsetParent === null) return false;
+        return true;
+    }
+    // Destroy the layer
+    destroy() {
+        this.layerEl.removeAttribute("style");
+        this.layerEl.removeAttribute("data-layer-init");
+        clearTimeout(this.delayTimer);
+        clearTimeout(this.stayTimer);
+        this.delayTimer = null;
+        this.stayTimer = null;
+    }
+}
+exports.default = Layer;
+
+},{"../../helpers/util.js":"iNkcr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kriZW":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+class LazyLoading {
+    // The namespace to be used when adding event listeners
+    namespace = "lazyloading";
+    // Reference to the base slider instance
+    slider;
+    // Indicates whether 
+    allowLazyLoadingCheck = true;
+    constructor(slider){
+        this.slider = slider;
+        this.init();
+    }
+    init() {
+        // The 'resize' event is fired after every update, so it's possible to use it for checking
+        // if the update made new slides become visible
+        // 
+        // Also, resizing the slider might make new slides or thumbnails visible
+        this.slider.addEventListener("resize." + this.namespace, this.resizeHandler.bind(this));
+        // Check visible images when a new slide is selected
+        this.slider.addEventListener("gotoSlide." + this.namespace, this.checkAndLoadVisibleImages.bind(this));
+        // Check visible thumbnail images when the thumbnails are updated because new thumbnail
+        // might have been added or the settings might have been changed so that more thumbnail
+        // images become visible
+        // 
+        // Also, check visible thumbnail images after the thumbnails have moved because new thumbnails might
+        // have become visible
+        if (typeof this.slider.thumbnails !== "undefined") {
+            this.slider.thumbnails.addEventListener("thumbnailsUpdate." + this.namespace, this.checkAndLoadVisibleThumbnailImages.bind(this));
+            this.slider.thumbnails.addEventListener("thumbnailsMoveComplete." + this.namespace, this.checkAndLoadVisibleThumbnailImages.bind(this));
+        }
+    }
+    resizeHandler() {
+        if (this.allowLazyLoadingCheck === false) return;
+        this.allowLazyLoadingCheck = false;
+        this.checkAndLoadVisibleImages();
+        if (this.slider.sliderEl.getElementsByClassName("sp-thumbnail").length !== 0) this.checkAndLoadVisibleThumbnailImages();
+        // Use a timer to deffer the loading of images in order to prevent too many
+        // checking attempts
+        setTimeout(()=>{
+            this.allowLazyLoadingCheck = true;
+        }, 500);
+    }
+    // Check visible slides and load their images
+    checkAndLoadVisibleImages() {
+        if (this.slider.sliderEl.querySelectorAll(".sp-slide:not([ data-loaded ])").length === 0) return;
+        const sizeProperty = this.slider.settings.orientation === "horizontal" ? "width" : "height";
+        const positionProperty = this.slider.settings.orientation === "horizontal" ? "left" : "top";
+        const middleSlidePosition = parseInt((this.slider.slidesOrder.length - 1) / 2, 10);
+        let slidesSize = 0, averageSlideSize = 0;
+        if (this.slider.settings.autoSlideSize === true) {
+            const firstSlide = this.slider.slidesEl.getElementsByClassName("sp-slide")[this.slider.slidesOrder[0]], firstSlidePosition = parseInt(firstSlide.style[positionProperty], 10), lastSlide = this.slider.slidesEl.getElementsByClassName("sp-slide")[this.slider.slidesOrder[this.slider.slidesOrder.length - 1]], lastSlidePosition = parseInt(lastSlide.style[positionProperty], 10) + (this.slider.settings.rightToLeft === true && this.slider.settings.orientation === "horizontal" ? -1 : 1) * parseInt(window.getComputedStyle(lastSlide)[sizeProperty], 10);
+            slidesSize = Math.abs(lastSlidePosition - firstSlidePosition);
+            averageSlideSize = Math.round(slidesSize / this.slider.slides.length);
+        } else {
+            slidesSize = ((this.slider.settings.orientation === "horizontal" ? this.slider.slideWidth : this.slider.slideHeight) + this.slider.settings.slideDistance) * this.slider.slides.length - this.slider.settings.slideDistance;
+            averageSlideSize = this.slider.settings.orientation === "horizontal" ? this.slider.slideWidth : this.slider.slideHeight;
+        }
+        // Use either the middle position or the index of the selected slide as a reference, depending on
+        // whether the slider is loop-able
+        const referencePosition = this.slider.settings.loop === true ? middleSlidePosition : this.slider.selectedSlideIndex, // Calculate how many slides are visible at the sides of the selected slide
+        visibleOnSides = Math.ceil((parseInt(this.slider.slidesMaskEl.style[sizeProperty], 10) - averageSlideSize) / 2 / averageSlideSize), // Calculate the indexes of the first and last slide that will be checked
+        from = this.slider.settings.centerSelectedSlide === true ? Math.max(referencePosition - visibleOnSides - 1, 0) : Math.max(referencePosition - 1, 0), to = this.slider.settings.centerSelectedSlide === true ? Math.min(referencePosition + visibleOnSides + 1, this.slider.getTotalSlides() - 1) : Math.min(referencePosition + visibleOnSides * 2 + 1, this.slider.getTotalSlides() - 1), // Get all the slides that need to be checked
+        slidesToCheck = this.slider.slidesOrder.slice(from, to + 1);
+        // Loop through the selected slides and if the slide is not marked as having
+        // been loaded yet, loop through its images and load them.
+        slidesToCheck.forEach((slideIndex)=>{
+            const slide = this.slider.slides[slideIndex], slideEl = slide.slideEl;
+            if (slideEl.getAttribute("data-loaded") === null) {
+                slideEl.setAttribute("data-loaded", true);
+                Array.from(slideEl.querySelectorAll("img[ data-src ]")).forEach((imgEl)=>{
+                    this.loadImage(imgEl, (newImageEl)=>{
+                        if (newImageEl.classList.contains("sp-image")) {
+                            slide.mainImageEl = newImageEl;
+                            slide.resizeMainImage(true);
+                        }
+                    });
+                });
+            }
+        });
+    }
+    // Check visible thumbnails and load their images
+    checkAndLoadVisibleThumbnailImages() {
+        if (this.slider.sliderEl.querySelectorAll(".sp-thumbnail-container:not([ data-loaded ])").length === 0) return;
+        const thumbnailSize = this.slider.thumbnails.thumbnailsSize / this.slider.thumbnails.thumbnails.length, // Calculate the indexes of the first and last thumbnail that will be checked
+        from = Math.floor(Math.abs(this.slider.thumbnails.thumbnailsPosition / thumbnailSize)), to = Math.floor((-this.slider.thumbnails.thumbnailsPosition + this.slider.thumbnails.thumbnailsContainerSize) / thumbnailSize), // Get all the thumbnails that need to be checked
+        thumbnailsToCheck = this.slider.thumbnails.thumbnails.slice(from, to + 1);
+        // Loop through the selected thumbnails and if the thumbnail is not marked as having
+        // been loaded yet, load its image.
+        thumbnailsToCheck.forEach((thumbnail)=>{
+            const thumbnailContainerEl = thumbnail.thumbnailContainerEl;
+            if (thumbnailContainerEl.getAttribute("data-loaded") === null) {
+                thumbnailContainerEl.setAttribute("data-loaded", true);
+                Array.from(thumbnailContainerEl.querySelectorAll("img[ data-src ]")).forEach((imageEl)=>{
+                    this.loadImage(imageEl, ()=>{
+                        thumbnail.resizeImage();
+                    });
+                });
+            }
+        });
+    }
+    // Load an image
+    loadImage(imageEl, callback) {
+        // Create a new image element
+        const newImageEl = new Image();
+        // Copy the class(es) and inline style
+        newImageEl.setAttribute("class", imageEl.getAttribute("class"));
+        newImageEl.setAttribute("style", imageEl.getAttribute("style"));
+        // Copy the data attributes
+        for(let keyname in imageEl.dataset)newImageEl.setAttribute("data-" + keyname, imageEl.dataset[keyname]);
+        // Copy the width and height attributes if they exist
+        if (imageEl.getAttribute("width") !== null) newImageEl.setAttribute("width", imageEl.getAttribute("width"));
+        if (imageEl.getAttribute("height") !== null) newImageEl.setAttribute("height", imageEl.getAttribute("height"));
+        if (imageEl.getAttribute("alt") !== null) newImageEl.setAttribute("alt", imageEl.getAttribute("alt"));
+        if (imageEl.getAttribute("title") !== null) newImageEl.setAttribute("title", imageEl.getAttribute("title"));
+        // Assign the source of the image
+        newImageEl.setAttribute("src", imageEl.getAttribute("data-src"));
+        newImageEl.removeAttribute("data-src");
+        if (imageEl.getAttribute("data-srcset") !== null) {
+            newImageEl.setAttribute("srcset", imageEl.getAttribute("data-srcset"));
+            newImageEl.removeAttribute("data-srcset");
+        }
+        // Add the new image in the same container and remove the older image
+        imageEl.after(newImageEl);
+        imageEl.remove();
+        imageEl = null;
+        if (typeof callback === "function") callback(newImageEl);
+    }
+    // Destroy the module
+    destroy() {
+        this.slider.removeEventListener("update." + this.namespace);
+        this.slider.removeEventListener("gotoSlide." + this.namespace);
+        this.slider.removeEventListener("resize." + this.namespace);
+        this.slider.thumbnails.removeEventListener("thumbnailsUpdate." + this.namespace);
+        this.slider.thumbnails.removeEventListener("thumbnailsMoveComplete." + this.namespace);
+    }
+}
+exports.default = LazyLoading;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"GM09p":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+class Retina {
+    // The namespace to be used when adding event listeners
+    namespace = "retina";
+    // Reference to the base slider instance
+    slider;
+    constructor(slider){
+        this.slider = slider;
+        this.init();
+    }
+    init() {
+        // Return if it's not a retina screen
+        if (window.devicePixelRatio < 2) return;
+        this.slider.addEventListener("resize." + this.namespace, this.resizeHandler.bind(this));
+        if (typeof this.slider.thumbnails !== "undefined") this.slider.thumbnails.addEventListener("thumbnailsUpdate." + this.namespace, this.thumbnailsUpdateHandler.bind(this));
+    }
+    // Loop through the slides and replace the images with their retina version
+    resizeHandler() {
+        this.slider.slides.forEach((slide)=>{
+            const slideEl = slide.slideEl;
+            if (slideEl.getAttribute("data-retina-loaded") === null) {
+                slideEl.setAttribute("data-retina-loaded", true);
+                Array.from(slideEl.querySelectorAll("img[data-retina]")).forEach((imageEl)=>{
+                    if (imageEl.getAttribute("data-src") !== null) {
+                        imageEl.setAttribute("data-src", imageEl.getAttribute("data-retina"));
+                        imageEl.removeAttribute("data-retina");
+                    } else this.loadImage(imageEl, (newImageEl)=>{
+                        if (newImageEl.classList.contains("sp-image")) {
+                            slide.mainImageEl = newImageEl;
+                            slide.resizeMainImage(true);
+                        }
+                    });
+                });
+            }
+        });
+    }
+    // Loop through the thumbnails and replace the images with their retina version
+    thumbnailsUpdateHandler() {
+        this.slider.thumbnails.thumbnails.forEach((thumbnail)=>{
+            const thumbnailContainerEl = thumbnail.thumbnailContainerEl;
+            if (thumbnailContainerEl.getAttribute("data-retina-loaded") === null) {
+                thumbnailContainerEl.setAttribute("data-retina-loaded", true);
+                Array.from(thumbnailContainerEl.querySelectorAll("img[data-retina]")).forEach((imageEl)=>{
+                    if (imageEl.getAttribute("data-src") !== null) imageEl.setAttribute("data-src", imageEl.getAttribute("data-retina"));
+                    else this.loadImage(imageEl, (newImageEl)=>{
+                        if (newImageEl.classList.contains("sp-thumbnail")) thumbnail.resizeImage();
+                    });
+                });
+            }
+        });
+    }
+    // Load the retina image
+    loadImage(imageEl, callback) {
+        let retinaFound = false, newImagePath = "";
+        // Check if there is a retina image specified
+        if (imageEl.getAttribute("data-retina") !== null) {
+            retinaFound = true;
+            newImagePath = imageEl.getAttribute("data-retina");
+        }
+        // Check if there is a lazy loaded, non-retina, image specified
+        if (imageEl.getAttribute("data-src") !== null) {
+            if (retinaFound === false) newImagePath = imageEl.getAttribute("data-src");
+            imageEl.removeAttribute("data-src");
+        }
+        // Return if there isn't a retina or lazy loaded image
+        if (newImagePath === "") return;
+        // Create a new image element
+        const newImageEl = new Image();
+        // Copy the class(es) and inline style
+        newImageEl.setAttribute("class", imageEl.getAttribute("class"));
+        newImageEl.setAttribute("style", imageEl.getAttribute("style"));
+        // Copy the data attributes
+        for(let keyname in imageEl.dataset)newImageEl.setAttribute("data-" + keyname, imageEl.dataset[keyname]);
+        // Copy the width and height attributes if they exist
+        if (imageEl.getAttribute("width") !== null) newImageEl.setAttribute("width", imageEl.getAttribute("width"));
+        if (imageEl.getAttribute("height") !== null) newImageEl.setAttribute("height", imageEl.getAttribute("height"));
+        if (imageEl.getAttribute("alt") !== null) newImageEl.setAttribute("alt", imageEl.getAttribute("alt"));
+        if (imageEl.getAttribute("title") !== null) newImageEl.setAttribute("title", imageEl.getAttribute("title"));
+        if (imageEl.getAttribute("data-srcset") !== null) {
+            newImageEl.setAttribute("srcset", imageEl.getAttribute("data-srcset"));
+            newImageEl.removeAttribute("data-srcset");
+        }
+        // Add the new image in the same container and remove the older image
+        imageEl.after(newImageEl);
+        imageEl.remove();
+        imageEl = null;
+        // Assign the source of the image
+        newImageEl.setAttribute("src", newImagePath);
+        if (typeof callback === "function") callback(newImageEl);
+    }
+    // Destroy the module
+    destroy() {
+        this.slider.removeEventListener("update." + this.namespace);
+        this.slider.removeEventListener("thumbnailsUpdate." + this.namespace);
+    }
+}
+exports.default = Retina;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"fxjei":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _customEventTargetJs = require("../../helpers/custom-event-target.js");
+var _customEventTargetJsDefault = parcelHelpers.interopDefault(_customEventTargetJs);
+var _utilJs = require("../../helpers/util.js");
+var _thumbnailJs = require("./thumbnail.js");
+var _thumbnailJsDefault = parcelHelpers.interopDefault(_thumbnailJs);
+class Thumbnails extends (0, _customEventTargetJsDefault.default) {
+    // The namespace to be used when adding event listeners
+    namespace = "thumbnails";
+    // Reference to the base slider instance
+    slider;
+    // Stores the current settings of the slider
+    settings;
+    // Reference to the thumbnail scroller 
+    thumbnailsEl = null;
+    // Reference to the container of the thumbnail scroller
+    thumbnailsContainerEl = null;
+    // List of Thumbnail objects
+    thumbnails = null;
+    // Index of the selected thumbnail
+    selectedThumbnailIndex = 0;
+    // Total size (width or height, depending on the orientation) of the thumbnails
+    thumbnailsSize = 0;
+    // Size of the thumbnail's container
+    thumbnailsContainerSize = 0;
+    // The position of the thumbnail scroller inside its container
+    thumbnailsPosition = 0;
+    // Orientation of the thumbnails
+    thumbnailsOrientation = null;
+    // Indicates the 'left' or 'top' position based on the orientation of the thumbnails
+    thumbnailsPositionProperty = null;
+    // Indicates if there are thumbnails in the slider
+    isThumbnailScroller = false;
+    // Stores references the event handlers in pairs containing the event identifier and the event handler
+    // in order to be able to retrieve them when they need to be removed
+    eventHandlerReferences = {};
+    // Default add-on settings
+    defaults = {
+        // Sets the width of the thumbnail
+        thumbnailWidth: 100,
+        // Sets the height of the thumbnail
+        thumbnailHeight: 80,
+        // Sets the position of the thumbnail scroller (top, bottom, right, left)
+        thumbnailsPosition: "bottom",
+        // Indicates if a pointer will be displayed for the selected thumbnail
+        thumbnailPointer: false
+    };
+    constructor(slider){
+        super();
+        this.slider = slider;
+        this.slider.thumbnails = this;
+        this.init();
+    }
+    init() {
+        this.thumbnails = [];
+        this.slider.addEventListener("beforeInit." + this.namespace, ()=>{
+            Array.from(document.querySelector(this.slider.selector).getElementsByClassName("sp-slide")).forEach((slideEl, index)=>{
+                slideEl.setAttribute("data-original-index", index);
+            });
+        });
+        this.slider.addEventListener("update." + this.namespace, this.updateHandler.bind(this));
+        this.slider.addEventListener("resize." + this.namespace, this.resizeHandler.bind(this));
+        this.slider.addEventListener("gotoSlide." + this.namespace, (event)=>{
+            this.gotoThumbnail(event.detail.index);
+        });
+    }
+    // Called when the slider is updated
+    updateHandler() {
+        this.settings = {
+            ...this.defaults,
+            ...this.slider.settings
+        };
+        if (this.slider.sliderEl.getElementsByClassName("sp-thumbnail").length === 0 && this.thumbnails.length === 0) {
+            this.isThumbnailScroller = false;
+            return;
+        }
+        this.isThumbnailScroller = true;
+        // Create the container of the thumbnail scroller, if it wasn't created yet
+        if (this.thumbnailsContainerEl === null) {
+            this.thumbnailsContainerEl = document.createElement("div");
+            this.thumbnailsContainerEl.classList.add("sp-thumbnails-container");
+            this.slider.slidesContainerEl.after(this.thumbnailsContainerEl);
+        }
+        // If the thumbnails' main container doesn't exist, create it, and get a reference to it
+        if (this.thumbnailsEl === null) {
+            if (this.slider.sliderEl.getElementsByClassName("sp-thumbnails").length !== 0) {
+                this.thumbnailsEl = this.slider.sliderEl.getElementsByClassName("sp-thumbnails")[0];
+                this.thumbnailsContainerEl.appendChild(this.thumbnailsEl);
+                // Shuffle/randomize the thumbnails
+                if (this.settings.shuffle === true) {
+                    let thumbnails = Array.from(this.thumbnailsEl.getElementsByClassName("sp-thumbnail")), shuffledThumbnails = [];
+                    // Reposition the thumbnails based on the order of the indexes in the
+                    // 'shuffledIndexes' array from the slider
+                    Array.from(this.slider.sliderEl.getElementsByClassName("sp-slide")).forEach((slideEl)=>{
+                        let thumbnailEl = thumbnails[parseInt(slideEl.getAttribute("data-original-index"), 10)];
+                        if (thumbnailEl.parentElement.tagName === "A") thumbnailEl = thumbnailEl.parentElement;
+                        shuffledThumbnails.push(thumbnailEl);
+                    });
+                    // Append the sorted thumbnails to the thumbnail scroller
+                    this.thumbnailsEl.replaceChildren(...shuffledThumbnails);
+                }
+            } else {
+                this.thumbnailsEl = document.createElement("div");
+                this.thumbnailsEl.classList.add("sp-thumbnails");
+                this.thumbnailsContainerEl.appendChild(this.thumbnailsEl);
+            }
+        }
+        // Check if there are thumbnails inside the slides and move them in the thumbnails container
+        Array.from(this.slider.slidesEl.getElementsByClassName("sp-thumbnail")).forEach(function(thumbnailEl, index) {
+            const lastThumbnailIndex = this.thumbnailsEl.getElementsByClassName("sp-thumbnail").length - 1;
+            if (thumbnailEl.parentElement.tagName === "A") thumbnailEl = thumbnailEl.parentElement;
+            // If the index of the slide that contains the thumbnail is greater than the total number
+            // of thumbnails from the thumbnails container, position the thumbnail at the end.
+            // Otherwise, add the thumbnails at the corresponding position.
+            if (index > lastThumbnailIndex) this.thumbnailsEl.appendChild(thumbnailEl);
+            else this.thumbnailsEl.insertBefore(thumbnailEl, this.thumbnailsEl.getElementsByClassName("sp-thumbnail")[index]);
+        });
+        // Loop through the Thumbnail objects and if a corresponding element is not found in the DOM,
+        // it means that the thumbnail might have been removed. In this case, destroy that Thumbnail instance.
+        for(let i = this.thumbnails.length - 1; i >= 0; i--)if (this.thumbnailsEl.querySelector('.sp-thumbnail[data-index="' + i + '"]') === null) {
+            const thumbnail = this.thumbnails[i];
+            thumbnail.destroy();
+            this.thumbnails.splice(i, 1);
+        }
+        // Loop through the thumbnails and if there is any uninitialized thumbnail,
+        // initialize it, else update the thumbnail's index.
+        Array.from(this.thumbnailsEl.getElementsByClassName("sp-thumbnail")).forEach((thumbnailEl, index)=>{
+            if (thumbnailEl.getAttribute("data-init") === null) this._createThumbnail(thumbnailEl, index);
+            else this.thumbnails[index].setIndex(index);
+        });
+        // Remove the previous class that corresponds to the position of the thumbnail scroller
+        this.thumbnailsContainerEl.classList.remove("sp-top-thumbnails", "sp-bottom-thumbnails", "sp-left-thumbnails", "sp-right-thumbnails");
+        // Check the position of the thumbnail scroller and assign it the appropriate class and styling
+        if (this.settings.thumbnailsPosition === "top") {
+            this.thumbnailsContainerEl.classList.add("sp-top-thumbnails");
+            this.thumbnailsOrientation = "horizontal";
+        } else if (this.settings.thumbnailsPosition === "bottom") {
+            this.thumbnailsContainerEl.classList.add("sp-bottom-thumbnails");
+            this.thumbnailsOrientation = "horizontal";
+        } else if (this.settings.thumbnailsPosition === "left") {
+            this.thumbnailsContainerEl.classList.add("sp-left-thumbnails");
+            this.thumbnailsOrientation = "vertical";
+        } else if (this.settings.thumbnailsPosition === "right") {
+            this.thumbnailsContainerEl.classList.add("sp-right-thumbnails");
+            this.thumbnailsOrientation = "vertical";
+        }
+        // Check if the pointer needs to be created
+        if (this.settings.thumbnailPointer === true) this.thumbnailsContainerEl.classList.add("sp-has-pointer");
+        else this.thumbnailsContainerEl.classList.remove("sp-has-pointer");
+        // Mark the thumbnail that corresponds to the selected slide
+        this.selectedThumbnailIndex = this.slider.selectedSlideIndex;
+        this.thumbnailsEl.getElementsByClassName("sp-thumbnail-container")[this.selectedThumbnailIndex].classList.add("sp-selected-thumbnail");
+        // Calculate the total size of the thumbnails
+        this.thumbnailsSize = 0;
+        this.thumbnails.forEach((thumbnail)=>{
+            thumbnail.setSize(this.settings.thumbnailWidth, this.settings.thumbnailHeight);
+            this.thumbnailsSize += this.thumbnailsOrientation === "horizontal" ? thumbnail.getSize().width : thumbnail.getSize().height;
+        });
+        // Set the size of the thumbnails
+        if (this.thumbnailsOrientation === "horizontal") {
+            this.thumbnailsEl.style.width = (0, _utilJs.resolveUnit)(this.thumbnailsSize);
+            this.thumbnailsEl.style.height = (0, _utilJs.resolveUnit)(this.settings.thumbnailHeight);
+            this.thumbnailsContainerEl.style.removeProperty("height");
+            this.thumbnailsPositionProperty = "left";
+        } else {
+            this.thumbnailsEl.style.width = (0, _utilJs.resolveUnit)(this.settings.thumbnailWidth);
+            this.thumbnailsEl.style.height = (0, _utilJs.resolveUnit)(this.thumbnailsSize);
+            this.thumbnailsContainerEl.style.removeProperty("width");
+            this.thumbnailsPositionProperty = "top";
+        }
+        // Fire the 'thumbnailsUpdate' event
+        this.dispatchEvent("thumbnailsUpdate");
+    }
+    // Create an individual thumbnail
+    _createThumbnail(thumbnailEl, index) {
+        const thumbnail = new (0, _thumbnailJsDefault.default)(thumbnailEl, this.thumbnailsEl, index);
+        // When the thumbnail is clicked, navigate to the corresponding slide
+        const thumbnailClickHandler = (event)=>{
+            this.slider.gotoSlide(event.detail.index);
+        };
+        thumbnail.addEventListener("thumbnailClick", thumbnailClickHandler);
+        this.eventHandlerReferences["thumbnailClick" + index] = thumbnailClickHandler;
+        // Add the thumbnail at the specified index
+        this.thumbnails.splice(index, 0, thumbnail);
+    }
+    // Called when the slider is resized.
+    // Resets the size and position of the thumbnail scroller container.
+    resizeHandler() {
+        if (this.isThumbnailScroller === false) return;
+        let newThumbnailsPosition;
+        if (this.thumbnailsOrientation === "horizontal") {
+            this.thumbnailsContainerSize = Math.min(this.slider.slidesMaskEl.clientWidth, this.thumbnailsSize);
+            this.thumbnailsContainerEl.style.width = (0, _utilJs.resolveUnit)(this.thumbnailsContainerSize);
+            // Reduce the slide mask's height, to make room for the thumbnails
+            if (this.settings.forceSize === "fullWindow") {
+                this.slider.slidesMaskEl.style.height = (0, _utilJs.resolveUnit)(this.slider.slidesMaskEl.clientHeight - this.thumbnailsContainerEl.offsetHeight);
+                // Resize the slides
+                this.slider.slideHeight = this.slider.slidesMaskEl.clientHeight;
+                this.slider.resizeSlides();
+                // Re-arrange the slides
+                this.slider.resetSlidesPosition();
+            }
+        } else if (this.thumbnailsOrientation === "vertical") {
+            // Check if the width of the slide mask plus the width of the thumbnail scroller is greater than
+            // the width of the slider's container and if that's the case, reduce the slides container width
+            // in order to make the entire slider fit inside the slider's container.
+            if (this.slider.slidesMaskEl.clientWidth + this.thumbnailsContainerEl.offsetWidth > this.slider.sliderEl.parentElement.clientWidth) {
+                // Reduce the slider's width, to make room for the thumbnails
+                if (this.settings.forceSize === "fullWidth" || this.settings.forceSize === "fullWindow") this.slider.sliderEl.style.maxWidth = (0, _utilJs.resolveUnit)(window.innerWidth - this.thumbnailsContainerEl.offsetWidth);
+                else this.slider.sliderEl.style.maxWidth = (0, _utilJs.resolveUnit)(this.slider.sliderEl.parentElement.clientWidth - this.thumbnailsContainerEl.offsetWidth);
+                this.slider.slidesMaskEl.style.width = (0, _utilJs.resolveUnit)(window.getComputedStyle(this.slider.sliderEl).width);
+                // If the slides are vertically oriented, update the width and height (to maintain the aspect ratio)
+                // of the slides.
+                if (this.settings.orientation === "vertical") {
+                    this.slider.slideWidth = this.slider.sliderEl.clientWidth;
+                    this.slider.resizeSlides();
+                }
+                // Re-arrange the slides
+                this.slider.resetSlidesPosition();
+            }
+            this.thumbnailsContainerSize = Math.min(this.slider.slidesMaskEl.clientHeight, this.thumbnailsSize);
+            this.thumbnailsContainerEl.style.height = (0, _utilJs.resolveUnit)(this.thumbnailsContainerSize);
+        }
+        // If the total size of the thumbnails is smaller than the thumbnail scroller' container (which has
+        // the same size as the slides container), it means that all the thumbnails will be visible, so set
+        // the position of the thumbnail scroller to 0.
+        // 
+        // If that's not the case, the thumbnail scroller will be positioned based on which thumbnail is selected.
+        if (this.thumbnailsSize <= this.thumbnailsContainerSize || this.thumbnailsEl.getElementsByClassName("sp-selected-thumbnail").length === 0) newThumbnailsPosition = 0;
+        else newThumbnailsPosition = Math.max(-this.thumbnails[this.selectedThumbnailIndex].getPosition()[this.thumbnailsPositionProperty], this.thumbnailsContainerSize - this.thumbnailsSize);
+        // Add a padding to the slider, based on the thumbnail scroller's orientation, to make room
+        // for the thumbnails.
+        const thumbnailsComputedStyle = window.getComputedStyle(this.thumbnailsContainerEl);
+        const thumbnailsWidth = this.thumbnailsContainerEl.offsetWidth + parseInt(thumbnailsComputedStyle.marginLeft) + parseInt(thumbnailsComputedStyle.marginRight);
+        const thumbnailsHeight = this.thumbnailsContainerEl.offsetHeight + parseInt(thumbnailsComputedStyle.marginTop) + parseInt(thumbnailsComputedStyle.marginBottom);
+        if (this.settings.thumbnailsPosition === "top") {
+            this.slider.sliderEl.style.paddingTop = (0, _utilJs.resolveUnit)(thumbnailsHeight);
+            this.slider.sliderEl.style.removeProperty("padding-left");
+            this.slider.sliderEl.style.removeProperty("padding-right");
+        } else if (this.settings.thumbnailsPosition === "bottom") {
+            this.slider.sliderEl.style.removeProperty("padding-top");
+            this.slider.sliderEl.style.removeProperty("padding-left");
+            this.slider.sliderEl.style.removeProperty("padding-right");
+        } else if (this.settings.thumbnailsPosition === "left") {
+            this.slider.sliderEl.style.removeProperty("padding-top");
+            this.slider.sliderEl.style.paddingLeft = (0, _utilJs.resolveUnit)(thumbnailsWidth);
+            this.slider.sliderEl.style.removeProperty("padding-right");
+        } else if (this.settings.thumbnailsPosition === "right") {
+            this.slider.sliderEl.style.removeProperty("padding-top");
+            this.slider.sliderEl.style.removeProperty("padding-left");
+            this.slider.sliderEl.style.paddingRight = (0, _utilJs.resolveUnit)(thumbnailsWidth);
+        }
+        this.moveTo(newThumbnailsPosition, true);
+    }
+    // Selects the thumbnail at the indicated index and moves the thumbnail scroller
+    // accordingly.
+    gotoThumbnail(index) {
+        if (this.isThumbnailScroller === false || typeof this.thumbnails[index] === "undefined") return;
+        let previousIndex = this.selectedThumbnailIndex, newThumbnailsPosition = this.thumbnailsPosition;
+        this.selectedThumbnailIndex = index;
+        // Set the 'selected' class to the appropriate thumbnail
+        this.thumbnailsEl.getElementsByClassName("sp-selected-thumbnail")[0].classList.remove("sp-selected-thumbnail");
+        this.thumbnailsEl.getElementsByClassName("sp-thumbnail-container")[this.selectedThumbnailIndex].classList.add("sp-selected-thumbnail");
+        // Calculate the new position that the thumbnail scroller needs to go to.
+        // 
+        // If the selected thumbnail has a higher index than the previous one, make sure that the thumbnail
+        // that comes after the selected thumbnail will be visible, if the selected thumbnail is not the
+        // last thumbnail in the list.
+        // 
+        // If the selected thumbnail has a lower index than the previous one, make sure that the thumbnail
+        // that's before the selected thumbnail will be visible, if the selected thumbnail is not the
+        // first thumbnail in the list.
+        if (this.settings.rightToLeft === true && this.thumbnailsOrientation === "horizontal") {
+            if (this.selectedThumbnailIndex >= previousIndex) {
+                const rtlNextThumbnailIndex = this.selectedThumbnailIndex === this.thumbnails.length - 1 ? this.selectedThumbnailIndex : this.selectedThumbnailIndex + 1, rtlNextThumbnail = this.thumbnails[rtlNextThumbnailIndex];
+                if (rtlNextThumbnail.getPosition().left < -this.thumbnailsPosition) newThumbnailsPosition = -rtlNextThumbnail.getPosition().left;
+            } else if (this.selectedThumbnailIndex < previousIndex) {
+                const rtlPreviousThumbnailIndex = this.selectedThumbnailIndex === 0 ? this.selectedThumbnailIndex : this.selectedThumbnailIndex - 1, rtlPreviousThumbnail = this.thumbnails[rtlPreviousThumbnailIndex], rtlThumbnailsRightPosition = -this.thumbnailsPosition + this.thumbnailsContainerSize;
+                if (rtlPreviousThumbnail.getPosition().right > rtlThumbnailsRightPosition) newThumbnailsPosition = this.thumbnailsPosition - (rtlPreviousThumbnail.getPosition().right - rtlThumbnailsRightPosition);
+            }
+        } else {
+            if (this.selectedThumbnailIndex >= previousIndex) {
+                const nextThumbnailIndex = this.selectedThumbnailIndex === this.thumbnails.length - 1 ? this.selectedThumbnailIndex : this.selectedThumbnailIndex + 1, nextThumbnail = this.thumbnails[nextThumbnailIndex], nextThumbnailPosition = this.thumbnailsOrientation === "horizontal" ? nextThumbnail.getPosition().right : nextThumbnail.getPosition().bottom, thumbnailsRightPosition = -this.thumbnailsPosition + this.thumbnailsContainerSize;
+                if (nextThumbnailPosition > thumbnailsRightPosition) newThumbnailsPosition = this.thumbnailsPosition - (nextThumbnailPosition - thumbnailsRightPosition);
+            } else if (this.selectedThumbnailIndex < previousIndex) {
+                const previousThumbnailIndex = this.selectedThumbnailIndex === 0 ? this.selectedThumbnailIndex : this.selectedThumbnailIndex - 1, previousThumbnail = this.thumbnails[previousThumbnailIndex], previousThumbnailPosition = this.thumbnailsOrientation === "horizontal" ? previousThumbnail.getPosition().left : previousThumbnail.getPosition().top;
+                if (previousThumbnailPosition < -this.thumbnailsPosition) newThumbnailsPosition = -previousThumbnailPosition;
+            }
+        }
+        // Move the thumbnail scroller to the calculated position
+        this.moveTo(newThumbnailsPosition);
+        // Fire the 'gotoThumbnail' event
+        this.dispatchEvent("gotoThumbnail");
+    }
+    // Move the thumbnail scroller to the indicated position
+    moveTo(position, instant, callback) {
+        const css = {};
+        // Return if the position hasn't changed
+        if (position === this.thumbnailsPosition) return;
+        this.thumbnailsPosition = position;
+        // Use CSS transitions if they are supported. If not, use JavaScript animation
+        let transition, left = this.thumbnailsOrientation === "horizontal" ? position : 0, top = this.thumbnailsOrientation === "horizontal" ? 0 : position;
+        css["transform"] = "translate3d(" + left + "px, " + top + "px, 0)";
+        if (typeof instant !== "undefined" && instant === true) transition = "";
+        else {
+            this.thumbnailsEl.classList.add("sp-animated");
+            transition = "transform 0.7s";
+            const transitionEndHandler = (event)=>{
+                if (event.target !== event.currentTarget) return;
+                this.thumbnailsEl.removeEventListener("transitionend", transitionEndHandler);
+                this.thumbnailsEl.classList.remove("sp-animated");
+                if (typeof callback === "function") callback();
+                // Fire the 'thumbnailsMoveComplete' event
+                this.dispatchEvent("thumbnailsMoveComplete");
+            };
+            this.thumbnailsEl.addEventListener("transitionend", transitionEndHandler);
+            this.eventHandlerReferences["thumbnailsTransitionEnd"] = transitionEndHandler;
+        }
+        css["transition"] = transition;
+        for(let property in css)this.thumbnailsEl.style[property] = css[property];
+    }
+    // Stop the movement of the thumbnail scroller
+    stopMovement() {
+        const matrixString = window.getComputedStyle(this.thumbnailsEl).transform, matrixType = matrixString.indexOf("matrix3d") !== -1 ? "matrix3d" : "matrix", matrixArray = matrixString.replace(matrixType, "").match(/-?[0-9.]+/g), left = matrixType === "matrix3d" ? parseInt(matrixArray[12], 10) : parseInt(matrixArray[4], 10), top = matrixType === "matrix3d" ? parseInt(matrixArray[13], 10) : parseInt(matrixArray[5], 10);
+        this.thumbnailsEl.style.transform = "translate3d(" + left + "px, " + top + "px, 0)";
+        this.thumbnailsEl.style.removeProperty("transition");
+        this.thumbnailsEl.removeEventListener("transitionend", this.eventHandlerReferences["thumbnailsTransitionEnd"]);
+        this.thumbnailsPosition = this.thumbnailsOrientation === "horizontal" ? parseInt(matrixArray[4], 10) : parseInt(matrixArray[5], 10);
+        this.thumbnailsEl.classList.remove("sp-animated");
+    }
+    // Destroy the module
+    destroy() {
+        // Remove event listeners
+        this.slider.removeEventListener("update." + this.namespace);
+        if (this.isThumbnailScroller === false) return;
+        this.slider.removeEventListener("resize." + this.namespace);
+        this.slider.removeEventListener("gotoSlide." + this.namespace);
+        // Destroy the individual thumbnails
+        Array.from(this.thumbnailsEl.getElementsByClassName("sp-thumbnail")).forEach((thumbnailEl)=>{
+            const index = parseInt(thumbnailEl.getAttribute("data-index"), 10), thumbnail = this.thumbnails[index];
+            thumbnail.removeEventListener("thumbnailClick", this.eventHandlerReferences["thumbnailClick" + index]);
+            thumbnail.destroy();
+        });
+        this.thumbnails.length = 0;
+        // Add the thumbnail scroller directly in the slider and
+        // remove the thumbnail scroller container
+        this.slider.sliderEl.appendChild(this.thumbnailsEl);
+        this.thumbnailsContainerEl.remove();
+        // Remove any created padding
+        this.slider.sliderEl.style.removeProperty("paddin-top");
+        this.slider.sliderEl.style.removeProperty("padding-left");
+        this.slider.sliderEl.style.removeProperty("padding-right");
+    }
+}
+exports.default = Thumbnails;
+
+},{"../../helpers/custom-event-target.js":"dGwse","../../helpers/util.js":"iNkcr","./thumbnail.js":"befj7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"befj7":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _customEventTargetJs = require("../../helpers/custom-event-target.js");
+var _customEventTargetJsDefault = parcelHelpers.interopDefault(_customEventTargetJs);
+var _utilJs = require("../../helpers/util.js");
+class Thumbnail extends (0, _customEventTargetJsDefault.default) {
+    // Indicates the index of the thumbnail
+    index;
+    // Reference to the thumbnail jQuery element
+    thumbnailEl = null;
+    // Reference to the thumbnail scroller
+    thumbnailsEl = null;
+    // Reference to the thumbnail's container, which will be 
+    // created dynamically.
+    thumbnailContainerEl = null;
+    // The width and height of the thumbnail
+    width = 0;
+    height = 0;
+    // Indicates whether the thumbnail's image is loaded
+    isImageLoaded = false;
+    // Stores references the event handlers in pairs containing the event identifier and the event handler
+    // in order to be able to retrieve them when they need to be removed
+    eventHandlerReferences = {};
+    constructor(thumbnailEl, thumbnailsEl, index){
+        super();
+        // Reference to the thumbnail jQuery element
+        this.thumbnailEl = thumbnailEl;
+        // Reference to the thumbnail scroller
+        this.thumbnailsEl = thumbnailsEl;
+        // Set the index of the slide
+        this.setIndex(index);
+        // Initialize the thumbnail
+        this.init();
+    }
+    init() {
+        // Mark the thumbnail as initialized
+        this.thumbnailEl.setAttribute("data-init", true);
+        // Create a container for the thumbnail and add the original thumbnail to this container.
+        // Having a container will help crop the thumbnail image if it's too large.
+        this.thumbnailContainerEl = document.createElement("div");
+        this.thumbnailContainerEl.classList.add("sp-thumbnail-container");
+        this.thumbnailsEl.appendChild(this.thumbnailContainerEl);
+        if (this.thumbnailEl.parentElement.tagName === "A") this.thumbnailContainerEl.appendChild(this.thumbnailEl.parentElement);
+        else this.thumbnailContainerEl.appendChild(this.thumbnailEl);
+        const thumbnailContainerClickHandler = ()=>{
+            this.dispatchEvent("thumbnailClick", {
+                index: this.index
+            });
+        };
+        // When the thumbnail container is clicked, fire an event
+        this.thumbnailContainerEl.addEventListener("click", thumbnailContainerClickHandler);
+        this.eventHandlerReferences["thumbnailContainerClick"] = thumbnailContainerClickHandler;
+    }
+    // Set the width and height of the thumbnail
+    setSize(width, height) {
+        this.width = width;
+        this.height = height;
+        // Apply the width and height to the thumbnail's container
+        this.thumbnailContainerEl.style.width = (0, _utilJs.resolveUnit)(this.width);
+        this.thumbnailContainerEl.style.height = (0, _utilJs.resolveUnit)(this.height);
+        // If there is an image, resize it to fit the thumbnail container
+        if (this.thumbnailEl.tagName === "IMG" && this.thumbnailEl.getAttribute("data-src") === null) this.resizeImage();
+    }
+    // Return the width and height of the thumbnail
+    getSize() {
+        return {
+            width: this.thumbnailContainerEl.offsetWidth + parseInt(window.getComputedStyle(this.thumbnailContainerEl).marginLeft, 10) + parseInt(window.getComputedStyle(this.thumbnailContainerEl).marginRight, 10),
+            height: this.thumbnailContainerEl.offsetHeight + parseInt(window.getComputedStyle(this.thumbnailContainerEl).marginTop, 10) + parseInt(window.getComputedStyle(this.thumbnailContainerEl).marginBottom, 10)
+        };
+    }
+    // Return the top, bottom, left and right position of the thumbnail
+    getPosition() {
+        return {
+            left: this.thumbnailContainerEl.offsetLeft + parseInt(window.getComputedStyle(this.thumbnailContainerEl).marginLeft, 10),
+            right: this.thumbnailContainerEl.offsetLeft + parseInt(window.getComputedStyle(this.thumbnailContainerEl).marginLeft, 10) + this.thumbnailContainerEl.offsetWidth,
+            top: this.thumbnailContainerEl.offsetTop + parseInt(window.getComputedStyle(this.thumbnailContainerEl).marginTop, 10),
+            bottom: this.thumbnailContainerEl.offsetTop + parseInt(window.getComputedStyle(this.thumbnailContainerEl).marginTop, 10) + this.thumbnailContainerEl.offsetHeight
+        };
+    }
+    // Set the index of the thumbnail
+    setIndex(index) {
+        this.index = index;
+        this.thumbnailEl.setAttribute("data-index", this.index);
+    }
+    // Resize the thumbnail's image
+    resizeImage() {
+        // If the image is not loaded yet, load it
+        if (this.isImageLoaded === false) {
+            (0, _utilJs.checkImagesComplete)(this.thumbnailContainerEl, ()=>{
+                this.isImageLoaded = true;
+                this.resizeImage();
+            });
+            return;
+        }
+        // Get the reference to the thumbnail image again because it was replaced by
+        // another img element during the loading process
+        this.thumbnailEl = this.thumbnailContainerEl.getElementsByClassName("sp-thumbnail")[0];
+        // Calculate whether the image should stretch horizontally or vertically
+        let imageWidth = this.thumbnailEl.clientWidth, imageHeight = this.thumbnailEl.clientHeight;
+        if (imageWidth / imageHeight <= this.width / this.height) {
+            this.thumbnailEl.style.width = "100%";
+            this.thumbnailEl.style.height = "auto";
+        } else {
+            this.thumbnailEl.style.width = "auto";
+            this.thumbnailEl.style.height = "100%";
+        }
+        this.thumbnailEl.style.marginLeft = (0, _utilJs.resolveUnit)((this.thumbnailContainerEl.clientWidth - this.thumbnailEl.clientWidth) * 0.5);
+        this.thumbnailEl.style.marginTop = (0, _utilJs.resolveUnit)((this.thumbnailContainerEl.clientHeight - this.thumbnailEl.clientHeight) * 0.5);
+    }
+    // Destroy the thumbnail
+    destroy() {
+        this.thumbnailContainerEl.removeEventListener("click", this.eventHandlerReferences);
+        // Remove added attributes
+        this.thumbnailEl.removeAttribute("data-init");
+        this.thumbnailEl.removeAttribute("data-index");
+        // Remove the thumbnail's container and add the thumbnail
+        // back to the thumbnail scroller container
+        if (this.thumbnailEl.parentElement.tagName === "A") this.thumbnailsEl.insertBefore(this.thumbnailEl.parentElement, this.thumbnailContainerEl);
+        else this.thumbnailsEl.insertBefore(this.thumbnailEl, this.thumbnailContainerEl);
+        this.thumbnailContainerEl.remove();
+    }
+}
+exports.default = Thumbnail;
+
+},{"../../helpers/custom-event-target.js":"dGwse","../../helpers/util.js":"iNkcr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"luCz7":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+class ThumbnailArrows {
+    // The namespace to be used when adding event listeners
+    namespace = "thumbnailarrows";
+    // Reference to the base slider instance
+    slider;
+    // Reference to the Thumbnails instance created by the slider
+    thumbnails;
+    // Stores the current settings of the slider
+    settings;
+    // Reference to the arrows container
+    arrowsEl = null;
+    // Reference to the previous arrow
+    previousArrowEl = null;
+    // Reference to the next arrow
+    nextArrowEl = null;
+    // Default add-on settings
+    defaults = {
+        // Indicates whether the arrow buttons will be created
+        thumbnailArrows: false,
+        // Indicates whether the arrows will fade in only on hover
+        fadeThumbnailArrows: true
+    };
+    // Stores references the event handlers in pairs containing the event identifier and the event handler
+    // in order to be able to retrieve them when they need to be removed
+    eventHandlerReferences = {};
+    constructor(slider){
+        this.slider = slider;
+        this.thumbnails = this.slider.thumbnails;
+        this.init();
+    }
+    init() {
+        this.slider.addEventListener("update." + this.namespace, this.updateHandler.bind(this));
+        // Check if the arrows need to be visible or invisible when the thumbnail scroller
+        // resizes and when the thumbnail scroller moves.
+        this.slider.addEventListener("resize." + this.namespace, ()=>{
+            if (this.thumbnails.isThumbnailScroller === true && this.settings.thumbnailArrows === true) this.checkVisibility();
+        });
+        this.thumbnails.addEventListener("thumbnailsMoveComplete." + this.namespace, ()=>{
+            if (this.thumbnails.isThumbnailScroller === true && this.settings.thumbnailArrows === true) this.checkVisibility();
+        });
+    }
+    // Called when the slider is updated
+    updateHandler() {
+        this.settings = {
+            ...this.defaults,
+            ...this.slider.settings
+        };
+        if (this.thumbnails.isThumbnailScroller === false) return;
+        // Create or remove the thumbnail scroller arrows
+        if (this.settings.thumbnailArrows === true && this.arrowsEl === null) this.createArrows();
+        else if (this.settings.thumbnailArrows === false && this.arrowsEl !== null) this.removeArrows();
+        // Add fading functionality and check if the arrows need to be visible or not
+        if (this.settings.thumbnailArrows === true) {
+            if (this.settings.fadeThumbnailArrows === true) this.arrowsEl.classList.add("sp-fade-thumbnail-thumbnail-arrows");
+            else if (this.settings.fadeThumbnailArrows === false) this.arrowsEl.classList.remove("sp-fade-thumbnail-thumbnail-arrows");
+            this.checkVisibility();
+        }
+    }
+    createArrows() {
+        this.arrowsEl = document.createElement("div");
+        this.arrowsEl.classList.add("sp-thumbnail-arrows");
+        this.thumbnails.thumbnailsContainerEl.appendChild(this.arrowsEl);
+        this.previousArrowEl = document.createElement("div");
+        this.previousArrowEl.classList.add("sp-thumbnail-arrow", "sp-previous-thumbnail-arrow");
+        this.arrowsEl.appendChild(this.previousArrowEl);
+        this.nextArrowEl = document.createElement("div");
+        this.nextArrowEl.classList.add("sp-thumbnail-arrow", "sp-next-thumbnail-arrow");
+        this.arrowsEl.appendChild(this.nextArrowEl);
+        const previousArrowClickHandler = ()=>{
+            const previousPosition = Math.min(0, this.thumbnails.thumbnailsPosition + this.thumbnails.thumbnailsContainerSize);
+            this.thumbnails.moveTo(previousPosition);
+        };
+        const nextArrowClickHandler = ()=>{
+            const nextPosition = Math.max(this.thumbnails.thumbnailsContainerSize - this.thumbnails.thumbnailsSize, this.thumbnails.thumbnailsPosition - this.thumbnails.thumbnailsContainerSize);
+            this.thumbnails.moveTo(nextPosition);
+        };
+        this.eventHandlerReferences["click.previousArrow"] = previousArrowClickHandler;
+        this.previousArrowEl.addEventListener("click", previousArrowClickHandler);
+        this.eventHandlerReferences["click.nextArrow"] = nextArrowClickHandler;
+        this.nextArrowEl.addEventListener("click", nextArrowClickHandler);
+    }
+    removeArrows() {
+        const previousArrowClickHandler = this.eventHandlerReferences["click.previousArrow"];
+        const nextArrowClickHandler = this.eventHandlerReferences["click.nextArrow"];
+        this.previousArrowEl.removeEventListener("click", previousArrowClickHandler);
+        this.nextArrowEl.removeEventListener("click", nextArrowClickHandler);
+        this.arrowsEl.remove();
+        this.arrowsEl = null;
+    }
+    // Checks if the 'next' or 'previous' arrows need to be visible or hidden,
+    // based on the position of the thumbnail scroller
+    checkVisibility() {
+        if (this.thumbnails.thumbnailsPosition === 0) this.previousArrowEl.style.display = "none";
+        else this.previousArrowEl.style.display = "block";
+        if (this.thumbnails.thumbnailsPosition === this.thumbnails.thumbnailsContainerSize - this.thumbnails.thumbnailsSize) this.nextArrowEl.style.display = "none";
+        else this.nextArrowEl.style.display = "block";
+    }
+    // Destroy the module
+    destroy() {
+        this.removeArrows();
+        this.slider.removeEventListener("update." + this.namespace);
+        this.slider.removeEventListener("resize." + this.namespace);
+        this.thumbnails.removeEventListener("thumbnailsMoveComplete." + this.namespace);
+    }
+}
+exports.default = ThumbnailArrows;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"224Xu":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _utilJs = require("../../helpers/util.js");
+class ThumbnailTouchSwipe {
+    // The namespace to be used when adding event listeners
+    namespace = "thumbnailtouchswipe";
+    // Reference to the base slider instance
+    slider;
+    // Reference to the base thumbnails instance
+    thumbnails;
+    // Stores the current settings of the slider
+    settings;
+    // Indicates whether the touch swipe is enabled for the thumbnails
+    isTouchSwipeEnabled = false;
+    // The x and y coordinates of the pointer/finger's starting position
+    touchStartPoint = {
+        x: 0,
+        y: 0
+    };
+    // The x and y coordinates of the pointer/finger's end position
+    touchEndPoint = {
+        x: 0,
+        y: 0
+    };
+    // The distance from the starting to the end position on the x and y axis
+    touchDistance = {
+        x: 0,
+        y: 0
+    };
+    // The position of the slides when the touch swipe starts
+    touchStartPosition = 0;
+    // Stores the names of the events
+    touchSwipeEvents = {
+        startEvent: [
+            "touchstart",
+            "mousedown"
+        ],
+        moveEvent: [
+            "touchmove",
+            "mousemove"
+        ],
+        endEvent: [
+            "touchend",
+            "mouseup"
+        ]
+    };
+    // Indicates if the thumbnail scroller is being swiped
+    isTouchMoving = false;
+    // Indicates whether the previous 'start' event was a 'touchstart' or 'mousedown'
+    previousStartEvent = "";
+    // Stores references the event handlers in pairs containing the event identifier and the event handler
+    // in order to be able to retrieve them when they need to be removed
+    eventHandlerReferences = {};
+    // Default add-on settings
+    defaults = {
+        // Indicates whether the touch swipe will be enabled
+        thumbnailTouchSwipe: true,
+        // Sets the minimum amount that the slides should move
+        thumbnailTouchSwipeThreshold: 50
+    };
+    constructor(slider){
+        this.slider = slider;
+        this.thumbnails = this.slider.thumbnails;
+        this.init();
+    }
+    init() {
+        this.slider.addEventListener("update." + this.namespace, this.updateHandler.bind(this));
+    }
+    updateHandler() {
+        this.settings = {
+            ...this.defaults,
+            ...this.slider.settings
+        };
+        if (this.thumbnails.isThumbnailScroller === false) return;
+        // check if touch swipe is enabled
+        if (this.settings.thumbnailTouchSwipe === true && this.isTouchSwipeEnabled === false) this.add();
+        else if (this.settings.thumbnailTouchSwipe === false && this.isTouchSwipeEnabled === true) this.destroy();
+    }
+    add() {
+        this.isTouchSwipeEnabled = true;
+        // Listen for touch swipe/mouse move events
+        Array.from(this.touchSwipeEvents.startEvent).forEach((eventType)=>{
+            const eventHandler = (event)=>{
+                this.touchStartHandler(event);
+            };
+            this.eventHandlerReferences[eventType] = eventHandler;
+            this.thumbnails.thumbnailsEl.addEventListener(eventType, eventHandler);
+        });
+        const dragStartHandler = (event)=>{
+            event.preventDefault();
+        };
+        this.eventHandlerReferences["dragstart"] = dragStartHandler;
+        this.thumbnails.thumbnailsEl.addEventListener("dragstart", dragStartHandler);
+        // Add the grabbing icon
+        this.thumbnails.thumbnailsEl.classList.add("sp-grab");
+        // Remove the default thumbnailClick
+        this.thumbnails.thumbnails.forEach((thumbnail)=>{
+            thumbnail.removeEventListener("thumbnailClick");
+        });
+    }
+    // Called when the slides starts being dragged
+    touchStartHandler(event) {
+        // Return if a 'mousedown' event follows a 'touchstart' event
+        if (event.type === "mousedown" && this.previousStartEvent === "touchstart") {
+            this.previousStartEvent = event.type;
+            return;
+        }
+        // Assign the new 'start' event
+        this.previousStartEvent = event.type;
+        // Disable dragging if the element is set to allow selections
+        if (event.target.classList.contains("sp-selectable")) return;
+        const eventObject = typeof event.touches !== "undefined" ? event.touches[0] : event;
+        // Prevent default behavior for mouse events
+        if (typeof event.touches === "undefined") event.preventDefault();
+        if ((0, _utilJs.getParent)(event.target, "sp-thumbnail-container") !== null && (0, _utilJs.getParent)(event.target, "sp-thumbnail-container").getElementsByTagName("a").length !== 0) {
+            const links = (0, _utilJs.getParent)(event.target, "sp-thumbnail-container").getElementsByTagName("a");
+            // Disable click events on links
+            const linkClickHandler = (event)=>{
+                event.preventDefault();
+                Array.from(links).forEach((link)=>{
+                    link.removeEventListener("click", linkClickHandler);
+                });
+            };
+            Array.from(links).forEach((link)=>{
+                link.addEventListener("click", linkClickHandler);
+            });
+            this.eventHandlerReferences["click.link"] = linkClickHandler;
+        }
+        // Get the initial position of the mouse pointer and the initial position
+        // of the slides' container
+        this.touchStartPoint.x = eventObject.pageX || eventObject.clientX;
+        this.touchStartPoint.y = eventObject.pageY || eventObject.clientY;
+        this.touchStartPosition = this.thumbnails.thumbnailsPosition;
+        // Clear the previous distance values
+        this.touchDistance.x = this.touchDistance.y = 0;
+        // If the slides are being grabbed while they're still animating, stop the
+        // current movement
+        if (this.thumbnails.thumbnailsEl.classList.contains("sp-animated")) {
+            this.isTouchMoving = true;
+            this.thumbnails.stopMovement();
+            this.touchStartPosition = this.thumbnails.thumbnailsPosition;
+        }
+        // Listen for move and end events
+        Array.from(this.touchSwipeEvents.moveEvent).forEach((eventType)=>{
+            const eventHandler = (event)=>{
+                this.touchMoveHandler(event);
+            };
+            this.eventHandlerReferences[eventType] = eventHandler;
+            this.thumbnails.thumbnailsEl.addEventListener(eventType, eventHandler);
+        });
+        Array.from(this.touchSwipeEvents.endEvent).forEach((eventType)=>{
+            const eventHandler = (event)=>{
+                this.touchEndHandler(event);
+            };
+            this.eventHandlerReferences[eventType] = eventHandler;
+            document.addEventListener(eventType, eventHandler);
+        });
+        // Swap grabbing icons
+        this.thumbnails.thumbnailsEl.classList.remove("sp-grab");
+        this.thumbnails.thumbnailsEl.classList.add("sp-grabbing");
+        this.thumbnails.thumbnailsContainerEl.classList.add("sp-swiping");
+    }
+    // Called during the thumbnail scroller's dragging
+    touchMoveHandler(event) {
+        const eventObject = typeof event.touches !== "undefined" ? event.touches[0] : event;
+        // Indicate that the move event is being fired
+        this.isTouchMoving = true;
+        // Get the current position of the mouse pointer
+        this.touchEndPoint.x = eventObject.pageX || eventObject.clientX;
+        this.touchEndPoint.y = eventObject.pageY || eventObject.clientY;
+        // Calculate the distance of the movement on both axis
+        this.touchDistance.x = this.touchEndPoint.x - this.touchStartPoint.x;
+        this.touchDistance.y = this.touchEndPoint.y - this.touchStartPoint.y;
+        // Calculate the distance of the swipe that takes place in the same direction as the orientation of the thumbnails
+        // and calculate the distance from the opposite direction.
+        // 
+        // For a swipe to be valid there should more distance in the same direction as the orientation of the thumbnails.
+        let distance = this.thumbnails.thumbnailsOrientation === "horizontal" ? this.touchDistance.x : this.touchDistance.y, oppositeDistance = this.thumbnails.thumbnailsOrientation === "horizontal" ? this.touchDistance.y : this.touchDistance.x;
+        // If the movement is in the same direction as the orientation of the thumbnails, the swipe is valid
+        if (Math.abs(distance) > Math.abs(oppositeDistance)) event.preventDefault();
+        else return;
+        // Make the thumbnail scroller move slower if it's dragged outside its bounds
+        if (this.thumbnails.thumbnailsPosition >= 0) {
+            const infOffset = -this.touchStartPosition;
+            distance = infOffset + (distance - infOffset) * 0.2;
+        } else if (this.thumbnails.thumbnailsPosition <= -this.thumbnails.thumbnailsSize + this.thumbnails.thumbnailsContainerSize) {
+            const supOffset = this.thumbnails.thumbnailsSize - this.thumbnails.thumbnailsContainerSize + this.touchStartPosition;
+            distance = -supOffset + (distance + supOffset) * 0.2;
+        }
+        this.thumbnails.moveTo(this.touchStartPosition + distance, true);
+    }
+    // Called when the thumbnail scroller is released
+    touchEndHandler(event) {
+        // Remove the 'move' and 'end' listeners
+        Array.from(this.touchSwipeEvents.moveEvent).forEach((eventType)=>{
+            const eventHandler = this.eventHandlerReferences[eventType];
+            this.thumbnails.thumbnailsEl.removeEventListener(eventType, eventHandler);
+        });
+        Array.from(this.touchSwipeEvents.endEvent).forEach((eventType)=>{
+            const eventHandler = this.eventHandlerReferences[eventType];
+            document.removeEventListener(eventType, eventHandler);
+        });
+        // Swap grabbing icons
+        this.thumbnails.thumbnailsEl.classList.remove("sp-grabbing");
+        this.thumbnails.thumbnailsEl.classList.add("sp-grab");
+        // Check if there is intention for a tap/click
+        if (this.isTouchMoving === false || this.isTouchMoving === true && Math.abs(this.touchDistance.x) < 10 && Math.abs(this.touchDistance.y) < 10) {
+            let targetThumbnail = (0, _utilJs.getParent)(event.target, "sp-thumbnail-container");
+            if (targetThumbnail === null) return;
+            const index = parseInt(targetThumbnail.getElementsByClassName("sp-thumbnail")[0].getAttribute("data-index"), 10);
+            // If a link is cliked, navigate to that link, else navigate to the slide that corresponds to the thumbnail
+            const parentLink = (0, _utilJs.getParent)(event.target, "a");
+            if (parentLink !== null) {
+                const linkClickHandler = this.eventHandlerReferences["click.link"];
+                parentLink.removeEventListener("click", linkClickHandler);
+                this.thumbnails.thumbnailsContainerEl.classList.remove("sp-swiping");
+            } else if (index !== this.thumbnails.selectedThumbnailIndex) this.slider.gotoSlide(index);
+            return;
+        }
+        this.isTouchMoving = false;
+        const clickedThumbnail = (0, _utilJs.getParent)(event.target, "sp-thumbnail");
+        if (clickedThumbnail !== null) {
+            const thumbnailClickHandler = (event)=>{
+                event.preventDefault();
+                clickedThumbnail.removeEventListener("click", thumbnailClickHandler);
+            };
+            clickedThumbnail.addEventListener("click", thumbnailClickHandler);
+        }
+        // Remove the 'sp-swiping' class but with a delay
+        // because there might be other event listeners that check
+        // the existence of this class, and this class should still be 
+        // applied for those listeners, since there was a swipe event
+        setTimeout(()=>{
+            this.thumbnails.thumbnailsContainerEl.classList.remove("sp-swiping");
+        }, 1);
+        // Keep the thumbnail scroller inside the bounds
+        if (this.thumbnails.thumbnailsPosition > 0) this.thumbnails.moveTo(0);
+        else if (this.thumbnails.thumbnailsPosition < this.thumbnails.thumbnailsContainerSize - this.thumbnails.thumbnailsSize) this.thumbnails.moveTo(this.thumbnails.thumbnailsContainerSize - this.thumbnails.thumbnailsSize);
+        // Fire the 'thumbnailsMoveComplete' event
+        this.thumbnails.dispatchEvent("thumbnailsMoveComplete");
+    }
+    // Destroy the module
+    destroy() {
+        this.isTouchSwipeEnabled = false;
+        if (this.thumbnails.isThumbnailScroller === false) return;
+        const dragStartHandler = this.eventHandlerReferences["dragstart"];
+        this.thumbnails.thumbnailsEl.removeEventListener("dragstart", dragStartHandler);
+        Array.from([
+            ...this.touchSwipeEvents.startEvent,
+            ...this.touchSwipeEvents.moveEvent
+        ]).forEach((eventType)=>{
+            const eventHandler = this.eventHandlerReferences[eventType];
+            this.thumbnails.thumbnailsEl.removeEventListener(eventType, eventHandler);
+        });
+        Array.from(this.touchSwipeEvents.endEvent).forEach((eventType)=>{
+            const eventHandler = this.eventHandlerReferences[eventType];
+            document.removeEventListener(eventType, eventHandler);
+        });
+        this.thumbnails.thumbnailsEl.classList.remove("sp-grab");
+        this.slider.removeEventListener("update." + this.namespace);
+    }
+}
+exports.default = ThumbnailTouchSwipe;
+
+},{"../../helpers/util.js":"iNkcr","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"2ZHbD":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+class TouchSwipe {
+    // The namespace to be used when adding event listeners
+    namespace = "touchswipe";
+    // Reference to the base slider instance
+    slider;
+    // Stores the current settings of the slider
+    settings;
+    // Indicates whether the touch swipe is enabled for slides
+    isTouchSwipeEnabled = false;
+    // The x and y coordinates of the pointer/finger's starting position
+    touchStartPoint = {
+        x: 0,
+        y: 0
+    };
+    // The x and y coordinates of the pointer/finger's end position
+    touchEndPoint = {
+        x: 0,
+        y: 0
+    };
+    // The distance from the starting to the end position on the x and y axis
+    touchDistance = {
+        x: 0,
+        y: 0
+    };
+    // The position of the slides when the touch swipe starts
+    touchStartPosition = 0;
+    // Indicates if the slides are being swiped
+    isTouchMoving = false;
+    // Stores the names of the events
+    touchSwipeEvents = {
+        startEvent: [
+            "touchstart",
+            "mousedown"
+        ],
+        moveEvent: [
+            "touchmove",
+            "mousemove"
+        ],
+        endEvent: [
+            "touchend",
+            "mouseup"
+        ]
+    };
+    // Indicates if scrolling (the page) in the opposite direction of the
+    // slides' layout is allowed. This is used to block vertical (or horizontal)
+    // scrolling when the user is scrolling through the slides.
+    allowOppositeScrolling = true;
+    // Indicates whether the previous 'start' event was a 'touchstart' or 'mousedown'
+    previousStartEvent = "";
+    // Stores references the event handlers in pairs containing the event identifier and the event handler
+    // in order to be able to retrieve them when they need to be removed
+    eventHandlerReferences = {};
+    // Default add-on settings
+    defaults = {
+        // Indicates whether the touch swipe will be enabled
+        touchSwipe: true,
+        // Sets the minimum amount that the slides should move
+        touchSwipeThreshold: 50
+    };
+    constructor(slider){
+        this.slider = slider;
+        this.init();
+    }
+    init() {
+        this.slider.addEventListener("update." + this.namespace, this.updateHandler.bind(this));
+    }
+    updateHandler() {
+        this.settings = {
+            ...this.defaults,
+            ...this.slider.settings
+        };
+        // check if touch swipe is enabled
+        if (this.settings.touchSwipe === true && this.isTouchSwipeEnabled === false) this.add();
+        else if (this.settings.touchSwipe === false && this.isTouchSwipeEnabled === true) this.destroy();
+    }
+    add() {
+        this.isTouchSwipeEnabled = true;
+        // Listen for touch swipe/mouse move events
+        Array.from(this.touchSwipeEvents.startEvent).forEach((eventType)=>{
+            const eventHandler = (event)=>{
+                this.touchStartHandler(event);
+            };
+            this.eventHandlerReferences[eventType] = eventHandler;
+            this.slider.slidesMaskEl.addEventListener(eventType, eventHandler);
+        });
+        const dragStartHandler = (event)=>{
+            event.preventDefault();
+        };
+        this.eventHandlerReferences["dragstart"] = dragStartHandler;
+        this.slider.slidesMaskEl.addEventListener("dragstart", dragStartHandler);
+        // Prevent 'click' events unless there is intention for a 'click'
+        const linkClickHandler = (event)=>{
+            if (this.slider.sliderEl.classList.contains("sp-swiping")) event.preventDefault();
+        };
+        Array.from(this.slider.slidesMaskEl.getElementsByTagName("a")).forEach((element)=>{
+            element.addEventListener("click", linkClickHandler);
+        });
+        this.eventHandlerReferences["linkclick"] = linkClickHandler;
+        // Add the grabbing icon
+        this.slider.slidesMaskEl.classList.add("sp-grab");
+    }
+    // Called when the slides starts being dragged
+    touchStartHandler(event) {
+        // Return if a 'mousedown' event follows a 'touchstart' event
+        if (event.type === "mousedown" && this.previousStartEvent === "touchstart") {
+            this.previousStartEvent = event.type;
+            return;
+        }
+        // Assign the new 'start' event
+        this.previousStartEvent = event.type;
+        // Disable dragging if the element is set to allow selections
+        if (event.target.classList.contains("sp-selectable")) return;
+        const eventObject = typeof event.touches !== "undefined" ? event.touches[0] : event;
+        const { left, top } = this.slider.getSlidesPosition();
+        const slidesPosition = this.settings.orientation === "horizontal" ? left : top;
+        // Get the initial position of the mouse pointer and the initial position
+        // of the slides' container
+        this.touchStartPoint.x = eventObject.pageX || eventObject.clientX;
+        this.touchStartPoint.y = eventObject.pageY || eventObject.clientY;
+        this.touchStartPosition = slidesPosition;
+        // Clear the previous distance values
+        this.touchDistance.x = this.touchDistance.y = 0;
+        // If the slides are being grabbed while they're still animating, stop the
+        // current movement
+        if (this.slider.slidesEl.classList.contains("sp-animated")) {
+            this.isTouchMoving = true;
+            this.slider.stopMovement();
+            this.touchStartPosition = slidesPosition;
+        }
+        // Listen for move and end events
+        Array.from(this.touchSwipeEvents.moveEvent).forEach((eventType)=>{
+            const eventHandler = (event)=>{
+                this.touchMoveHandler(event);
+            };
+            this.eventHandlerReferences[eventType] = eventHandler;
+            this.slider.slidesMaskEl.addEventListener(eventType, eventHandler);
+        });
+        Array.from(this.touchSwipeEvents.endEvent).forEach((eventType)=>{
+            const eventHandler = (event)=>{
+                this.touchEndHandler(event);
+            };
+            this.eventHandlerReferences[eventType] = eventHandler;
+            document.addEventListener(eventType, eventHandler);
+        });
+        // Swap grabbing icons
+        this.slider.slidesMaskEl.classList.remove("sp-grab");
+        this.slider.slidesMaskEl.classList.add("sp-grabbing");
+    }
+    // Called during the slides' dragging
+    touchMoveHandler(event) {
+        const eventObject = typeof event.touches !== "undefined" ? event.touches[0] : event;
+        // Indicate that the move event is being fired
+        this.isTouchMoving = true;
+        // Add 'sp-swiping' class to indicate that the slides are being swiped
+        if (this.slider.sliderEl.classList.contains("sp-swiping") === false) this.slider.sliderEl.classList.add("sp-swiping");
+        // Get the current position of the mouse pointer
+        this.touchEndPoint.x = eventObject.pageX || eventObject.clientX;
+        this.touchEndPoint.y = eventObject.pageY || eventObject.clientY;
+        // Calculate the distance of the movement on both axis
+        this.touchDistance.x = this.touchEndPoint.x - this.touchStartPoint.x;
+        this.touchDistance.y = this.touchEndPoint.y - this.touchStartPoint.y;
+        // Calculate the distance of the swipe that takes place in the same direction as the orientation of the slides
+        // and calculate the distance from the opposite direction.
+        // 
+        // For a swipe to be valid there should more distance in the same direction as the orientation of the slides.
+        let distance = this.settings.orientation === "horizontal" ? this.touchDistance.x : this.touchDistance.y;
+        const oppositeDistance = this.settings.orientation === "horizontal" ? this.touchDistance.y : this.touchDistance.x;
+        // If the movement is in the same direction as the orientation of the slides, the swipe is valid
+        // and opposite scrolling will not be allowed.
+        if (Math.abs(distance) > Math.abs(oppositeDistance)) this.allowOppositeScrolling = false;
+        // If opposite scrolling is still allowed, the swipe wasn't valid, so return.
+        if (this.allowOppositeScrolling === true) return;
+        // Don't allow opposite scrolling
+        event.preventDefault();
+        if (this.settings.loop === false) // Make the slides move slower if they're dragged outside its bounds
+        {
+            if (this.slider.slidesPosition > this.touchStartPosition && this.slider.selectedSlideIndex === 0 || this.slider.slidesPosition < this.touchStartPosition && this.slider.selectedSlideIndex === this.slider.getTotalSlides() - 1) distance = distance * 0.2;
+        }
+        this.slider.moveTo(this.touchStartPosition + distance, true);
+    }
+    // Called when the slides are released
+    touchEndHandler() {
+        let touchDistance = this.settings.orientation === "horizontal" ? this.touchDistance.x : this.touchDistance.y;
+        // Remove the 'move' and 'end' listeners
+        Array.from(this.touchSwipeEvents.moveEvent).forEach((eventType)=>{
+            const eventHandler = this.eventHandlerReferences[eventType];
+            this.slider.slidesMaskEl.removeEventListener(eventType, eventHandler);
+        });
+        Array.from(this.touchSwipeEvents.endEvent).forEach((eventType)=>{
+            const eventHandler = this.eventHandlerReferences[eventType];
+            document.removeEventListener(eventType, eventHandler);
+        });
+        this.allowOppositeScrolling = true;
+        // Swap grabbing icons
+        this.slider.slidesMaskEl.classList.remove("sp-grabbing");
+        this.slider.slidesMaskEl.classList.add("sp-grab");
+        // Remove the 'sp-swiping' class with a delay, to allow
+        // other event listeners (i.e. click) to check the existance
+        // of the swipe event.
+        if (this.slider.sliderEl.classList.contains("sp-swiping")) setTimeout(()=>{
+            this.slider.sliderEl.classList.remove("sp-swiping");
+        }, 100);
+        // Return if the slides didn't move
+        if (this.isTouchMoving === false) return;
+        this.isTouchMoving = false;
+        // Calculate the old position of the slides in order to return to it if the swipe
+        // is below the threshold
+        const sizeProperty = this.settings.orientation === "horizontal" ? "width" : "height";
+        const positionProperty = this.settings.orientation === "horizontal" ? "left" : "top";
+        const selectedSlideOffset = this.settings.centerSelectedSlide === true && this.settings.visibleSize !== "auto" ? Math.round((parseInt(this.slider.slidesMaskEl.style[sizeProperty], 10) - this.slider.getSlideAt(this.slider.selectedSlideIndex).getSize()[sizeProperty]) / 2) : 0;
+        const oldSlidesPosition = -parseInt(this.slider.slidesEl.getElementsByClassName("sp-slide")[this.slider.selectedSlideIndex].style[positionProperty], 10) + selectedSlideOffset;
+        if (Math.abs(touchDistance) < this.settings.touchSwipeThreshold) this.slider.moveTo(oldSlidesPosition);
+        else {
+            let slidesSize = 0, averageSlideSize = 0;
+            if (this.settings.autoSlideSize === true) {
+                const firstSlide = this.slider.slidesEl.getElementsByClassName("sp-slide")[this.slider.slidesOrder[0]], firstSlidePosition = parseInt(firstSlide.style[positionProperty], 10), lastSlide = this.slider.slidesEl.getElementsByClassName("sp-slide")[this.slider.slidesOrder[this.slider.slidesOrder.length - 1]], lastSlidePosition = parseInt(lastSlide.style[positionProperty], 10) + (this.settings.rightToLeft === true && this.settings.orientation === "horizontal" ? -1 : 1) * parseInt(window.getComputedStyle(lastSlide)[sizeProperty], 10);
+                slidesSize = Math.abs(lastSlidePosition - firstSlidePosition);
+                averageSlideSize = Math.round(slidesSize / this.slider.slides.length);
+            } else {
+                slidesSize = ((this.settings.orientation === "horizontal" ? this.slider.slideWidth : this.slider.slideHeight) + this.settings.slideDistance) * this.slider.slides.length - this.settings.slideDistance;
+                averageSlideSize = this.settings.orientation === "horizontal" ? this.slider.slideWidth : this.slider.slideHeight;
+            }
+            // Calculate by how many slides the slides container has moved
+            let slideArrayDistance = (this.settings.rightToLeft === true && this.settings.orientation === "horizontal" ? -1 : 1) * touchDistance / (averageSlideSize + this.settings.slideDistance);
+            // Floor the obtained value and add or subtract 1, depending on the direction of the swipe
+            slideArrayDistance = parseInt(slideArrayDistance, 10) + (slideArrayDistance > 0 ? 1 : -1);
+            // Get the index of the currently selected slide and subtract the position index in order to obtain
+            // the new index of the selected slide. 
+            const nextSlideIndex = this.slider.slidesOrder[this.slider.slidesOrder.findIndex((slideIndex)=>slideIndex === this.slider.selectedSlideIndex) - slideArrayDistance];
+            if (this.settings.loop === true) this.slider.gotoSlide(nextSlideIndex);
+            else if (typeof nextSlideIndex !== "undefined") this.slider.gotoSlide(nextSlideIndex);
+            else this.slider.moveTo(oldSlidesPosition);
+        }
+    }
+    // Destroy the module
+    destroy() {
+        this.isTouchSwipeEnabled = false;
+        this.slider.removeEventListener("update." + this.namespace);
+        const dragStartHandler = this.eventHandlerReferences["dragstart"];
+        this.slider.slidesMaskEl.removeEventListener("dragstart", dragStartHandler);
+        Array.from(this.slider.slidesMaskEl.getElementsByTagName("a")).forEach((element)=>{
+            element.removeEventListener("click", this.eventHandlerReferences["linkclick"]);
+        });
+        Array.from([
+            ...this.touchSwipeEvents.startEvent,
+            ...this.touchSwipeEvents.moveEvent
+        ]).forEach((eventType)=>{
+            const eventHandler = this.eventHandlerReferences[eventType];
+            this.slider.slidesMaskEl.removeEventListener(eventType, eventHandler);
+        });
+        Array.from(this.touchSwipeEvents.endEvent).forEach((eventType)=>{
+            const eventHandler = this.eventHandlerReferences[eventType];
+            document.removeEventListener(eventType, eventHandler);
+        });
+        this.slider.slidesMaskEl.classList.remove("sp-grab");
+    }
+}
+exports.default = TouchSwipe;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"czAYr":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _videoControllerJs = require("./video-controller.js");
+var _videoControllerJsDefault = parcelHelpers.interopDefault(_videoControllerJs);
+class Video {
+    // The namespace to be used when adding event listeners
+    namespace = "video";
+    // Reference to the base slider instance
+    slider = null;
+    // Stores the current settings of the slider
+    settings = null;
+    firstInit = false;
+    videoReferences = {};
+    preinitVideoClickHandler = null;
+    // Default add-on settings
+    defaults = {
+        // Sets the action that the video will perform when its slide container is selected
+        // ( 'playVideo' and 'none' )
+        reachVideoAction: "none",
+        // Sets the action that the video will perform when another slide is selected
+        // ( 'stopVideo', 'pauseVideo', 'removeVideo' and 'none' )
+        leaveVideoAction: "pauseVideo",
+        // Sets the action that the slider will perform when the video starts playing
+        // ( 'stopAutoplay' and 'none' )
+        playVideoAction: "stopAutoplay",
+        // Sets the action that the slider will perform when the video is paused
+        // ( 'startAutoplay' and 'none' )
+        pauseVideoAction: "none",
+        // Sets the action that the slider will perform when the video ends
+        // ( 'startAutoplay', 'nextSlide', 'replayVideo' and 'none' )
+        endVideoAction: "none"
+    };
+    constructor(slider){
+        this.slider = slider;
+        this.init();
+    }
+    init() {
+        this.slider.addEventListener("update." + this.namespace, this.updateHandler.bind(this));
+        this.slider.addEventListener("gotoSlide." + this.namespace, this.gotoSlideHandler.bind(this));
+        this.slider.addEventListener("gotoSlideComplete." + this.namespace, this.gotoSlideCompleteHandler.bind(this));
+    }
+    updateHandler() {
+        this.settings = {
+            ...this.defaults,
+            ...this.slider.settings
+        };
+        // Find all the inline videos and initialize them
+        Array.from(this.slider.sliderEl.querySelectorAll(".sp-video:not(a):not([data-video-init])")).forEach((videoEl)=>{
+            this.initVideo(videoEl);
+        });
+        // Find all the lazy-loaded videos and preinitialize them. They will be initialized
+        // only when their play button is clicked.
+        Array.from(this.slider.sliderEl.querySelectorAll("a.sp-video:not([data-video-preinit])")).forEach((videoEl)=>{
+            this.preinitVideo(videoEl);
+        });
+        // call the 'gotoSlideComplete' method in case the first slide contains a video that
+        // needs to play automatically
+        if (this.firstInit === false) {
+            this.firstInit = true;
+            this.gotoSlideCompleteHandler({
+                index: this.slider.selectedSlideIndex,
+                previousIndex: -1
+            });
+        }
+    }
+    // Initialize the target video
+    initVideo(videoEl) {
+        videoEl.setAttribute("data-video-init", true);
+        const video = new (0, _videoControllerJsDefault.default)(videoEl);
+        const videoReference = (parseInt(new Date().valueOf(), 10) * Math.floor(Math.random() * 1000)).toString();
+        videoEl.setAttribute("data-video-ref", videoReference);
+        this.videoReferences[videoReference] = video;
+        // When the video starts playing, pause the autoplay if it's running
+        video.addEventListener("videoPlay", ()=>{
+            if (this.settings.playVideoAction === "stopAutoplay" && typeof this.slider.autoplay !== "undefined") {
+                this.slider.autoplay.stop();
+                this.settings.autoplay = false;
+                this.slider.autoplay.settings.autoplay = false;
+            }
+        });
+        // When the video is paused, restart the autoplay
+        video.addEventListener("videoPause", ()=>{
+            if (this.settings.pauseVideoAction === "startAutoplay" && typeof this.slider.autoplay !== "undefined") {
+                this.settings.autoplay = true;
+                this.slider.autoplay.settings.autoplay = true;
+                this.slider.autoplay.stop();
+                this.slider.autoplay.start();
+            }
+        });
+        // When the video ends, restart the autoplay (which was paused during the playback), or
+        // go to the next slide, or replay the video
+        video.addEventListener("videoEnded", ()=>{
+            if (this.settings.endVideoAction === "startAutoplay" && typeof this.slider.autoplay !== "undefined") {
+                this.settings.autoplay = true;
+                this.slider.autoplay.settings.autoplay = true;
+                this.slider.autoplay.stop();
+                this.slider.autoplay.start();
+            } else if (this.settings.endVideoAction === "nextSlide") this.slider.nextSlide();
+            else if (this.settings.endVideoAction === "replayVideo") video.replay();
+        });
+    }
+    // Pre-initialize the video. This is for lazy loaded videos.
+    preinitVideo(videoEl) {
+        videoEl.setAttribute("data-video-preinit", true);
+        // When the video poster is clicked, remove the poster and create
+        // the inline video
+        this.preinitVideoClickHandler = (event)=>{
+            let videoEl = event.target;
+            // If the video is being dragged, don't start the video
+            if (this.slider.sliderEl.classList.contains("sp-swiping") || videoEl.parentElement.querySelector(".sp-video[data-video-init]") !== null) return;
+            event.preventDefault();
+            let href = videoEl.getAttribute("href"), iframe, provider, regExp, match, id, src, videoAttributes, videoPoster = videoEl.getElementsByTagName("img")[0], videoWidth = videoPoster.getAttribute("width") || videoPoster.clientWidth, videoHeight = videoPoster.getAttribute("height") || videoPoster.clientHeight;
+            // Check if it's a youtube or vimeo video
+            if (href.indexOf("youtube") !== -1 || href.indexOf("youtu.be") !== -1) provider = "youtube";
+            else if (href.indexOf("vimeo") !== -1) provider = "vimeo";
+            // Get the id of the video
+            regExp = provider === "youtube" ? /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/ : /(www\.)?vimeo.com\/(\d+)/;
+            match = href.match(regExp);
+            id = match[2];
+            // Get the source of the iframe that will be created
+            src = provider === "youtube" ? "//www.youtube.com/embed/" + id + "?enablejsapi=1&wmode=opaque" : "//player.vimeo.com/video/" + id;
+            // Get the attributes passed to the video link and then pass them to the iframe's src
+            videoAttributes = href.split("?")[1];
+            if (typeof videoAttributes !== "undefined") {
+                videoAttributes = videoAttributes.split("&");
+                videoAttributes.forEach((value)=>{
+                    if (value.indexOf(id) === -1) src += "&" + value;
+                });
+            }
+            // Create the iframe
+            iframe = document.createElement("iframe");
+            iframe.setAttribute("src", src);
+            iframe.setAttribute("width", videoWidth);
+            iframe.setAttribute("height", videoHeight);
+            iframe.setAttribute("class", videoEl.getAttribute("class"));
+            iframe.setAttribute("frameborder", 0);
+            iframe.setAttribute("allowfullscreen", "allowfullscreen");
+            videoEl.parentElement.insertBefore(iframe, videoEl);
+            // Initialize the video and play it
+            this.initVideo(iframe);
+            const player = this.videoReferences[iframe.getAttribute("data-video-ref")];
+            player.play();
+            // Hide the video poster
+            videoEl.style.display = "none";
+        };
+        videoEl.addEventListener("click", this.preinitVideoClickHandler);
+    }
+    // Called when a new slide is selected
+    gotoSlideHandler(event) {
+        if (event.detail.previousIndex === -1) return;
+        // Get the video from the previous slide
+        const previousVideoEl = this.slider.slidesEl.getElementsByClassName("sp-slide")[event.detail.previousIndex].querySelector(".sp-video[data-video-init]");
+        if (previousVideoEl === null) return;
+        const previousVideo = this.videoReferences[previousVideoEl.getAttribute("data-video-ref")];
+        // Handle the video from the previous slide by stopping it, or pausing it,
+        // or remove it, depending on the value of the 'leaveVideoAction' option.
+        if (previousVideo !== null) {
+            if (this.settings.leaveVideoAction === "stopVideo") previousVideo.stop();
+            else if (this.settings.leaveVideoAction === "pauseVideo") previousVideo.pause();
+            else if (this.settings.leaveVideoAction === "removeVideo") {
+                // If the video was lazy-loaded, remove it and show the poster again. If the video
+                // was not lazy-loaded, but inline, stop the video.
+                if (previousVideoEl.parentElement.querySelector("a.sp-video") !== null) {
+                    previousVideoEl.parentElement.querySelector("a.sp-video").style.removeProperty("display");
+                    previousVideo.destroy();
+                    previousVideoEl.remove();
+                } else previousVideo.stop();
+            }
+        }
+    }
+    // Called when a new slide is selected, 
+    // after the transition animation is complete.
+    gotoSlideCompleteHandler(event) {
+        // Handle the video from the selected slide
+        if (this.settings.reachVideoAction === "playVideo" && event.detail.index === this.slider.selectedSlideIndex) {
+            const loadedVideoEl = this.slider.slidesEl.getElementsByClassName("sp-slide")[event.detail.index].querySelector(".sp-video[data-video-init]"), unloadedVideoEl = this.slider.slidesEl.getElementsByClassName("sp-slide")[event.detail.index].querySelector(".sp-video[data-video-preinit]");
+            // If the video was already initialized, play it. If it's not initialized (because
+            // it's lazy loaded) initialize it and play it.
+            if (loadedVideoEl !== null) {
+                const loadedVideo = this.videoReferences[loadedVideo.getAttribute("data-video-ref")];
+                loadedVideo.play();
+            } else if (unloadedVideoEl !== null) unloadedVideoEl.dispatchEvent("click");
+            // Autoplay is stopped when the video starts playing
+            // and the video's 'play' event is fired, but on slower connections,
+            // the video's playing will be delayed and the 'play' event
+            // will not fire in time to stop the autoplay, so we'll
+            // stop it here as well.
+            if (this.settings.playVideoAction === "stopAutoplay" && typeof this.slider.autoplay !== "undefined") {
+                this.slider.autoplay.stop();
+                this.settings.autoplay = false;
+                this.slider.autoplay.settings.autoplay = false;
+            }
+        }
+    }
+    // Destroy the module
+    destroy() {
+        Array.from(this.slider.sliderEl.querySelectorAll(".sp-video[ data-video-preinit ]")).forEach((videoEl)=>{
+            videoEl.removeAttribute("data-video-preinit");
+            videoEl.removeEventListener("click", this.preinitVideoClickHandler);
+        });
+        // Loop through all the videos and destroy them
+        Array.from(this.slider.sliderEl.querySelectorAll(".sp-video[ data-video-init ]")).forEach((videoEl)=>{
+            videoEl.removeAttribute("data-video-init");
+            const video = this.videoReferences[videoEl.getAttribute("data-video-ref")];
+            video.removeEventListener("videoPlay");
+            video.removeEventListener("videoPause");
+            video.removeEventListener("videoEnded");
+            video.destroy();
+            videoEl.removeAttribute("data-video-ref");
+            if (videoEl.parentElement.querySelector(".sp-video[ data-video-preinit ]") !== null) videoEl.remove();
+        });
+        this.videoReferences.length = 0;
+        this.slider.removeEventListener("update." + this.namespace);
+        this.slider.removeEventListener("gotoSlide." + this.namespace);
+        this.slider.removeEventListener("gotoSlideComplete." + this.namespace);
+    }
+}
+exports.default = Video;
+
+},{"./video-controller.js":"4ISRV","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4ISRV":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _customEventTargetJs = require("../../helpers/custom-event-target.js");
+var _customEventTargetJsDefault = parcelHelpers.interopDefault(_customEventTargetJs);
+var _html5PlayerJs = require("./html5-player.js");
+var _html5PlayerJsDefault = parcelHelpers.interopDefault(_html5PlayerJs);
+var _videojsPlayerJs = require("./videojs-player.js");
+var _videojsPlayerJsDefault = parcelHelpers.interopDefault(_videojsPlayerJs);
+var _vimeoPlayerJs = require("./vimeo-player.js");
+var _vimeoPlayerJsDefault = parcelHelpers.interopDefault(_vimeoPlayerJs);
+var _youtubePlayerJs = require("./youtube-player.js");
+var _youtubePlayerJsDefault = parcelHelpers.interopDefault(_youtubePlayerJs);
+class VideoController extends (0, _customEventTargetJsDefault.default) {
+    // Stores the available players
+    static players = [];
+    // Reference to the current player instance
+    player = null;
+    // Reference to the video element
+    videoEl;
+    // Check if an iOS device is used.
+    // This information is important because a video can not be
+    // controlled programmatically unless the user has started the video manually.
+    isIOS = window.navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false;
+    constructor(videoEl){
+        super();
+        this.videoEl = videoEl;
+        this.init();
+    }
+    static addPlayer(player) {
+        if (VideoController.players.indexOf(player) === -1) VideoController.players.unshift(player);
+    }
+    init() {
+        const videoID = this.videoEl.getAttribute("id");
+        // Loop through the available video players
+        // and check if the targeted video element is supported by one of the players.
+        // If a compatible type is found, store the video type.
+        const playerConstructor = VideoController.players.find((player)=>player.isType(this.videoEl));
+        this.player = new playerConstructor(this.videoEl);
+        // Return if the player could not be instantiated
+        if (this.player === null) return;
+        // Add event listeners
+        const playerEvents = [
+            "ready",
+            "start",
+            "play",
+            "pause",
+            "ended"
+        ];
+        playerEvents.forEach((playerEvent)=>{
+            const videoControllerEvent = "video" + playerEvent.charAt(0).toUpperCase() + playerEvent.slice(1);
+            this.player.addEventListener(playerEvent, ()=>{
+                this.dispatchEvent(videoControllerEvent, {
+                    video: videoID
+                });
+            });
+        });
+    }
+    play() {
+        if (this.isIOS === true && this.player.isStarted() === false || this.player.getState() === "playing") return;
+        this.player.play();
+    }
+    stop() {
+        if (this.isIOS === true && this.player.isStarted() === false || this.player.getState() === "stopped") return;
+        this.player.stop();
+    }
+    pause() {
+        if (this.isIOS === true && this.player.isStarted() === false || this.player.getState() === "paused") return;
+        this.player.pause();
+    }
+    replay() {
+        if (this.isIOS === true && this.player.isStarted() === false) return;
+        this.player.replay();
+    }
+    destroy() {
+        if (this.player.isStarted() === true) this.stop();
+        this.player.removeEventListener("ready");
+        this.player.removeEventListener("start");
+        this.player.removeEventListener("play");
+        this.player.removeEventListener("pause");
+        this.player.removeEventListener("ended");
+    }
+}
+VideoController.addPlayer((0, _html5PlayerJsDefault.default));
+VideoController.addPlayer((0, _videojsPlayerJsDefault.default));
+VideoController.addPlayer((0, _youtubePlayerJsDefault.default));
+VideoController.addPlayer((0, _vimeoPlayerJsDefault.default));
+exports.default = VideoController;
+
+},{"../../helpers/custom-event-target.js":"dGwse","./html5-player.js":"6zOjU","./videojs-player.js":"enwRQ","./vimeo-player.js":"4iGiw","./youtube-player.js":"loRx7","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"6zOjU":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _playerJs = require("./player.js");
+var _playerJsDefault = parcelHelpers.interopDefault(_playerJs);
+class HTML5Player extends (0, _playerJsDefault.default) {
+    constructor(videoEl){
+        super(videoEl);
+    }
+    static isType(videoEl) {
+        if (videoEl.tagName === "VIDEO") return true;
+        return false;
+    }
+    init() {
+        // Get a reference to the player
+        this.player = this.videoEl;
+        this.ready = true;
+        this.dispatchEvent("ready");
+        this.player.addEventListener("play", ()=>{
+            if (this.started === false) {
+                this.started = true;
+                this.dispatchEvent("start");
+            }
+            this.state = "playing";
+            this.dispatchEvent("play");
+        });
+        this.player.addEventListener("pause", ()=>{
+            this.state = "paused";
+            this.dispatchEvent("pause");
+        });
+        this.player.addEventListener("ended", ()=>{
+            this.state = "ended";
+            this.dispatchEvent("ended");
+        });
+    }
+    play() {
+        if (this.ready === true) this.player.play();
+        else {
+            const timer = setInterval(()=>{
+                if (this.ready === true) {
+                    clearInterval(timer);
+                    this.player.play();
+                }
+            }, 100);
+        }
+    }
+    pause() {
+        this.player.pause();
+    }
+    stop() {
+        this.player.currentTime = 0;
+        this.player.pause();
+        this.state = "stopped";
+    }
+    replay() {
+        this.player.currentTime = 0;
+        this.player.play();
+    }
+}
+exports.default = HTML5Player;
+
+},{"./player.js":"jQIdG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jQIdG":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _customEventTargetJs = require("../../helpers/custom-event-target.js");
+var _customEventTargetJsDefault = parcelHelpers.interopDefault(_customEventTargetJs);
+class Player extends (0, _customEventTargetJsDefault.default) {
+    videoEl = null;
+    ready = false;
+    started = false;
+    state = "";
+    constructor(videoEl){
+        super();
+        this.videoEl = videoEl;
+        this.init();
+    }
+    init() {}
+    play() {}
+    pause() {}
+    stop() {}
+    replay() {}
+    isType() {}
+    isReady() {
+        return this.ready;
+    }
+    isStarted() {
+        return this.started;
+    }
+    getState() {
+        return this.state;
+    }
+}
+exports.default = Player;
+
+},{"../../helpers/custom-event-target.js":"dGwse","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"enwRQ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _playerJs = require("./player.js");
+var _playerJsDefault = parcelHelpers.interopDefault(_playerJs);
+class VideoJSPlayer extends (0, _playerJsDefault.default) {
+    constructor(videoEl){
+        super(videoEl);
+    }
+    static isType(videoEl) {
+        if ((videoEl.getAttribute("data-videojs-id") !== null || videoEl.classList.contains("video-js")) && typeof window.videojs !== "undefined") return true;
+        return false;
+    }
+    init() {
+        const videoID = this.videoEl.classList.contains("video-js") ? this.videoEl.getAttribute("id") : this.videoEl.getAttribute("data-videojs-id");
+        this.player = window.videojs(videoID);
+        this.player.ready(()=>{
+            this.ready = true;
+            this.dispatchEvent("ready");
+            this.player.on("play", ()=>{
+                if (this.started === false) {
+                    this.started = true;
+                    this.dispatchEvent("start");
+                }
+                this.state = "playing";
+                this.dispatchEvent("play");
+            });
+            this.player.on("pause", ()=>{
+                this.state = "paused";
+                this.dispatchEvent("pause");
+            });
+            this.player.on("ended", ()=>{
+                this.state = "ended";
+                this.dispatchEvent("ended");
+            });
+        });
+    }
+    play() {
+        this.player.play();
+    }
+    pause() {
+        this.player.pause();
+    }
+    stop() {
+        this.player.currentTime(0);
+        this.player.pause();
+        this.state = "stopped";
+    }
+    replay() {
+        this.player.currentTime(0);
+        this.player.play();
+    }
+}
+exports.default = VideoJSPlayer;
+
+},{"./player.js":"jQIdG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"4iGiw":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _playerJs = require("./player.js");
+var _playerJsDefault = parcelHelpers.interopDefault(_playerJs);
+class VimeoPlayer extends (0, _playerJsDefault.default) {
+    static vimeoAPIAdded = false;
+    static vimeoVideos = [];
+    constructor(videoEl){
+        super(videoEl);
+    }
+    static isType(videoEl) {
+        if (videoEl.tagName === "IFRAME") {
+            const src = videoEl.getAttribute("src");
+            if (src.indexOf("vimeo.com") !== -1) return true;
+        }
+        return false;
+    }
+    init() {
+        this.isInit = false;
+        if (typeof window.Vimeo !== "undefined") this.setup();
+        else {
+            VimeoPlayer.vimeoVideos.push(this);
+            if (VimeoPlayer.vimeoAPIAdded === false) {
+                VimeoPlayer.vimeoAPIAdded = true;
+                const tag = document.createElement("script");
+                tag.src = "//player.vimeo.com/api/player.js";
+                const firstScriptTag = document.getElementsByTagName("script")[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                let checkVimeoAPITimer = setInterval(()=>{
+                    if (typeof window.Vimeo !== "undefined") {
+                        clearInterval(checkVimeoAPITimer);
+                        VimeoPlayer.vimeoVideos.forEach((video)=>{
+                            video.setup();
+                        });
+                    }
+                }, 100);
+            }
+        }
+    }
+    setup() {
+        this.isInit = true;
+        // Get a reference to the player
+        this.player = new window.Vimeo.Player(this.videoEl);
+        this.ready = true;
+        this.dispatchEvent("ready");
+        this.player.on("play", ()=>{
+            if (this.started === false) {
+                this.started = true;
+                this.dispatchEvent("start");
+            }
+            this.state = "playing";
+            this.dispatchEvent("play");
+        });
+        this.player.on("pause", ()=>{
+            this.state = "paused";
+            this.dispatchEvent("pause");
+        });
+        this.player.on("ended", ()=>{
+            this.state = "ended";
+            this.dispatchEvent("ended");
+        });
+    }
+    play() {
+        if (this.ready === true) this.player.play();
+        else {
+            const timer = setInterval(()=>{
+                if (this.ready === true) {
+                    clearInterval(timer);
+                    this.player.play();
+                }
+            }, 100);
+        }
+    }
+    pause() {
+        this.player.pause();
+    }
+    stop() {
+        this.player.setCurrentTime(0).then(()=>{
+            this.player.pause();
+            this.state = "stopped";
+        });
+    }
+    replay() {
+        this.player.setCurrentTime(0).then(()=>{
+            this.player.play();
+        });
+    }
+    addEventListener(type, callback) {
+        if (this.isInit === true) super.addEventListener(type, callback);
+        else {
+            const timer = setInterval(()=>{
+                if (this.isInit === true) {
+                    clearInterval(timer);
+                    super.addEventListener(type, callback);
+                }
+            }, 100);
+        }
+    }
+}
+exports.default = VimeoPlayer;
+
+},{"./player.js":"jQIdG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"loRx7":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _playerJs = require("./player.js");
+var _playerJsDefault = parcelHelpers.interopDefault(_playerJs);
+class YoutubePlayer extends (0, _playerJsDefault.default) {
+    static youtubeAPIAdded = false;
+    static youtubeVideos = [];
+    constructor(videoEl){
+        super(videoEl);
+    }
+    static isType(videoEl) {
+        if (videoEl.tagName === "IFRAME") {
+            const src = videoEl.getAttribute("src");
+            if (src.indexOf("youtube.com") !== -1 || src.indexOf("youtu.be") !== -1) return true;
+        }
+        return false;
+    }
+    init() {
+        this.isInit = false;
+        const youtubeAPILoaded = window.YT && window.YT.Player;
+        if (typeof youtubeAPILoaded !== "undefined") this.setup();
+        else {
+            YoutubePlayer.youtubeVideos.push(this);
+            if (YoutubePlayer.youtubeAPIAdded === false) {
+                YoutubePlayer.youtubeAPIAdded = true;
+                const tag = document.createElement("script");
+                tag.src = "//www.youtube.com/player_api";
+                const firstScriptTag = document.getElementsByTagName("script")[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+                window.onYouTubePlayerAPIReady = ()=>{
+                    YoutubePlayer.youtubeVideos.forEach((video)=>{
+                        video.setup();
+                    });
+                };
+            }
+        }
+    }
+    setup() {
+        this.isInit = true;
+        // Get a reference to the player
+        this.player = new window.YT.Player(this.videoEl, {
+            events: {
+                "onReady": ()=>{
+                    this.dispatchEvent("ready");
+                    this.ready = true;
+                },
+                "onStateChange": (event)=>{
+                    switch(event.data){
+                        case window.YT.PlayerState.PLAYING:
+                            if (this.started === false) {
+                                this.started = true;
+                                this.dispatchEvent("start");
+                            }
+                            this.state = "playing";
+                            this.dispatchEvent("play");
+                            break;
+                        case window.YT.PlayerState.PAUSED:
+                            this.state = "paused";
+                            this.dispatchEvent("pause");
+                            break;
+                        case window.YT.PlayerState.ENDED:
+                            this.state = "ended";
+                            this.dispatchEvent("ended");
+                            break;
+                    }
+                }
+            }
+        });
+    }
+    play() {
+        if (this.ready === true) this.player.playVideo();
+        else {
+            const timer = setInterval(()=>{
+                if (this.ready === true) {
+                    clearInterval(timer);
+                    this.player.playVideo();
+                }
+            }, 100);
+        }
+    }
+    pause() {
+        // On iOS, simply pausing the video can make other videos unresponsive
+        // so we stop the video instead.
+        const isIOS = window.navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false;
+        if (isIOS === true) this.stop();
+        else this.player.pauseVideo();
+    }
+    stop() {
+        this.player.seekTo(1);
+        this.player.stopVideo();
+        this.state = "stopped";
+    }
+    replay() {
+        this.player.seekTo(1);
+        this.player.playVideo();
+    }
+    addEventListener(type, callback) {
+        if (this.isInit === true) super.addEventListener(type, callback);
+        else {
+            const timer = setInterval(()=>{
+                if (this.isInit === true) {
+                    clearInterval(timer);
+                    super.addEventListener(type, callback);
+                }
+            }, 100);
+        }
+    }
+}
+exports.default = YoutubePlayer;
+
+},{"./player.js":"jQIdG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"kIvDg":[function() {},{}]},["anvqh","gLLPy"], "gLLPy", "parcelRequire94c2")
 
 //# sourceMappingURL=index.4d6bcbeb.js.map
