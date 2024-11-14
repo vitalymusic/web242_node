@@ -4,9 +4,9 @@
     "build": "parcel build src/index.pug"
   },
   "dependencies": {
-    "bigger-picture-fork": "^1.1.25",
     "jquery": "^3.7.1",
     "parcel": "^2.12.0",
+    "photoswipe": "^5.4.4",
     "slider-pro": "^1.6.2",
     "slider-pro-js": "^1.0.2"
   },
